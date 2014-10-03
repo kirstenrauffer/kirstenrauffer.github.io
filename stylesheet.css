@@ -8,9 +8,9 @@ html {
 }
 
 body{
+	font-family:Bebas, sans-serif;
 	height: 100%;
 	margin: 20px
-	font-family:Bebas, sans-serif;
 	color:white; 
 	text-align:center;
 	background: radial-gradient(ellipse at center, #4d4958 0%,#4d4958 10%,#100f13 100%);
