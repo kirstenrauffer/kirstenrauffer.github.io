@@ -9,10 +9,11 @@ html {
 
 body{
 	height: 100%;
+	margin: 20px
 	font-family:Bebas, sans-serif;
 	color:white; 
 	text-align:center;
-	background: radial-gradient(ellipse at bottom, #666666 0%,#111111 51%,#2c2c2c 98%,#2b2b2b 100%,#111111 100%,#000000 100%,#131313 100%,#2b2b2b 100%,#595959 100%,#2c2c2c 100%,#1c1c1c 100%,#111111 100%);
+	background: radial-gradient(ellipse at center, #666666 0%,#111111 51%,#2c2c2c 98%,#2b2b2b 100%,#111111 100%,#000000 100%,#131313 100%,#2b2b2b 100%,#595959 100%,#2c2c2c 100%,#1c1c1c 100%,#111111 100%);
 	background-repeat: no-repeat;
 }
 	
