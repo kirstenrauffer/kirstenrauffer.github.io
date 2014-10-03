@@ -34,7 +34,10 @@ a:hover{
 div{
     text-align:left;
 }
-
+span {
+  position: absolute;
+  margin: 10px 10px;
+}
 #navlist{
     text-align:right;
 }
