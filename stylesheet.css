@@ -3,9 +3,9 @@
 	src: url('BebasNeue.otf');
 }
 body{
-	font-family:Bebas, monospace;
+	font-family:Bebas, sans-serif;
 	color:white; 
-	background:radial-gradient(#546278 3%,#273345 100%);
+	background:radial-gradient(gray 3%,black 100%);
 	text-align:center;
 }
 	
