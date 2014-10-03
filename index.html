@@ -9,139 +9,111 @@
 	<span></span>
 	<canvas></canvas>
 	<script>
-		var PARTICLES_NUM = 1000;
-var BANG_SCALE = Math.pow( 50, 3 );
-
-var cvs = document.querySelector('canvas');
-var ctx = cvs.getContext('2d');
-
-var cW = window.innerWidth;
-var cH = window.innerHeight;
-
-var particles = [];
-var isMouseDown = false;
-var mouseX, mouseY;
-var dx, dy, d, t, f;
-
-cvs.width = cW;
-cvs.height = cH;
-
-var requestAnimFrame = (function(){
-    return  window.requestAnimationFrame       ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame    ||
-        window.oRequestAnimationFrame      ||
-        window.msRequestAnimationFrame     ||
-        function( callback ){
-            window.setTimeout(callback, 1000 / 60);
-        };
-})();
-
-function Particle(){
-  this.x = Math.random()*cW;
-  this.y = Math.random()*cH;
-
-  this.w = Math.random();
-  this.h = Math.random();
-
-  //some velocity for the particles
-  this.vx = -1 + Math.random() * 2;
-  this.vy = -1 + Math.random() * 2;
+function Emitter(width, height) {
+  this.width = width;
+  this.height = height;
+  this.particles = [];
+  this.lines = [];
 }
-Particle.prototype.draw = function(){
-  ctx.fillStyle = '#ccc';
-  ctx.fillRect(this.x, this.y, this.w, this.h);
+Emitter.prototype.emit = function(x, y) {
+  var p = new Particle(this, x || 0, y || 0);
+  var _this = this;
+  this.particles.forEach(function(val){
+    _this.lines.push(new Line(_this,p,val));
+  });
+  this.particles.push(p);
+  return this;
 }
-
-init()
-function init(){
-  for (var i = 0; i < PARTICLES_NUM; i++) {
-    particles.push(new Particle());
-  }
-  cvs.onmousedown = onMouseDown;
+Emitter.prototype.step = function(delta) {
+  this.particles.forEach(function(p){
+    p.angle += Math.random() * 0.4 - 0.2;
+    p.step(delta);
+  });
+  return this;
 }
+Emitter.prototype.draw = function(ctx) {
+  this.lines.forEach(function(l) {
+    l.draw(ctx);
+  });
+  return this;
+}
+function Particle(emitter, x, y) {
+  this.x = x;
+  this.y = y;
+  this.emitter = emitter;
+  this.angle = Math.random()*360;
+}
+Particle.prototype.step = function(delta) {
+  var stepX = Particle.velocity*Math.cos(this.angle);
+  var stepY = Particle.velocity*Math.sin(this.angle);
+  this.x += stepX*delta + this.emitter.width;
+  this.y += stepY*delta + this.emitter.height;
+  this.x %= this.emitter.width;
+  this.y %= this.emitter.height;
+  return this;
+}
+Particle.velocity = .05;
 
-function draw() {
-  //re-draw in each next frame
-  ctx.fillStyle = "#000";
-  ctx.fillRect(0,0,cW,cH);
-
-  for (var i = 0; i < PARTICLES_NUM; i++) {
-    var p = particles[i];
-    p.draw();
-  }
-  update();
-  requestAnimFrame(draw);
+function Line(emitter, particle1, particle2) {
+  Line.maxLength = emitter.height/6;
+  this.particle1 = particle1;
+  this.particle2 = particle2;
 }
 
-function update() {
-  // Update every particle's position according to their velocities
-  for (var i = 0; i < PARTICLES_NUM; i++) {
-    var p = particles[i];
-
-    if(isMouseDown){
-      d = ( dx = mouseX - p.x ) * dx + ( dy = mouseY - p.y ) * dy;
-      f = -BANG_SCALE / d;
-      if ( d < BANG_SCALE ) {
-        t = Math.atan2( dy, dx );
-        p.vx = f * Math.cos(t);
-        p.vy = f * Math.sin(t);
-      }
+Line.prototype.length = function() {
+  var x = this.particle1.x - this.particle2.x;
+  var y = this.particle1.y - this.particle2.y;
+  return Math.sqrt(x*x + y*y);
+}
+Line.prototype.draw = function(ctx) {
+  var opacity = Math.max(-1,Line.maxLength - this.length())/Line.maxLength;
+  if (opacity > 0) {
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = 'rgba('+parseInt(Math.random()*255)+','+parseInt(Math.random()*255)+','+parseInt(Math.random()*255)+',' + opacity + ')'; 
+    ctx.arc(this.particle1.x,this.particle1.y,1,0,2*Math.PI);
+    ctx.arc(this.particle2.x,this.particle2.y,1,0,2*Math.PI);
+    ctx.stroke();
+  } 
+} 
+var jj = 0;
+window.addEventListener("DOMContentLoaded", function(){ 
+  setTimeout(function(){
+    var cvs = document.getElementById('cvs');
+    cvs.width = window.innerWidth;
+    cvs.height = window.innerHeight;
+    var ctx = cvs.getContext('2d'); 
+    var emitter = new Emitter(cvs.width, cvs.height);
+    for(var i = 0; i < 50; i++) {
+  emitter.emit(Math.random()*cvs.width, Math.random()*cvs.height); 
     }
-    p.x += p.vx;
-    p.y += p.vy;
-
-    // Change particle position when out of bounds
-    if(p.x > cW){p.x = 0;}
-    else if(p.x < 0) {p.x = cW;}
-
-    if(p.y > cH){p.y = 0;}
-    else if(p.y < 0) {p.y = cH;}
-
-    // Check the distance between particles and compare
-    // them to the minDist
-    for(var j = i + 1; j < PARTICLES_NUM; j++) {
-      var p2 = particles[j];
-      checkDistance(p, p2);
-    }
-  }
-}
-
-function checkDistance(p1, p2) {
-  var dist;
-  var minDist = 70;
-  var dx = p1.x - p2.x;
-  var dy = p1.y - p2.y;
-
-  dist = Math.sqrt(dx*dx + dy*dy);
-
-  if(dist <= minDist) {
-    // particles acceleration depending on their distance
-    var ax = dx/2000,
-        ay = dy/2000;
-
-    // Apply the acceleration on the particles
-    p1.vx -= ax;
-    p1.vy -= ay;
-    p2.vx += ax;
-    p2.vy += ay;
-  }
-}
-
-draw();
-
-window.onresize = function(){
-  cW = window.innerWidth;
-  cH = window.innerHeight;
-  ctx.canvas.width  = cW;
-  ctx.canvas.height = cH;
-}
-function onMouseDown(e) {
-  var rect = e.target.getBoundingClientRect();
-  mouseX = e.clientX - rect.left;
-  mouseY = e.clientY - rect.top;
-  isMouseDown = true;
-}
+    Hammer(document.getElementById('cvs')).on("doubletap",{drag: false,transform: false}, function(event) {
+        alert('hello!');
+    });
+Hammer(document.getElementById('cvs')).on(
+  "tap",
+  function(event)
+  {
+      emitter.emit(event.gesture.center.pageX, event.gesture.center.pageY);
+  });
+     
+    $('canvas').mousemove( 
+  function(e)
+  { if(jj % 10 == 0)  emitter.emit(e.pageX, e.pageY);
+  });
+    var time = new Date().getTime();
+    (function animloop(){
+      requestAnimationFrame(animloop);
+     jj++;
+      ctx.fillStyle = '#000';
+      ctx.fillRect(0,0,cvs.width, cvs.height);
+      var t = new Date().getTime();
+      emitter.step(t - time);
+      time = t;
+      emitter.draw(ctx);
+    })();
+  },0);
+});
 </script>
 
 	<div id="navlist">
