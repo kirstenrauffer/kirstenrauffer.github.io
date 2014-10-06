@@ -15,7 +15,7 @@ body{
 	height: 100%;
 	margin: 20px
 	color:white; 
-	background: radial-gradient(ellipse at center, #4d4958 0%,#4d4958 10%,#100f13 100%);
+	background-color: #1c242f;
 	background-repeat: no-repeat;
 }
 	
