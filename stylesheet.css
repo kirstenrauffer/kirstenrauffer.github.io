@@ -24,6 +24,13 @@ body{
     	-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
 }
 
+canvas
+{
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+
 h2{
     font-size: 65px;
     line-height:20px;

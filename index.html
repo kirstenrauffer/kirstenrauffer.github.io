@@ -7,114 +7,84 @@
 
 <body>
 
+	<canvas></canvas>
 	<script>
-function Emitter(width, height) {
-  this.width = width;
-  this.height = height;
-  this.particles = [];
-  this.lines = [];
-}
-Emitter.prototype.emit = function(x, y) {
-  var p = new Particle(this, x || 0, y || 0);
-  var _this = this;
-  this.particles.forEach(function(val){
-    _this.lines.push(new Line(_this,p,val));
-  });
-  this.particles.push(p);
-  return this;
-}
-Emitter.prototype.step = function(delta) {
-  this.particles.forEach(function(p){
-    p.angle += Math.random() * 0.4 - 0.2;
-    p.step(delta);
-  });
-  return this;
-}
-Emitter.prototype.draw = function(ctx) {
-  this.lines.forEach(function(l) {
-    l.draw(ctx);
-  });
-  return this;
-}
-function Particle(emitter, x, y) {
-  this.x = x;
-  this.y = y;
-  this.emitter = emitter;
-  this.angle = Math.random()*360;
-}
-Particle.prototype.step = function(delta) {
-  var stepX = Particle.velocity*Math.cos(this.angle);
-  var stepY = Particle.velocity*Math.sin(this.angle);
-  this.x += stepX*delta + this.emitter.width;
-  this.y += stepY*delta + this.emitter.height;
-  this.x %= this.emitter.width;
-  this.y %= this.emitter.height;
-  return this;
-}
-Particle.velocity = .05;
+var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"], // because not all stars are white
+    HEIGHT = 400, // height of the canvas
+    WIDTH = 800; // width of the canvas
 
-function Line(emitter, particle1, particle2) {
-  Line.maxLength = emitter.height/6;
-  this.particle1 = particle1;
-  this.particle2 = particle2;
+/**
+ * Generate a random integer between min and max
+ */
+function random (min, max) {
+  return Math.round((Math.random() * max - min) + min);
 }
 
-Line.prototype.length = function() {
-  var x = this.particle1.x - this.particle2.x;
-  var y = this.particle1.y - this.particle2.y;
-  return Math.sqrt(x*x + y*y);
-}
-Line.prototype.draw = function(ctx) {
-  var opacity = Math.max(-1,Line.maxLength - this.length())/Line.maxLength;
-  if (opacity > 0) {
-    ctx.beginPath();
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = 'rgba('+parseInt(Math.random()*255)+','+parseInt(Math.random()*255)+','+parseInt(Math.random()*255)+',' + opacity + ')'; 
-    ctx.arc(this.particle1.x,this.particle1.y,1,0,2*Math.PI);
-    ctx.arc(this.particle2.x,this.particle2.y,1,0,2*Math.PI);
-    ctx.stroke();
-  } 
-} 
-var jj = 0;
-window.addEventListener("DOMContentLoaded", function(){ 
-  setTimeout(function(){
-    var cvs = document.getElementById('cvs');
-    cvs.width = window.innerWidth;
-    cvs.height = window.innerHeight;
-    var ctx = cvs.getContext('2d'); 
-    var emitter = new Emitter(cvs.width, cvs.height);
-    for(var i = 0; i < 50; i++) {
-  emitter.emit(Math.random()*cvs.width, Math.random()*cvs.height); 
-    }
-    Hammer(document.getElementById('cvs')).on("doubletap",{drag: false,transform: false}, function(event) {
-        alert('hello!');
-    });
-Hammer(document.getElementById('cvs')).on(
-  "tap",
-  function(event)
-  {
-      emitter.emit(event.gesture.center.pageX, event.gesture.center.pageY);
-  });
-     
-    $('canvas').mousemove( 
-  function(e)
-  { if(jj % 10 == 0)  emitter.emit(e.pageX, e.pageY);
-  });
-    var time = new Date().getTime();
-    (function animloop(){
-      requestAnimationFrame(animloop);
-     jj++;
-      ctx.fillStyle = '#000';
-      ctx.fillRect(0,0,cvs.width, cvs.height);
-      var t = new Date().getTime();
-      emitter.step(t - time);
-      time = t;
-      emitter.draw(ctx);
-    })();
-  },0);
-});
-</script>
+/**
+ * Generate a new star field with star_number stars and draw 
+ * it onto the provided canvas context
+ */
+function star_field (context, star_number) {
+  var x, // x position of the star
+      y, // y position of the star
+      brightness, // brightness of the star
+      radius; // radius of the star
 
+  // draw the blank night sky
+  context.fillStyle = "#000";
+  context.fillRect(0, 0, WIDTH, HEIGHT);
+  
+  // save the previous canvas context state
+  context.save();
+  
+  for (var i = 0; i < star_number; i++) {
+    x = Math.random() * WIDTH; // random x position
+    y = Math.random() * HEIGHT; // random y position
+    radius = Math.random() * 1.1; // random radius
+    brightness = random(80, 100) / 100;
+
+    // start drawing the star
+    context.beginPath();
+    // set the brightness of the star
+    context.globalAlpha = brightness;
+    // choose a random star colour
+    context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
+    // draw the star (an arc of radius 2 * pi)
+    context.arc(x, y, radius, 0, Math.PI * 2, true);
+    // fill the star and stop drawing it
+    context.fill();
+    context.closePath();
+  }
+  
+  // restore the previous context state
+  context.restore();
+}
+
+/**
+ * Kick everything off
+ */
+function init () {
+  // find the canvas and create its context
+  var canvas = document.getElementsByTagName('canvas')[0],
+      context = canvas.getContext('2d');
+  
+  // set up the width and height
+  canvas.width = WIDTH;
+  canvas.height = HEIGHT;
+  
+  // create a star field
+  star_field(context, 300);
+  
+  // create a new star field when you click on the canvas
+  canvas.addEventListener ("click", function () {
+    star_field(context, 200);
+  }, false);
+}
+
+// GO, GO, GO!
+init();
+	</script>
+	
 	<div id="navlist">
 		<a href=#About>About | </a>
 		<a href=#Projects>Projects | </a>
