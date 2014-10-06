@@ -15,47 +15,39 @@
 	src: url(‘Aaargh.tff’);
 }
 html {
-    height: 100%;
+	height: 100%;
 }
 
 body{
 	font-family:argh, sans-serif;
 	height: 100%;
-	margin: 20px
+	width: 100%;
 	color:white; 
-	background: linear-gradient(#1c242f, #00b752);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left top, left bottom, color-stop(.7, ##1c242f), color-stop(0.5, #66E45E), color-stop(1, #00A3EF));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(top, ##1c242f 70%, #66E45E 50%, #00A3EF 100%);
-
-/* W3C Markup, IE10 Release Preview */ 
-background-image: linear-gradient(to bottom, ##1c242f 70%, #66E45E 50%, #00A3EF 100%);
-
+    	background: #1c242f;
+    	background-image: 
+    	-webkit-linear-gradient(top, #1c242f, #007333 700%); 	
 	background-repeat: no-repeat;
 }
 	
 h2{
-    font-size: 65px;
-    line-height:20px;
-    text-align: center;
-    font-family:launica;
+	font-size: 65px;
+	line-height:20px;
+	text-align: center;
+	font-family:launica;
 }
 
 a{
-    text-decoration: none;
-    color:white;
+	text-decoration: none;
+	color:white;
 }
 
 a:hover{
-    color:gray;
+	color:gray;
 }
 
 div{
-    text-align:left;
+	text-align:left;
 }
 #navlist{
-    text-align:right;
+	text-align:right;
 }
