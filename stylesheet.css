@@ -21,9 +21,8 @@ body{
 	color:white; 
     background: #1c242f;
     background-image: 
-    -webkit-linear-gradient(top, #001524 20%, #03243c, #002642 , 262e69, #30c978 120%);
+    -webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
 }
-
 
 h2{
     font-size: 65px;
