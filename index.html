@@ -9,29 +9,18 @@
 
 	<canvas></canvas>
 	<script>
-var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"], // because not all stars are white
-    /**HEIGHT = 400, // height of the canvas
-    *WIDTH = 800; // width of the canvas
-    */
-/**
- * Generate a random integer between min and max
- */
+var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"], 
+HEIGHT = 1000,
+WIDTH = 1000;
+    
 function random (min, max) {
-  return Math.round((Math.random() * max - min) + min);
+	return Math.round((Math.random() * max - min) + min);
 }
-
-/**
- * Generate a new star field with star_number stars and draw 
- * it onto the provided canvas context
- */
 function star_field (context, star_number) {
-  var x, // x position of the star
-      y, // y position of the star
-      brightness, // brightness of the star
-      radius; // radius of the star
+	var x, y, brightness, radius;
 
   // draw the blank night sky
-  context.fillStyle = "#000";
+  context.fillStyle = “rgba(0,0,0,.2)”;
   context.fillRect(0, 0, WIDTH, HEIGHT);
   
   // save the previous canvas context state
