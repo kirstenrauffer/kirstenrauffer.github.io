@@ -11,7 +11,7 @@
 	<script>
 var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"], 
 HEIGHT = 1000,
-WIDTH = 1000;
+WIDTH = 500;
     
 function random (min, max) {
 	return Math.round((Math.random() * max - min) + min);
@@ -19,39 +19,28 @@ function random (min, max) {
 function star_field (context, star_number) {
 	var x, y, brightness, radius;
 
-  // draw the blank night sky
   context.fillStyle = “rgba(0,0,0,.2)”;
   context.fillRect(0, 0, WIDTH, HEIGHT);
   
-  // save the previous canvas context state
   context.save();
   
   for (var i = 0; i < star_number; i++) {
-    x = Math.random() * WIDTH; // random x position
-    y = Math.random() * HEIGHT; // random y position
-    radius = Math.random() * 1.1; // random radius
+    x = Math.random() 
+    y = Math.random()
+    radius = Math.random() * 1.1;
     brightness = random(80, 100) / 100;
 
-    // start drawing the star
     context.beginPath();
-    // set the brightness of the star
     context.globalAlpha = brightness;
-    // choose a random star colour
     context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
-    // draw the star (an arc of radius 2 * pi)
     context.arc(x, y, radius, 0, Math.PI * 2, true);
-    // fill the star and stop drawing it
     context.fill();
     context.closePath();
   }
   
-  // restore the previous context state
   context.restore();
 }
 
-/**
- * Kick everything off
- */
 function init () {
   // find the canvas and create its context
   var canvas = document.getElementsByTagName('canvas')[0],
@@ -70,7 +59,6 @@ function init () {
   }, false);
 }
 
-// GO, GO, GO!
 init();
 	</script>
 	
