@@ -1,8 +1,4 @@
 @font-face{
-	font-family: Bebas;
-	src: url('BebasNeue.otf');
-}
-@font-face{
 	font-family: Tusj;
 	src: url(‘FFF_Tusj.tff’);
 }
@@ -15,7 +11,7 @@
 	src: url(‘Aaargh.tff’);
 }
 html {
-	height: 100%;
+    height: 100%;
 }
 
 body{
@@ -23,31 +19,31 @@ body{
 	height: 100%;
 	width: 100%;
 	color:white; 
-    	background: #1c242f;
-    	background-image: 
-    	-webkit-linear-gradient(top, #1c242f, #007333 700%); 	
-	background-repeat: no-repeat;
+    background: #1c242f;
+    background-image: 
+    -webkit-linear-gradient(top, #001524 20%, #03243c, #002642 , 262e69, #30c978 120%);
 }
-	
+
+
 h2{
-	font-size: 65px;
-	line-height:20px;
-	text-align: center;
-	font-family:launica;
+    font-size: 65px;
+    line-height:20px;
+    text-align: center;
+    font-family:launica;
 }
 
 a{
-	text-decoration: none;
-	color:white;
+    text-decoration: none;
+    color:white;
 }
 
 a:hover{
-	color:gray;
+    color:gray;
 }
 
 div{
-	text-align:left;
+    text-align:left;
 }
 #navlist{
-	text-align:right;
+    text-align:right;
 }
