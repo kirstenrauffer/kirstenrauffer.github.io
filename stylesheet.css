@@ -6,6 +6,10 @@
 	font-family: Tusj;
 	src: url(‘FFF_Tusj.tff’);
 }
+@font-face{
+	font-family: launica;
+	src: url(‘launica.tff’);
+}
 html {
     height: 100%;
 }
@@ -23,7 +27,7 @@ h2{
     font-size: 65px;
     line-height:20px;
     text-align: center;
-    font-family:Tusj;
+    font-family:launica;
 }
 
 a{
