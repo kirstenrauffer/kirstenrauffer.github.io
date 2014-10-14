@@ -57,7 +57,7 @@
     		context.beginPath();
     		context.globalAlpha = brightness;
     		context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
-    		context.arc(clickX,clickY,2,0,Math.PI * 2,true);
+    		context.arc(clickX,clickY,10,0,Math.PI * 2,true);
     		context.fill();
     		context.closePath();
   		context.restore();
