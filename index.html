@@ -9,56 +9,72 @@
 <body>
 	<canvas></canvas>
 	<script>
-		var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"], 
-    HEIGHT = 525, // height of the canvas
-    WIDTH = 1000; // width of the canvas
 
-function random (min, max) {
-  return Math.round((Math.random() * max - min) + min);
-}
+	var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"], 
+    	HEIGHT = 525, // height of the canvas
+    	WIDTH = 1000; // width of the canvas
 
-function star_field (context, star_number) {
-  var x,
-      y,
-      brightness, 
-      radius; 
+	function random (min, max) {
+  		return Math.round((Math.random() * max - min) + min);
+	}
 
-  context.fillStyle = 'rgba(0,0,0,.0)';
-  context.fillRect(0, 0, WIDTH, HEIGHT);
-  context.save();
+	function star_field (context, star_number) {
+  		var x,y,brightness,radius; 
+
+  		context.fillStyle = 'rgba(0,0,0,.0)';
+  		context.fillRect(0, 0, WIDTH, HEIGHT);
+  		context.save();
   
-for (var i = 0; i < star_number; i++) {
-    x = Math.random() * WIDTH; // random x position
-    y = Math.random() * HEIGHT; // random y position
-    radius = Math.random() * 1.1; // random radius
-    brightness = random(80, 100) / 100;
+		for (var i = 0; i < star_number; i++) {
+   	 		x = Math.random() * WIDTH; // random x position
+    			y = Math.random() * HEIGHT; // random y position
+    			radius = Math.random() * 1.1; // random radius
+    			brightness = random(80, 100) / 100;
 
-    context.beginPath();
-    context.globalAlpha = brightness;
-    context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
-    context.arc(x, y, radius, 0, Math.PI * 2, true);
-    context.fill();
-    context.closePath();
-}
-  context.restore();
-}
+    			context.beginPath();
+    			context.globalAlpha = brightness;
+    			context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
+    			context.arc(x, y, radius, 0, Math.PI * 2, true);
+    			context.fill();
+    			context.closePath();
+		}
+  		context.restore();
+	}
 
-function init () {
-  	var canvas = document.getElementsByTagName('canvas')[0],
+	function click_star_field (context,x,y) {
+  		var brightness,radius; 
+
+  		context.fillStyle = 'rgba(0,0,0,.0)';
+  		context.fillRect(0, 0, WIDTH, HEIGHT);
+  		context.save();
+  
+    		radius = Math.random() * 1.1; // random radius
+    		brightness = random(80, 100) / 100;
+
+    		context.beginPath();
+    		context.globalAlpha = brightness;
+    		context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
+    		context.arc(x, y, radius, 0, Math.PI * 2, true);
+    		context.fill();
+    		context.closePath();
+  		context.restore();
+	}
+
+	function init () {
+  		var canvas = document.getElementsByTagName('canvas')[0],
       		context = canvas.getContext('2d');
   
-  canvas.width = WIDTH;
-  canvas.height = HEIGHT;
+  		canvas.width = WIDTH;
+  		canvas.height = HEIGHT;
   
-  star_field(context, 300);
+  		star_field(context, 300);
   
-//make it so that the click matches the x,y coordinates
-  canvas.addEventListener ("click", function () {
-    star_field(context, 1);
-  }, false);
-}
+  		canvas.addEventListener ("click", function () {
+    			click_star_field(context, event.clientX, event.clienty);
+  		}, false);
+	}
 
-init();
+	init();
 	</script>
 	
 	<div id="navlist">
