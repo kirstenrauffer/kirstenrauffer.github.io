@@ -43,8 +43,8 @@
 
 	function click_star_field (context, e) {
 		var evt = e ? e:window.event;
- 		clickX = evt.clientX 
-  		clickY = evt.clientY 
+ 		clickX = evt.clientX + document.body.scrollLeft;
+  		clickY = evt.clientY + document.body.scrollTop;
   		var brightness,radius; 
 
   		context.fillStyle = 'rgba(0,0,0,.0)';
