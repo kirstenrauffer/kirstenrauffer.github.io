@@ -18,13 +18,14 @@ canvas
 }
 
 h2{
-      	font-size: 65px;
+      	font-size: 100px;
     	line-height:20px;
     	text-align: center;
 	z-index: 1;
 }
 
 a{
+	font-size: 30px;
     	text-decoration: none;
     	color:white;
 }
@@ -33,9 +34,11 @@ a:hover{
     	color:gray;
 }
 
-div{
-    	text-align:left;
-}
+
 #navlist{
     	text-align:right;
+}
+#subheader{
+	font-size: 50px;
+	text-align:center;
 }
