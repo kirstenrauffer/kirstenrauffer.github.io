@@ -1,6 +1,7 @@
 html{
 	height: 100%;
 	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
+	z-index:1
 }
 
 body{
@@ -10,7 +11,7 @@ body{
 	color:white; 
 	text-align:center;
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 }
 
 canvas
