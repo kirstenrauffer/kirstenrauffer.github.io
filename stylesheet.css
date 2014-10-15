@@ -21,7 +21,8 @@ body{
 	font-family:launica, sans-serif;
 	height: 100%;
 	width: 100%;
-	color:white; 	
+	color:white; 
+	position: absolute;	
 }
 
 canvas
@@ -36,7 +37,7 @@ h2{
     	line-height:20px;
     	text-align: center;
     	font-family:launica;
-	position: absolute;
+	z-index: 1;
 }
 
 a{
