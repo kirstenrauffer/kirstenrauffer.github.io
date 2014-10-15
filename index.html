@@ -19,7 +19,7 @@
   		return Math.round((Math.random() * max - min) + min);
 	}
 
-	function star_field (star_number) {
+	function star_field (context,star_number) {
   		var x,y,brightness,radius; 
 
   		context.fillStyle = 'rgba(0,0,0,.0)';
@@ -42,7 +42,7 @@
   		context.restore();
 	}
 
-	function click_star_field (e) {
+	function click_star_field(e) {
  		clickX = e.clientX + document.body.scrollLeft;
   		clickY = e.clientY + document.body.scrollTop;
   		var brightness,radius; 
@@ -72,8 +72,8 @@
   
   		star_field(context, 300);
   
-  		canvas.addEventListener ("click", function () {
-    			click_star_field(e);
+  		canvas.addEventListener ("click",
+    			click_star_field;
   		}, false);
 	}
 
