@@ -1,15 +1,3 @@
-@font-face{
-	font-family: Tusj;
-	src: url(‘FFF_Tusj.tff’);
-}
-@font-face{
-	font-family: launica;
-	src: url(‘launica.tff’);
-}
-@font-face{
-	font-family: argh;
-	src: url(‘Aaargh.tff’);
-}
 html {
     	height: 100%;
 	background: #1c242f;
@@ -18,7 +6,8 @@ html {
 }
 
 body{
-	font-family:launica, sans-serif;
+	font-family: 'Amatic SC', cursive;
+
 	height: 100%;
 	width: 100%;
 	color:white; 
@@ -36,7 +25,6 @@ h2{
       	font-size: 65px;
     	line-height:20px;
     	text-align: center;
-    	font-family:launica;
 	z-index: 1;
 }
 
