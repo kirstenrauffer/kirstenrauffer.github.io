@@ -22,7 +22,6 @@ canvas
 }
 
 a{
-	font-size: 30px;
     	text-decoration: none;
     	color:white;
 }
@@ -32,6 +31,7 @@ a:hover{
 }
 
 #navlist{
+	font-size: 30px;
     	text-align:right;
 	z-index: 1;
 }
