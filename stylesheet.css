@@ -11,7 +11,7 @@ body{
 	position:absolute;
 	z-index:0;
 }
-#header{
+.header{
 	font-size: 100px;
 	z-index:1;	
 }
