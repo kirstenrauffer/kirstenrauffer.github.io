@@ -33,21 +33,12 @@ a:hover{
     	color:gray;
 }
 
-#header{
+h1{
 	font-size: 80px;
 	text-align:center;
 }
 
-#subheader{
+h2{
 	font-size: 40px;
 	text-align:center;
 }
-
-#navlist{
-	font-size: 30px;
-    	text-align:right;
-    	position: relative;
-    	left: -40px;
-}
-
-
