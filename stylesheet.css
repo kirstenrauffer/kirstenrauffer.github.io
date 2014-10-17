@@ -1,11 +1,5 @@
-html{
-	height: 100%;
-}
-
 body{
 	font-family: 'Amatic SC', cursive;
-	height: 100%;
-	width: 100%;
 	color:white; 
 	text-align:center;
 	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
