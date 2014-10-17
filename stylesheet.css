@@ -1,11 +1,12 @@
+html{
+	height: 100%;
+}
+
 body{
-    	width: 100%;
-    	height: 100%;
 	font-family: 'Amatic SC', cursive;
 	color:white; 
 	text-align:center;
 	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
-	background-size: cover;
 	overflow: hidden;
 	
 }
