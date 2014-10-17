@@ -46,18 +46,14 @@ function star_field (context, star_number) {
   for (var i = 0; i < star_number; i++) {
     x = Math.random() * WIDTH; // random x position
     y = Math.random() * HEIGHT; // random y position
-    radius = Math.random() * 1.1; // random radius
+    radius = Math.random() * 1.8; // random radius
     brightness = random(80, 100) / 100;
 
     // start drawing the star
     context.beginPath();
-    // set the brightness of the star
     context.globalAlpha = brightness;
-    // choose a random star colour
     context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
-    // draw the star (an arc of radius 2 * pi)
     context.arc(x, y, radius, 0, Math.PI * 2, true);
-    // fill the star and stop drawing it
     context.fill();
     context.closePath();
   }
@@ -79,7 +75,7 @@ function init () {
   canvas.height = HEIGHT;
   
   // create a star field
-  star_field(context, 1200);
+  star_field(context, 1500);
   
   // create a new star field when you click on the canvas
   canvas.addEventListener ("click", function () {
