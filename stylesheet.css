@@ -9,9 +9,11 @@ body{
 	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
 	background-size: cover;	
 	position:absolute;
+	z-index:0;
 }
 #header{
-	font-size: 100px;	
+	font-size: 100px;
+	z-index:1;	
 }
 
 #subheader{
