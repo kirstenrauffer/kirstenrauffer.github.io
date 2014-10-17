@@ -12,9 +12,8 @@
 	<script>
 
 	var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"], 
-    	HEIGHT = 525, // height of the canvas
+    	HEIGHT = 1000, // height of the canvas
     	WIDTH = 1000; // width of the canvas
-	var clickX=0; var clickY=0;
 
 	function random (min, max) {
   		return Math.round((Math.random() * max - min) + min);
@@ -24,7 +23,8 @@
   		var x,y,brightness,radius; 
 
   		context.fillStyle = 'rgba(0,0,0,.0)';
-  		context.fillRect(0, 0, WIDTH, HEIGHT);
+  		context.width = window.innerWidth;
+		context.height = windowInnerHeight;
   		context.save();
   
 		for (var i = 0; i < star_number; i++) {
