@@ -1,6 +1,5 @@
 html{
 	height: 100%;
-	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
 }
 
 body{
@@ -9,6 +8,7 @@ body{
 	width: 100%;
 	color:white; 
 	text-align:center;
+	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);
 	
 }
 
