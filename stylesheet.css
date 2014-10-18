@@ -4,7 +4,8 @@ html{
 }
 
 body{
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
 	color:white; 
 	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);	
 	overflow:hidden;
