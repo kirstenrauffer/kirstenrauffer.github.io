@@ -20,9 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
-
-
 !function($){
 
     "use strict";
@@ -313,7 +310,7 @@
         // false = infinite
         loopCount: false,
         // show cursor
-        showCursor: true,
+        showCursor: false,
         // character for cursor
         cursorChar: "|",
         // attribute to type (null == text)
