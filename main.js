@@ -5,9 +5,10 @@ $(document).ready(function() {
     setInterval ('cursorAnimation()', 600);
     captionEl = $('#caption'); 
 
-    setInterval(type, 1000);
+   // setInterval(type, 1000);
 });
 
+/*
 function type() {
     erase();
 
@@ -25,6 +26,7 @@ function erase(){
         setTimeout('erase()', 100);
     }
 }
+*/
 
 function cursorAnimation() {
     $('#cursor').animate({
