@@ -1,14 +1,14 @@
-var captionList = ['built my own ukulele from scratch!','am a Pokemon master.','attend Rutgers University.','think that you're pretty great.','am a buffalo wing fanatic.','can smell fear.','am a study Computer Science.''];
-var caption = caption[Math.round(Math.random()*7)];
+var captionList = ["built my own ukulele from scratch!","am a Pokemon master.","attend Rutgers University.","think that you are pretty great.","am a buffalo wing fanatic.","can smell fear.","am a study Computer Science."];
+var caption = captionList[Math.round(Math.random()*7)];
 
 $(document).ready(function() {
     setInterval ('cursorAnimation()', 600);
     captionEl = $('#caption'); 
 
-   // setInterval(type, 1000);
+    setInterval(type, 1000);
 });
 
-/*
+
 function type() {
     erase();
 
@@ -26,7 +26,6 @@ function erase(){
         setTimeout('erase()', 100);
     }
 }
-*/
 
 function cursorAnimation() {
     $('#cursor').animate({
