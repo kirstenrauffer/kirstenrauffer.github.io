@@ -12,18 +12,8 @@
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-
 !function($){
-
     "use strict";
-
     var Typed = function(el, options){
 
         // chosen element to manipulate text
@@ -282,7 +272,6 @@
                 // Send the callback
                 self.options.resetCallback();
             }
-
         };
 
     $.fn.typed = function (option) {
@@ -296,7 +285,6 @@
     };
 
     $.fn.typed.defaults = {
-        strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
         // typing speed
         typeSpeed: 0,
         // time before typing starts
@@ -309,9 +297,8 @@
         loop: false,
         // false = infinite
         loopCount: false,
-        // show cursor
+        //cursor
         showCursor: false,
-        // character for cursor
         cursorChar: "|",
         // attribute to type (null == text)
         attr: null,
