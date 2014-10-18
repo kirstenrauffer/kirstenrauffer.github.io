@@ -13,6 +13,14 @@
 	<div class = "header">
 		<h1><b><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></b></h2>
 		<h2>Hi! I'm a Junior studying Computer Science and I %%</h1>
+
+		<script type="text/javascript">
+		var phrases = ["built my own ukulele from scratch!","am a Pokemon master.","attend Rutgers University.","think that you're pretty great.","am a buffalo wing fanatic.","can smell fear.","am a study Computer Science."];
+		var myOldString = "Hi! I %";
+		var myNewString = myOldString.replace("&", phrases[Math.round((Math.random() * 7))]);
+		document.write(myNewString);
+		</script>
+
 		<p id = "navlist"> <a href=#About>About</a> | <a href=#Projects>Projects</a> | <a href=#Contact>Contact</a> | <a href=resume.pdf>Resume</a></p>
 	</div>
 	
@@ -64,7 +72,7 @@
   		canvas.width = WIDTH;
   		canvas.height = HEIGHT;
   
-  		star_field(context, 600);
+  		star_field(context, 250);
   
   		canvas.addEventListener ("click", function () {
     		star_field(context, 200);
