@@ -6,25 +6,15 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,100,200,500,600' rel='stylesheet' type='text/css'></head>
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>	
-	
-<!-- Add favicon -->
-	  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-
-
-	<script type="text/javascript"> 
-	function changeColor(newColor) {
-    	var elem = document.getElementById("dyn");
-	var phrases = ["built my own ukulele from scratch!","am a Pokemon master.","attend Rutgers University.","think that you're pretty great.","am a buffalo wing fanatic.","can smell fear.","am a study Computer Science."];
-    	elem.replace("&", phrases[Math.round((Math.random() * 7))]);
-  	}
-  </script>
+	<link type="text/javascript" rel="javascript" href="javascript.js"/>	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 <body>
     
 	<div class = "header">
-		<h1><b><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></b></h2>
-		<h1 id="dyn">Hi! I'm a Junior studying Computer Science and I %%</h1>
-
+		<h1><b><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></b></h1>
+		<p class="console"><span>Hi! Let me tell you a little but about myself. I </span><span id="caption"></span><span id="cursor">|<span></p>
 		<p id = "navlist"> <a href=#About>About</a> | <a href=#Projects>Projects</a> | <a href=#Contact>Contact</a> | <a href=resume.pdf>Resume</a></p>
 	</div>
 	
