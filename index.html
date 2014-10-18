@@ -5,8 +5,32 @@
 	<title>Kirsten Rauffer</title>
 
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,100,200,500,600' rel='stylesheet' type='text/css'></head>
-	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>	
-	<link type="text/javascript" rel="javascript" href="main.js"/>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="typed.js" type="text/javascript"></script>
+    <script>
+    $(function(){
+
+        $("#caption").typed({
+            strings: ["built a ukulele from scratch!", "think you have a great smile.", "attend Rutgers University!", "am studying Computer Science.","can smell fear.","have the eye of a tiger."],
+            typeSpeed: 30,
+            backDelay: 500,
+            loop: true,
+            // defaults to false for infinite loop
+            loopCount: true,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+	
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -14,7 +38,8 @@
     
 	<div class = "header">
 		<h1><b><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></b></h1>
-		<p class="console"><span>Hi! Let me tell you a little but about myself. I </span><span id="caption"></span><span id="cursor">|<span></p>
+
+		<p class="console"><span>Hi! I </span><span id="caption"></span><span id="cursor">|<span></p>
 
 		<p id = "navlist"> <a href=#About>About</a> | <a href=#Projects>Projects</a> | <a href=#Contact>Contact</a> | <a href=resume.pdf>Resume</a></p>
 	</div>
