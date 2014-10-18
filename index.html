@@ -10,22 +10,19 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="typed.js" type="text/javascript"></script>
     <script>
-    $(function(){
+	$(function(){
 
-        $("#caption").typed({
-            strings: ["built a ukulele from scratch!", "think you have a great smile.", "attend Rutgers University!", "am studying Computer Science.","can smell fear.","have the eye of a tiger."],
-            typeSpeed: 30,
-            backDelay: 500,
-            loop: true,
-            // defaults to false for infinite loop
-            loopCount: true,
-            callback: function(){ foo(); },
-            resetCallback: function() { newTyped(); }
-        });
-
+		$("#caption").typed({
+         			strings: ["built a ukulele from scratch!", "think you have a great smile.", "attend Rutgers University!", "am studying Computer Science.","can smell fear.","have the eye of a tiger."],
+         			typeSpeed: 5,
+         			backDelay: 4000,            
+			loop: true,
+         			// defaults to false for infinite loop
+         			loopCount: true,
+         			callback: function(){ foo(); },
+        			resetCallback: function() { newTyped(); }
+       		});
     });
-
-    function newTyped(){ /* A new typed object */ }
 
     function foo(){ console.log("Callback"); }
 
