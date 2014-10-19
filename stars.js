@@ -5,7 +5,7 @@ var screenW;
 var stars = [];
 var fps = 50;
 var numStars = 1000;
-var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"]
+var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"];
 
 $('document').ready(function() {
   
@@ -106,7 +106,7 @@ Star.prototype.draw = function() {
 	}
 	context.lineTo(0, this.length);
 	context.closePath();
-	context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];;
+	context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
 	context.shadowBlur = 5;
 	context.shadowColor = '#ffff33';
 	context.fill();
