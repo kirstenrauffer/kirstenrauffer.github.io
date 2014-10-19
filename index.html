@@ -40,32 +40,27 @@
 		<p>and I <span id="caption"></span><span id="cursor">|<span></p>
 	</div>
 	
-		<canvas id = stars></canvas>
+	<canvas id = stars></canvas>
 	<script>
 	var canvas;
-var context;
-var screenH;
-var screenW;
-var stars = [];
-var fps = 50;
-var numStars = 1000;
-var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"];
+	var context;
+	var screenH;
+	var screenW;
+	var stars = [];
+	var fps = 50;
+	var numStars = 1000;
 
-$('document').ready(function() {
+	$('document').ready(function() {
   
-  // Calculate the screen size
 	screenH = $(window).height();
 	screenW = $(window).width();
 	
-	// Get the canvas
 	canvas = $('#stars');
-	
-	// Fill out the canvas
+
 	canvas.attr('height', screenH);
 	canvas.attr('width', screenW);
 	context = canvas[0].getContext('2d');
 	
-	// Create all the stars
 	for(var i = 0; i < numStars; i++) {
 		var x = Math.round(Math.random() * screenW);
 		var y = Math.round(Math.random() * screenH);
@@ -82,8 +77,8 @@ $('document').ready(function() {
 	setInterval(animate, 1000 / fps);
 });
 
-/**
- * Animate the canvas
+/*
+ * Twinkling
  */
 function animate() {
 	context.clearRect(0, 0, screenW, screenH);
@@ -92,13 +87,8 @@ function animate() {
 	})
 }
 
-/**
+/*
  * Star
- * 
- * @param int x
- * @param int y
- * @param int length
- * @param opacity
  */
 function Star(x, y, length, opacity) {
 	this.x = parseInt(x);
@@ -109,15 +99,10 @@ function Star(x, y, length, opacity) {
 	this.increment = Math.random() * .03;
 }
 
-/**
+/*
  * Draw a star
- * 
- * This function draws a start.
- * You need to give the contaxt as a parameter 
- * 
- * @param context
  */
-Star.prototype.draw = function() {
+	Star.prototype.draw = function() {
 	context.rotate((Math.PI * 1 / 10));
 	
 	// Save the context
@@ -150,7 +135,20 @@ Star.prototype.draw = function() {
 	}
 	context.lineTo(0, this.length);
 	context.closePath();
-	context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
+	
+	var ran = Math.round(Math.random()*3);
+	if(ran == 0){
+		context.fillStyle = "rgba(255,255,255,"+this.opacity+")";
+	}
+	else if(ran == 1){
+		context.fillStyle = "rgba(255,253,296,"+this.opacity+")";
+	}
+	else if(ran == 2){
+		context.fillStyle = "rgba(212,251,255,"+this.opacity+")";
+	}
+	else{
+		context.fillStyle = "rgba(255,255,200,"+this.opacity+")";
+	}
 	context.shadowBlur = 5;
 	context.shadowColor = '#ffff33';
 	context.fill();
@@ -161,9 +159,7 @@ Star.prototype.draw = function() {
 	function random (min, max) {
   		return Math.round((Math.random() * max - min) + min);
 	}
-
 	</script>
-	
 </body>
 </html>
 
