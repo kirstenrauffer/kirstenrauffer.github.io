@@ -48,12 +48,12 @@ h1{
 }
 
 p{
-	font-size: 25px;
+	font-size: 28px;
 }
 
-#greetings{
-	margin-bottom:-15px;
-	left:20%;
+.greetings{
+	margin-bottom:-50px;
+	left:40%;
 }
 
 #cursor{
