@@ -14,7 +14,7 @@ $('document').ready(function() {
 	screenW = $(window).width();
 	
 	// Get the canvas
-	canvas = $('#space');
+	canvas = $('#stars');
 	
 	// Fill out the canvas
 	canvas.attr('height', screenH);

@@ -41,62 +41,8 @@
 		<p>and I <span id="caption"></span><span id="cursor">|<span></p>
 	</div>
 	
-	<div id = "stars">
-		<canvas></canvas>
-	</div>
-	<script>
-
-	var STAR_COLOURS = ["#ffffff", "#ffe9c4", "#d4fbff"],
-    	HEIGHT = 1250, 
-	WIDTH = 2500; 
-
-	function random (min, max) {
-  		return Math.round((Math.random() * max - min) + min);
-	}
-
-	function star_field (context, star_number) {
-  		var x,
-		y,
-		brightness,
-		radius;
-
-  		context.fillStyle = 'rgba(0,0,0,.0)';
- 		context.fillRect(0, 0, WIDTH, HEIGHT);
-  		context.save();
-  
-  		for (var i = 0; i < star_number; i++) {
-    			x = Math.random() * WIDTH; // random x position
-    			y = Math.random() * HEIGHT; // random y position
-    			radius = (Math.random() * 2)+1; // random radius
-    			brightness = random(80, 100) / 100;
-
-    			// start drawing the star
-    			context.beginPath();
-    			context.globalAlpha = brightness;
-    			context.fillStyle = STAR_COLOURS[random(0, STAR_COLOURS.length)];
-    			context.arc(x, y, radius, 0, Math.PI * 2, true);
-    			context.fill();
-    			context.closePath();
-  		}
-  		// restore the previous context state
-  		context.restore();
-	}
-
-	function init () {
-  		var canvas = document.getElementsByTagName('canvas')[0],
-      		context = canvas.getContext('2d');
-  
-  		canvas.width = WIDTH;
-  		canvas.height = HEIGHT;
-  
-  		star_field(context, 250);
-  
-  		canvas.addEventListener ("click", function () {
-    		star_field(context, 200);
-  		}, false);
-	}
-	init();
-	</script>
+		<canvas id = stars></canvas>
+	<script></script>
 	
 </body>
 </html>
