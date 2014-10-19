@@ -51,6 +51,11 @@ h1{
 	font-size: 30px;
 }
 
+#greetings{
+	margin-bottom:-15px;
+	left:10px;
+}
+
 #cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
