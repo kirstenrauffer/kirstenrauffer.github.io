@@ -28,7 +28,7 @@ void draw() {
   textFont(createFont("Arial", 15));
   text("new constellation", 10, 15); 
   
-  float r = random(3, 5);
+  float r = random(5, 7);
   float x = random(1, 4);
 
   if (x <= 2) {
@@ -45,7 +45,8 @@ void draw() {
     }
     else{
        stroke(255, 80);
-       strokeWeight(0.7);
+       strokeWeight(2);
+       fill(230,231,232,255);
        line(pX, pY, X, Y); 
     }
     mousePressed = false;
@@ -55,7 +56,7 @@ void draw() {
 }
 
 void mousePressed() {  
-  float r = random(3, 5);
+  float r = random(5, 7);
   float x = random(1, 4);
 
   pX = pmouseX;
