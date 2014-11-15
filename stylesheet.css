@@ -71,8 +71,10 @@ p{
 }
 
 .archer{
+	position:absolute;
 	right:70%;
 	top:10%;
+	opacity: 70;
 }
 
 #cursor{
