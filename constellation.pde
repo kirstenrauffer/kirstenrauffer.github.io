@@ -7,7 +7,7 @@ boolean rectOver;
 
 void setup()
 {
-  size(800, 400);
+  size(1600, 1400);
   background(0,0,0,0);
 }
 
