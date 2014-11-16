@@ -21,6 +21,15 @@ body{
     	margin-left:auto;
     	margin-right:auto;
 }
+
+.archer{
+	position:absolute;
+	z-index:2;
+	left:-20%;
+	top:30%;
+	opacity:70;
+}
+
 canvas
 {
 	position:absolute;
@@ -51,14 +60,6 @@ p{
 
 .greetings{
 	margin-bottom:-50px;
-}
-
-.archer{
-	position:absolute;
-	z-index:2;
-	right:80%;
-	top:20%;
-	opacity:70;
 }
 
 #cursor{
