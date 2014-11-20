@@ -4,6 +4,7 @@ color c2 = #FFE9C4;
 color c3 = #D4FBFF;
 float X, Y, pX, pY, r,radius,xpos,ypos,c;
 boolean rectOver;
+boolean newC;
 
 
 void setup()
@@ -32,21 +33,12 @@ void setup()
 }
 
 void draw() {
-  update(mouseX, mouseY);
   
   noStroke();
   fill(0,0,0,0);
   rect(0,0,60,30);
   
-  fill(color(c1));
-  
-  if(rectOver) {
-    fill(color(204));
-    count = 0;
-  }
-  
-  textFont(createFont("Arial", 15));
-  text("new constellation", 10, 15); 
+  fill(color(c1)); 
   
   float r = random(3, 5);
   float x = random(1, 4);
@@ -90,10 +82,6 @@ void mousePressed() {
     fill(c3);
   }
   
-  if (rectOver) {
-    fill(color(0));
-  }
-  
   ellipse(mouseX, mouseY, r, r);
  
 }
@@ -103,22 +91,6 @@ void mouseReleased(){
   Y = mouseY;
 }
 
-void update(int x, int y){
-   if (overRect(0, 0, 125, 30)) {
-      rectOver = true; 
-   }
-   else{
-      rectOver = false; 
-   }
+void keyPressed(){
+   count=0;
 }
-
-boolean overRect(int x, int y, int width, int height)  {
-  if (mouseX >= x && mouseX <= x+width && 
-      mouseY >= y && mouseY <= y+height) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-
