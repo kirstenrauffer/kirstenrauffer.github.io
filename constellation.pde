@@ -2,17 +2,19 @@ int count = 0;
 color c1 = #FFFFFF;
 color c2 = #FFE9C4;
 color c3 = #D4FBFF;
-float X, Y, pX, pY, r;
+float X, Y, pX, pY, r,radius,xpos,ypos,c;
 boolean rectOver;
+
 
 void setup()
 {
   size(1600, 1400);
   background(0,0,0,0);
-  
-  for(int i=0; i<=400; i=i+1){
-  float radius = random(3, 5);
-  float c = random(1, 4);
+  noStroke();
+ 
+  for(int i=0; i<=300; i=i+1){
+  radius = random(3, 5);
+  c = random(1, 4);
 
   if (c <= 2) {
     fill(c1);
@@ -22,8 +24,8 @@ void setup()
     fill(c3);
   }
   
-  float xpos = random(0, 1500);
-  float ypos = random(0,1400);
+  xpos = random(0, 1500);
+  ypos = random(0,1400);
   
   ellipse(xpos, ypos, radius, radius);
   }
