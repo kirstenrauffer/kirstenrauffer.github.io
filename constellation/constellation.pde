@@ -9,6 +9,24 @@ void setup()
 {
   size(1600, 1400);
   background(0,0,0,0);
+  
+  for(int i=0; i<=400; i=i+1){
+  float radius = random(3, 5);
+  float c = random(1, 4);
+
+  if (c <= 2) {
+    fill(c1);
+  } else if (c <= 3) {
+    fill(c2);
+  } else {
+    fill(c3);
+  }
+  
+  float xpos = random(0, 1500);
+  float ypos = random(0,1400);
+  
+  ellipse(xpos, ypos, radius, radius);
+  }
 }
 
 void draw() {
