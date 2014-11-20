@@ -1,9 +1,11 @@
 
-html{
+html
+{
     	height: 100%;
 }
 
-body{
+body
+{
 	font-family: 'VT323', sans-serif;
 	font-weight: 100;
 	color:white; 
@@ -11,7 +13,8 @@ body{
 	overflow:hidden;
 }
 
-.header{
+.header
+{
 	position:absolute;
 	text-align:center;
 	z-index:2;
@@ -22,12 +25,13 @@ body{
     	margin-right:auto;
 }
 
-.archer{
+.archer
+{
 	position:absolute;
 	z-index:2;
-	left:70%;
-	top:5%;
-	opacity:70%;
+	left:55%;
+	top:-5%;
+	opacity:70;
 }
 
 canvas
@@ -43,7 +47,8 @@ a{
     	color:white;
 }
 
-a:hover{
+a:hover
+{
     	color:gray;
 }
 
@@ -68,16 +73,19 @@ p{
     	-moz-animation: blink 0.7s infinite;
     	animation: blink 0.7s infinite;
 }
+
 @keyframes blink{
     	0% { opacity:1; }
     	50% { opacity:0; }
     	100% { opacity:1; }
 }
+
 @-webkit-keyframes blink{
     	0% { opacity:1; }
     	50% { opacity:0; }
     	100% { opacity:1; }
 }
+
 @-moz-keyframes blink{
     	0% { opacity:1; }
     	50% { opacity:0; }
