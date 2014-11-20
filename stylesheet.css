@@ -25,9 +25,9 @@ body{
 .archer{
 	position:absolute;
 	z-index:2;
-	left:-20%;
-	top:30%;
-	opacity:70;
+	left:70%;
+	top:5%;
+	opacity:70%;
 }
 
 canvas
