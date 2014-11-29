@@ -2,20 +2,24 @@ int count = 0;
 color c1 = #FFFFFF;
 color c2 = #FFE9C4;
 color c3 = #D4FBFF;
-float X, Y, pX, pY, r,radius,xpos,ypos,c;
+float X, Y, Z, pX, pY, pZ, r,radius,xpos,ypos,zpos,c;
 boolean rectOver;
 boolean newC;
-
+Sphere[] arrayOfSpheres;
 
 void setup()
 {
-  size(1600, 1400);
+  size(1600, 1400, P3D);
   background(0,0,0,0);
   noStroke();
  
-  for(int i=0; i<=300; i=i+1){
-  radius = random(3, 5);
-  c = random(1, 4);
+  lights();
+ 
+   
+ 
+  for(int i=0; i<=100; i=i+1){
+    radius = random(3, 5);
+    c = random(1, 4);
 
   if (c <= 2) {
     fill(c1);
@@ -25,18 +29,23 @@ void setup()
     fill(c3);
   }
   
-  xpos = random(0, 1500);
-  ypos = random(0,1400);
+  xpos = random(0, 800);
+  ypos = random(0, 700);
+  zpos = random(0);
   
-  ellipse(xpos, ypos, radius, radius);
+  arrayOfSpheres = new Sphere[10];
+  arrayOfSpheres[i] = new Sphere(xpos,ypos,zpos,radius,c1);
   }
+  
+  for (int i = 0; i < arrayOfSpheres.length; i++) {
+    arrayOfSpheres[i].display();
+  }
+  
 }
 
 void draw() {
   
   noStroke();
-  fill(0,0,0,0);
-  rect(0,0,60,30);
   
   fill(color(c1)); 
   
@@ -73,6 +82,7 @@ void mousePressed() {
 
   pX = pmouseX;
   pY = pmouseY;
+  pZ = random(0,1000);
 
   if (x <= 2) {
     fill(c1);
@@ -89,8 +99,11 @@ void mousePressed() {
 void mouseReleased(){
   X = mouseX;
   Y = mouseY;
+  Z = random(0,1000);
 }
 
 void keyPressed(){
    count=0;
 }
+
+
