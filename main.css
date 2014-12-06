@@ -6,7 +6,7 @@ html
 
 body
 {
-	font-family: 'VT323', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 100;
 	color:white; 
 	background-color:#FFF8E7;	
@@ -54,7 +54,7 @@ a:hover
 
 
 h1{
-   
+   	font-family: 'Homemade Apple', cursive;
 	font-size: 80px;
 	margin-bottom:-30px;
 }
