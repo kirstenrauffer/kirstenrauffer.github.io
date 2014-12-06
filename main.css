@@ -9,7 +9,7 @@ body
 	font-family: 'VT323', sans-serif;
 	font-weight: 100;
 	color:white; 
-	background-image:-webkit-linear-gradient(top, #001524 30%, #03243c, #002642 10%, #313763 95%, #30c978 150%);	
+	background-color:#FFF8E7;	
 	overflow:hidden;
 }
 
