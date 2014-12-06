@@ -8,7 +8,7 @@ body
 {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 100;
-	color:white; 
+	color:21201B; 
 	background-color:#FFF8E7;	
 	overflow:hidden;
 }
@@ -55,7 +55,8 @@ a:hover
 
 h1{
    	font-family: 'Homemade Apple', cursive;
-	font-size: 80px;
+	color: #807EB2;
+	font-size: 35px;
 	margin-bottom:-30px;
 }
 
