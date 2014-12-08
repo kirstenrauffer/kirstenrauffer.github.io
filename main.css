@@ -6,11 +6,15 @@ html
 
 body
 {
-	font-family: 'Josefin Sans', sans-serif;
-	font-weight: 100;
 	color:21201B; 
 	background-color:#FFF8E7;	
 	overflow:hidden;
+}
+
+#text{
+	color:#FFFFFF;
+	font-size:20px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .header
@@ -19,27 +23,17 @@ body
 	text-align:center;
 	z-index:2;
 	left:0;
-    	right:0;
-    	top:25%;
+    	top:10%;
     	margin-left:auto;
     	margin-right:auto;
 }
 
-.archer
+.navbar
 {
 	position:absolute;
 	z-index:2;
-	left:55%;
-	top:-5%;
-	opacity:70;
-}
-
-canvas
-{
-	position:absolute;
-	z-index:3;
-	left:0;
-	top:0;	
+	left:50%;
+	top:10%;
 }
 
 a{
@@ -53,20 +47,13 @@ a:hover
 }
 
 
-h1{
+.name
+{
    	font-family: 'Homemade Apple', cursive;
 	color: #807EB2;
 	font-size: 35px;
-	margin-bottom:-30px;
 }
 
-p{
-	font-size: 30px;
-}
-
-.greetings{
-	margin-bottom:-50px;
-}
 
 #cursor{
     	opacity: 1;
