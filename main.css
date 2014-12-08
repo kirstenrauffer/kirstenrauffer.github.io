@@ -26,6 +26,7 @@ body
     	top:10%;
     	margin-left:auto;
     	margin-right:auto;
+	width: 200px;
 }
 
 .navbar
@@ -34,6 +35,7 @@ body
 	z-index:2;
 	left:50%;
 	top:10%;
+	width: 400px;
 }
 
 a{
