@@ -1,12 +1,5 @@
-
-html
-{
-    	height: 100%;
-}
-
 body
 {
-	color:21201B; 
 	background-color:#FFF8E7;	
 	overflow:hidden;
 }
@@ -22,7 +15,6 @@ body
 	position:absolute;
 	text-align:center;
 	z-index:2;
-	left:0;
     	top:10%;
     	margin-left:auto;
     	margin-right:auto;
