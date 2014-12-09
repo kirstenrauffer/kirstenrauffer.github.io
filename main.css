@@ -28,9 +28,11 @@ li {
 #header
 {
 	float:left;
+	min-width: 410px;
+	max-width: 500px;
 	margin-top: 1%;
 	margin-left: 4%;
-	width: 400px;
+	padding-right:45%;
 }
 
 #subheader
@@ -43,9 +45,8 @@ li {
 {
 	float:left;
 	text-align:center;
-	margin-left:45%;
 	min-width:275px;
-	max-width:400px;
+	max-width:300px;
 }
 
 #name
@@ -74,7 +75,7 @@ li {
     background: white;
     height: 150px;
     width: 600px;
-    margin-right: 25%;
+    margin-right: 30%;
 }
 #container_shadow{
     position: absolute;
@@ -159,6 +160,7 @@ li {
 	width: 100%;
 	background: #FFEAAA;
 }
+
 #bike{
 	position: absolute;
 	top:-10%;
