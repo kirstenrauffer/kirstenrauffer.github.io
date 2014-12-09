@@ -92,12 +92,12 @@ li {
 
 #quotes{
 	font-family: "Coustard", serif;
-    	font-size: 70px;
+    	font-size: 40px;
+    	margin-top: 50px;
 }
 
 #typed{
 	font-family: "Josefin Sans", sans-serif;
-	font-size: 40px;
 }
 
 .underline {
