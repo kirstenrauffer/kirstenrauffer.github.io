@@ -1,6 +1,6 @@
 body
 {
-	background-color:#FFF8E7;	
+	background-color:#FFD5C7;	
 	overflow:hidden;
 }
 
@@ -64,6 +64,26 @@ li {
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
+
+#container{
+    position: absolute;
+    z-index:2;
+    top: 25%;
+    left: 25%;
+    background: white;
+    height: 200px;
+    width: 700px;
+}
+#container_shadow{
+    position: absolute;
+    z-index: 1;
+    top: 27%;
+    left: 26%;
+    background: #B5E8BF;
+    height: 200px;
+    width: 700px;
+}
+
 
 .underline {
 	display: inline-block;
