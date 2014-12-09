@@ -46,7 +46,7 @@ li {
 	position:absolute;
 	position:absolute;
 	text-align:right;
-	max-width: 310px;
+	min-width: 310px;
 	margin-right: 5%;
 	z-index:2;
 	left: 76%;	
