@@ -25,13 +25,21 @@ li {
 	color: black;
 }
 
+#name
+{
+   	font-family: "Homemade Apple", cursive;
+	font-size: 25px;
+    	color: black;
+}
+
 #header
 {
 	position:absolute;
+	z-index:3;
 	width: 400px;
 	left: 35px;
 	top: 25px;
-	z-index:2;
+	margin: 0 auto;
 	
 }
 
@@ -44,28 +52,11 @@ li {
 #navbar
 {
 	position:absolute;
-	position:absolute;
+	z-index:2;
+	left: 76%;
 	text-align:right;
 	min-width: 310px;
-	margin-right: 5%;
-	z-index:2;
-	left: 76%;	
-}
-
-#name
-{
-   	font-family: "Homemade Apple", cursive;
-	font-size: 25px;
-    	color: black;
-
-}
-
-
-#cursor{
-    	opacity: 1;
-    	-webkit-animation: blink 0.7s infinite;
-    	-moz-animation: blink 0.7s infinite;
-    	animation: blink 0.7s infinite;
+	margin: 0 auto;	
 }
 
 #container{
@@ -103,8 +94,8 @@ li {
 
 #bike{
 	position: absolute;
-	top:10%;
-	left:25%;
+	top:-10%;
+	left:20%;
 	margin: 0 auto;
 }
 
@@ -169,22 +160,4 @@ li {
 .underline-yellow:hover:after {
 	width: 100%;
 	background: #FFEAAA;
-}
-
-@keyframes blink{
-    	0% { opacity:1; }
-    	50% { opacity:0; }
-    	100% { opacity:1; }
-}
-
-@-webkit-keyframes blink{
-    	0% { opacity:1; }
-    	50% { opacity:0; }
-    	100% { opacity:1; }
-}
-
-@-moz-keyframes blink{
-    	0% { opacity:1; }
-    	50% { opacity:0; }
-    	100% { opacity:1; }
 }
