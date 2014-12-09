@@ -101,6 +101,13 @@ li {
 	font-family: "Josefin Sans", sans-serif;
 }
 
+#bike{
+	position: absolute;
+	top:30%;
+	left:30%;
+	margin: 0 auto;
+}
+
 .underline-blue {
 	display: inline-block;
 	position: relative;
