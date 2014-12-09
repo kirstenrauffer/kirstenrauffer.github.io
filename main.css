@@ -78,7 +78,7 @@ li {
     	width: 600px;
     	z-index:2;
     	top: 30%;
-    	left: 30%;
+    	left: 29%;
 }
 #container_shadow{
     	position: absolute;
@@ -87,14 +87,14 @@ li {
     	width: 600px;
     	z-index: 1;
     	top: 32%;
-    	left: 31%;
+    	left: 30%;
 
 }
 
 #quotes{
 	font-family: "Coustard", serif;
     	font-size: 40px;
-    	margin-top: 32px;
+    	margin-top: 30px;
 }
 
 #typed{
