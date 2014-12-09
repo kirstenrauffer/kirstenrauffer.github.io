@@ -73,50 +73,94 @@ li {
 	text-align:center;
 	line-height: 30px;
 	background: white;
-    	height: 200px;
-    	width: 700px;
+    	height: 150px;
+    	width: 600px;
     	z-index:2;
-    	top: 25%;
-    	left: 25%;
+    	top: 30%;
+    	left: 30%;
 }
 #container_shadow{
     	position: absolute;
    	background: #B5E8BF;	
-	height: 200px;
-    	width: 700px;
+	height: 150px;
+    	width: 600px;
     	z-index: 1;
-    	top: 27%;
-    	left: 26%;
+    	top: 32%;
+    	left: 31%;
 
 }
 
 #quotes{
 	font-family: "Coustard", serif;
     	font-size: 40px;
-    	margin-top: 50px;
+    	margin-top: 40px;
 }
 
 #typed{
 	font-family: "Josefin Sans", sans-serif;
 }
 
-.underline {
+.underline-blue {
 	display: inline-block;
 	position: relative;
 	padding-bottom: 3px;
 }
-.underline:after {
+
+.underline-green {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+
+.underline-yellow {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+
+.underline-blue:after {
 	content: '';
 	display: block;
 	margin: auto;
-	height: 2px;
+	height: 3px;
 	width: 0px;
 	background: transparent;
 	transition: width .5s ease, background-color .5s ease;
 }
-.underline:hover:after {
+
+.underline-green:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.underline-yellow:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.underline-blue:hover:after {
 	width: 100%;
-	background: black;
+	background: #C7D1FF;
+}
+
+.underline-green:hover:after {
+	width: 100%;
+	background: #B5E8BF;
+}
+
+.underline-yellow:hover:after {
+	width: 100%;
+	background: #FFEAAA;
 }
 
 @keyframes blink{
