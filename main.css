@@ -71,7 +71,7 @@ li {
 #container{
     	position: absolute;
 	text-align:center;
-	line-height: 30px;
+	line-height: 45px;
 	background: white;
     	height: 150px;
     	width: 600px;
@@ -93,7 +93,7 @@ li {
 #quotes{
 	font-family: "Coustard", serif;
     	font-size: 40px;
-    	margin-top: 40px;
+    	margin-top: 32px;
 }
 
 #typed{
