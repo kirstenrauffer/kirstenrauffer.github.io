@@ -44,12 +44,12 @@ li {
 #navbar
 {
 	position:absolute;
-	margin: 0 auto;
-	width: 300px;
-	left: 79%;
+	position:absolute;
+	text-align:right;
+	max-width: 310px;
+	margin-right: 5%;
 	z-index:2;
-	
-	
+	left: 76%;	
 }
 
 #name
@@ -73,6 +73,7 @@ li {
 	text-align:center;
 	line-height: 45px;
 	background: white;
+	margin-right: 25%;
     	height: 150px;
     	width: 600px;
     	z-index:2;
