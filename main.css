@@ -71,6 +71,7 @@ li {
 #container{
     	position: absolute;
 	text-align:center;
+	line-height: 30px;
 	background: white;
     	height: 200px;
     	width: 700px;
@@ -95,6 +96,7 @@ li {
 }
 
 #typed{
+	font-family: "Josefin Sans", sans-serif;
 	font-size: 40px;
 }
 
