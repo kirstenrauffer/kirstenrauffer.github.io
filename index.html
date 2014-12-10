@@ -10,56 +10,25 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="main.css"/>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Josefin+Sans|Homemade+Apple|Coustard">
-	<script src="jquery-1.11.1.min.js"></script>
-	<script src="processing.min.js"></script>
-	<script src="typed.js" type="text/javascript"></script>
-
-    	<script>
-	$(function(){
-		$("#typed").typed({
-         			strings: ["The greatest pleasure in life is doing what people say you cannot do."],
-         			typeSpeed: 50,
-         			backDelay: 4000,            
-			loop: true,
-         			loopCount: false,
-         			callback: function(){ foo(); },
-        			resetCallback: function() { newTyped(); }
-       		});
-   	 });
-
-    	function foo(){ console.log("Callback"); }
-    	</script>
-	
-	
 
 </head>
 
 <body>
-	<div id="header">
-		<a href="kirstenrauffer.com" id="name">Kirsten Rauffer</a>
-    	<div id="subheader">
-    	    <p class="text">design + direction</p>
-         </div>
-	</div>
-	<div id="navbar">
-		<ul class="text">
-            		<li class="underline-blue"><a href="#about">about</a></li>
-            		<li class="underline-green"><a href="#resume">resume</a></li>
-           		 <li class="underline-yellow"><a href="#contact">contact</a></li>
-       		</ul>
-	</div>
+	<div class="nav-container">
+		<div class="header">
+			<a href="kirstenrauffer.com" id="name">Kirsten Rauffer</a>
+     		</div>	
+		<div class="navbar">
+			<ul class="text">
+           			 <li class="underline"><a href="#about">ABOUT</a></li>
+           			 <li class="underline"><a href="#resume">RESUME</a></li>
+            			<li class="underline"><a href="#contact">CONTACT</a></li>
+        		</ul>
+    		</div>
+   	 </div>
 	
-	<div id="container">
-	<div id="changing_quote">
-		<p id="quotes">“<span id="typed"></span>”</p>
+	<div id="footer">
+		<p></p>
 	</div>
-	</div>
-	<div id="container_shadow">
-	</div>
-
-	<object id="bike" type="image/svg+xml" data="/svg/bike.svg"></object>
-		
 </body>
 </html>
-
-
