@@ -1,25 +1,35 @@
+html 
+{
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body
 {
-	margin: 0;
+	margin: 0 0;
 	padding: 0;
 	overflow:hidden;
 	background-color: #FFFEF5;
-;
-	
 }
 
-a{
+a
+{
     text-decoration: none;
     color:black;
 }
 
-ul {
+ul 
+{
     list-style-type: none;
+    margin-left:-41px;
 }
 
-li {
-    display: inline;
-    padding: 15px;
+li 
+{
+    display: block;
+    padding: 10px;
+    
 }
 
 .text
@@ -29,48 +39,40 @@ li {
 	font-family: "Josefin Sans", sans-serif;
 }
 
-#footer{
-    position: fixed;
-    top:97%;
-    width:100%;
-    height: 3%;
-    background-color: #FFE8B6; 
-}
-
-.nav-container{
-    position: fixed;
+.bar
+{
     background: white;
-    height: 17%;
+    height: 18%;
     width:100%;
+    
 }
 
 .header
 {
-    position: absolute;
-    z-index: 3;
-	width: 270px;
+	width: 60%;
 	height: 40px;
-	left: 43%;
-    top: 15%;
-    margin: 0 auto;
-}
-
-.navbar
-{
-	position: absolute;
-	z-index: 3;
-	width:310px;
-	height: 40px;
-	left: 38.5%;
-    top: 35%;
-	margin: 0 auto;
-}
-
-#name
-{
-   	font-family: "Homemade Apple", cursive;
+	padding-top: 15px;
     color: black;
     font-size:25px;
+    font-family: "Homemade Apple", cursive;
+    text-align:center;
+    margin: auto;
+}
+
+.links
+{
+    width: 60%;
+    margin: auto;
+    margin-top: -5px;
+    text-align: center;
+}
+
+#footer{
+    position: fixed;
+    top:95%;
+    width:100%;
+    height: 5%;
+    background-color: #FFE8B6; 
 }
 
 .underline {
