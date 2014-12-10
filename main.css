@@ -85,7 +85,14 @@ li
   	position: absolute;
   	top: 10%;
   	left: 20%;
-	fill-opacity:0.75;
+	fill-opacity:0.25;
+}
+
+.string{
+    width:1px;
+    height:30%;
+    background-color: black;
+    margin-left:30%;
 }
 
 .underline {
