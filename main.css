@@ -10,7 +10,7 @@ body
 	margin: 0 0;
 	padding: 0;
 	overflow:hidden;
-	background-color: #FFFEF5;
+	background-color: #FAF7E8;;
 }
 
 a
@@ -89,10 +89,10 @@ li
 }
 
 .string{
-    width:1px;
-    height:30%;
-    background-color: black;
-    margin-left:30%;
+    	width:1px;
+    	height:30%;
+    	background-color: black;
+    	margin-left:30%;
 }
 
 .underline {
