@@ -87,17 +87,15 @@ canvas{
 }
 
 .beehive {
-  	float:right;
+  	float:left;
 	z-index:0;
-	fill-opacity:0.1;
 }
 
 
 .beehive2 {
-  	float:left;
-	top:50%;
+  	float:right;
+	top:5%;
 	z-index:0;
-	fill-opacity:0.1;
 }
 
 #about{
@@ -112,7 +110,7 @@ canvas{
     display: none;
     position: fixed;
     top: 50%;
-    left: 41%;
+    left: 35%;
     width: 650px;
     height: 280px;
     padding: 10px;
@@ -123,7 +121,6 @@ canvas{
     z-index:10;  
     font-family: "Dosis";
 }
-
 
 #x{
     float:right;   
