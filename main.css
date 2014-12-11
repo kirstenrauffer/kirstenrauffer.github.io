@@ -38,7 +38,7 @@ canvas{
 	height:100%;
 	z-index:0;
 	left:0;
-	top:82%;	
+	top:18%;	
 }
 
 .text
@@ -95,7 +95,7 @@ canvas{
 .beehive {
   	position: absolute;
 	z-index:1;
-  	top: 10%;
+  	top: 5%;
   	left: 20%;
 	fill-opacity:0.1;
 }
