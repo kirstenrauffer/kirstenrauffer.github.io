@@ -7,9 +7,8 @@ boolean mouseDown = false;
  
 void setup()
 {
-  size(800,600,P2D);
+  size(1500,800,P2D);
   smooth();
-  background(255);
   noStroke();
   
   for(int i=0; i<100;i++){
@@ -19,7 +18,7 @@ void setup()
  
 void draw()
 {
-  background(255);
+  background(255,255,255,0);
   
   bc.run();
 }
@@ -100,4 +99,3 @@ class Colony
     }
   }
 }
-
