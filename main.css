@@ -92,12 +92,6 @@ canvas{
   	position: relative;
 }
 
-.beehive-wrap2 {
-  	height: 0;
-  	padding-top: 100%;
-  	position: relative;
-}
-
 .beehive {
   	position: absolute;
 	z-index:0;
