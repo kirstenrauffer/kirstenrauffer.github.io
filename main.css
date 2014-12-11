@@ -36,7 +36,7 @@ canvas{
 	position:absolute;
 	width:100%;
 	height:100%;
-	z-index:0;
+	z-index:2;
 	left:0;
 	top:18%;	
 }
@@ -94,9 +94,17 @@ canvas{
 
 .beehive {
   	position: absolute;
-	z-index:1;
-  	top: 5%;
+	z-index:0;
+  	top: 3%;
   	left: 20%;
+	fill-opacity:0.1;
+}
+
+.beehive2 {
+  	position: absolute;
+	z-index:0;
+  	top: 6%;
+  	left: 40%;
 	fill-opacity:0.1;
 }
 

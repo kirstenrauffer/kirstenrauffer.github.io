@@ -11,7 +11,7 @@ void setup()
   smooth();
   noStroke();
   
-  for(int i=0; i<100;i++){
+  for(int i=0; i<70;i++){
     bc.add(new Bee(7,random(width),random(height)));
   }
 }
