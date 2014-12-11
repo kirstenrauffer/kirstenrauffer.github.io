@@ -33,6 +33,7 @@ li
 }
 
 canvas{
+	clear:both;
 	padding-left: 0;
     	padding-right: 0;
     	margin-left: auto;
