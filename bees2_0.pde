@@ -49,13 +49,46 @@ class Bee
  
     void move()
   {
+    
+    float targetX;
+    float targetY;
+    float easing = 0.02;
+    
+    if(x - mouseX >= -100 && x - mouseX <= 100 && y- mouseY >= -100  && y- mouseY <= 100){
+      
+    targetX = mouseX;
+    dx = targetX - x;
+    
+    if(abs(dx) > 1){
+       x += dx * easing; 
+    }
+    
+    targetY = mouseY;
+    dy = targetY - y;
+    
+    if(abs(dy) > 1){
+    y += dy * easing;
+    }
+    
+    }
+    else{
+      
     x += dx;
     y += dy;
      
-    if(x > width) {x = width; dx = 0;}
-    if(x < 0) {x = 0; dx = 0;}
-    if(y > height) {y = height; dy = 0;}
-    if(y < 0) {y = 0; dy = 0;}
+    if(x > width){
+      x = width; dx = 0;
+    }
+    if(x < 0){
+    x = 0; dx = 0;
+    }
+    if(y > height){
+    y = height; dy = 0;
+    }
+    if(y < 0){
+    y = 0; dy = 0;
+    }
+    }
   }
    
   void change_momentum()
