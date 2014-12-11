@@ -7,7 +7,7 @@ boolean mouseDown = false;
  
 void setup()
 {
-  size(1800,900,P2D);
+  size(1500,800,P2D);
   smooth();
   noStroke();
   
