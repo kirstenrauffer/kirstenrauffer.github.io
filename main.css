@@ -95,8 +95,8 @@ canvas{
 
 .beehive2 {
   	position: absolute;
+	top:50%;
 	z-index:0;
-  	top: 8%;
 	fill-opacity:0.1;
 }
 
@@ -142,6 +142,7 @@ canvas{
 
 .bee-stuff{
 	position:fixed;
+	left:25%;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
