@@ -18,7 +18,7 @@ void setup()
  
 void draw()
 {
-  background(255,255,255,0);
+  background(255,255,255);
   noStroke();
    
   for(int i = 0; i < bees.length; i++)
