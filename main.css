@@ -33,7 +33,7 @@ li
 }
 
 canvas{
-	clear:both;
+	position: absolute;
 	padding-left: 0;
     	padding-right: 0;
     	margin-left: auto;
