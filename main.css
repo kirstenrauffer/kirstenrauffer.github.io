@@ -103,11 +103,23 @@ canvas{
 	fill-opacity:0.1;
 }
 
-.string{
-    	width:100px;
-    	height:30%;
-    	background-color: black;
-    	margin-left:30%;
+.white_content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 41%;
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    background-color: white;
+    margin: -125px 0 0 -125px;
+    overflow: auto;
+    opacity: .75;
+    z-index:10;   
+}
+
+#x{
+    float:right;   
 }
 
 .underline {
