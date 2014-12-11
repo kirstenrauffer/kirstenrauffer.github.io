@@ -50,6 +50,8 @@ canvas{
 
 .bar
 {
+	position:fixed;
+	z-index:5;
     	background: white;
     	height: 18%;
     	width:100%;
@@ -132,7 +134,18 @@ li
     	padding: 4px;  
 } 
 
-.mobile{
+body
+{
     	font-size: 18px;   
+}
+
+canvas
+{
+	visibility: hidden;
+}
+
+beehive
+{
+	visibility: hidden;
 }
   
