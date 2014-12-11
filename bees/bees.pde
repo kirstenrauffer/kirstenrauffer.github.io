@@ -1,7 +1,7 @@
 float acc = .05;
 float vel = .4;
 float z_limit = 6;
-int size = 60;
+int size = 1000;
  
 Bee bees[] = new Bee[size];
 
@@ -19,7 +19,6 @@ void setup()
 void draw()
 {
   background(255,255,255);
-  rect(100,100,200,200);
   noStroke();
    
   for(int i = 0; i < bees.length; i++)
