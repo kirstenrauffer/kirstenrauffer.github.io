@@ -9,6 +9,7 @@ void setup()
 {
   size(1500, 800);
   background(255,255,255);
+  
   for(int i = 0; i<bees.length; i++)
   {
     bees[i] = new Bee(7,random(width),random(height));
@@ -18,6 +19,7 @@ void setup()
 void draw()
 {
   background(255,255,255);
+  rect(100,100,200,200);
   noStroke();
    
   for(int i = 0; i < bees.length; i++)
