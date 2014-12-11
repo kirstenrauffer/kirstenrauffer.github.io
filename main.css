@@ -142,17 +142,23 @@ li
     	padding: 4px;  
 } 
 
-body
+.links
 {
-    	font-size: 18px;   
+    	font-size: 10px;   
 }
+
+.header
+{
+    	font-size: 10px;   
+}
+
 
 canvas
 {
 	visibility: hidden;
 }
 
-beehive
+.beehive-wrapper
 {
 	visibility: hidden;
 }
