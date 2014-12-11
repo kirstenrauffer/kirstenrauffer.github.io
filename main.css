@@ -150,22 +150,33 @@ li
 
 .links
 {
-    	font-size: 10px;   
+    	font-size: 13px;   
 }
 
 .header
 {
-    	font-size: 10px;   
+    	font-size: 5px;   
 }
-
 
 canvas
 {
 	visibility: hidden;
+	display: none;
 }
 
-.beehive-wrapper
+.bar
+{
+    	height: 100%;
+}    
+
+.beehive
 {
 	visibility: hidden;
+	display: none;
 }
-  
+
+.beehive2
+{
+	visibility: hidden;
+	display: none;
+}  
