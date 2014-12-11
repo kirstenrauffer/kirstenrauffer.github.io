@@ -87,12 +87,6 @@ canvas{
     	background-color: #FFE8B6; 
 }
 
-.beehive-wrap {
-  	height: 0;
-  	padding-top: 100%;
-  	position: relative;
-}
-
 .beehive {
   	position: absolute;
 	z-index:0;
