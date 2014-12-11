@@ -33,12 +33,11 @@ li
 }
 
 canvas{
-	position:absolute;
+	position:fixed;
 	width:100%;
 	height:100%;
 	z-index:2;
-	left:0;
-	top:18%;	
+	top:18%;
 }
 
 .text
@@ -81,7 +80,7 @@ canvas{
 #footer{
     	position: fixed;
 	z-index:5;
-    	top:95%;
+    	top:97%;
     	width:100%;
     	height: 3%;
     	background-color: #FFE8B6; 
@@ -145,6 +144,11 @@ canvas{
 .underline:hover:after {
 	width: 100%;
 	background: #FFE8B6;
+}
+
+.bee-stuff{
+	position:fixed;
+	margin:auto;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
