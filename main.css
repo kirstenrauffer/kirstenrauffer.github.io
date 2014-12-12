@@ -103,31 +103,32 @@ canvas{
 }
 
 #about{
-    float:left;   
-    width:850px;
-    margin-left:30px;
-}
+    	float:left;   
+    	width:920px;
+   	margin-left:30px;
+}	
 
-.white_content {
-    text-align: left;
-    font-size:15px;
-    display: none;
-    position: fixed;
-    top: 45%;
-    left: 27%;
-    width: 900px;
-    height: 400px;
-    padding: 10px;
-    background-color: white;
-    margin: -125px 0 0 -125px;
-    overflow: auto;
-    opacity: .75;
-    z-index:10;  
-    font-family: "Dosis";
+.lightbox {
+    	text-align: left;
+    	font-size:15px;
+    	display: none;
+    	position: fixed;
+    	top: 45%;
+    	left: 10%%;
+    	width: 90%;
+    	height: 50%;
+    	padding: 10px;
+    	background-color: white;
+    	margin: -125px 0 0 -125px;
+    	overflow: auto;
+    	opacity: .75;
+    	z-index:10;  
+    	font-family: "Dosis";
 }
 
 #x{
-    float:right;   
+    	float:right;
+	width: 5%; 
 }
 
 .underline {
