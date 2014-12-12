@@ -151,7 +151,7 @@ canvas{
 	background: #FFE8B6;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media all and (min-device-width : 320px) and (max-device-width : 480px) {
 li 
 {
     	padding: 4px;  
@@ -185,7 +185,7 @@ li
 }  
 
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media all and (min-device-width : 768px) and (max-device-width : 1024px) {
 
 .beehive2
 {
