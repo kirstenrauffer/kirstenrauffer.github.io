@@ -56,7 +56,6 @@ canvas{
     	background: white;
     	height: 16%;
     	width:100%;
-    
 }
 
 .header
@@ -176,7 +175,7 @@ canvas
 
 .bar
 {
-    	height: 100%;
+    	height: 30%;
 }    
 
 .beehive
@@ -190,3 +189,26 @@ canvas
 	visibility: hidden;
 	display: none;
 }  
+
+mobile{
+	width:100%;
+	height:35%;
+}
+
+link1{
+	background: #F7F77F;
+}
+
+link2{
+	background: #FBE075;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+.beehive2
+{
+	visibility: hidden;
+	display: none;
+}  
+
+}
