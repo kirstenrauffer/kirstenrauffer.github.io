@@ -104,7 +104,7 @@ canvas{
 
 #about{
     float:left;   
-    width:590px;
+    width:850px;
     margin-left:30px;
 }
 
@@ -113,10 +113,10 @@ canvas{
     font-size:15px;
     display: none;
     position: fixed;
-    top: 50%;
-    left: 35%;
+    top: 45%;
+    left: 27%;
     width: 900px;
-    height: 500px;
+    height: 400px;
     padding: 10px;
     background-color: white;
     margin: -125px 0 0 -125px;
