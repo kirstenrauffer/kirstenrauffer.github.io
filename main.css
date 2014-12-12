@@ -167,12 +167,6 @@ li
     	font-size: 15px;   
 }
 
-canvas
-{
-	visibility: hidden;
-	display: none;
-}
-
 .bar
 {
     	height: 30%;
