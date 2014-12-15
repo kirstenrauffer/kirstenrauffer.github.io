@@ -194,7 +194,9 @@ canvas{
 	font-size:12px;
 	width: 320px;
 	height:480px;
-	margin-left: -10%;
+	left:0%;
+	top:22%;
+	margin: 0 auto;
 	padding: 0;
 }
 
