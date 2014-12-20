@@ -189,6 +189,8 @@ canvas{
 	position: fixed;
 	width: 100%;
 	height:100%;
+	-webkit-transform: scaleX(3) scaleY(3);
+        -moz-transform: scaleX(3) scaleY(3);
 }
 
 .lightbox{
