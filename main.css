@@ -197,7 +197,7 @@ canvas{
 	font-size:12px;
 	width: 320px;
 	height:480px;
-	left:3%;
+	left:-3%;
 	top:22%;
 	margin: 0 auto;
 	padding: 0;
