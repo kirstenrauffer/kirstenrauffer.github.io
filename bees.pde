@@ -55,7 +55,7 @@ class Bee
     float targetY;
     float easing = 0.02;
     
-    if(x - mouseX >= -175 && x - mouseX <= 175 && y- mouseY >= -175  && y- mouseY <= 175){
+    if(x - mouseX >= -100 && x - mouseX <= 100 && y- mouseY >= -100  && y- mouseY <= 100){
       
     targetX = mouseX;
     dx = targetX - x;
