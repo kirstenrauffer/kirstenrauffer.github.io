@@ -8,7 +8,7 @@ boolean mouseDown = false;
  
 void setup()
 {
-  size(displayWidth, displayHeight);
+  size(400, 400);
   smooth();
   noStroke();
   
