@@ -6,19 +6,10 @@ html{
 	overflow: hidden;
 }
 
-ul{
-    	list-style-type: none;
-}
-
-li{
-    	display: inline;
-    	padding: 5px;
-}
-
 a{
     	text-decoration: none;
     	color:black;
-}
+}s
 
 #bees{
 	position: absolute; 
