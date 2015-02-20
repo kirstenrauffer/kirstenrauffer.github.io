@@ -184,12 +184,13 @@ h1{
 
 .everything{
 	width:100%;
-	margin-left: 20%;
+	margin-left:0;
 }
 
 #hive{
-	width:90%;	
-	height:90%;
+	width:75%;	
+	height:75%;
+	margin-left:0;
 }
 
 h1{
