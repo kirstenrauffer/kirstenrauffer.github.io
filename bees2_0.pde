@@ -1,17 +1,18 @@
 float acc = .05;
 float vel = .4;
 float z_limit = 6;
+color yellow = #FFF5AB;
 
 Colony bc = new Colony();
 boolean mouseDown = false;
  
 void setup()
 {
-  size(1500,1500,P2D);
+  size(displayWidth, displayHeight);
   smooth();
   noStroke();
   
-  for(int i=0; i<200;i++){
+  for(int i=0; i<50;i++){
     bc.add(new Bee(7,random(width),random(height)));
   }
 }
@@ -54,7 +55,7 @@ class Bee
     float targetY;
     float easing = 0.02;
     
-    if(x - mouseX >= -100 && x - mouseX <= 100 && y- mouseY >= -100  && y- mouseY <= 100){
+    if(x - mouseX >= -150 && x - mouseX <= 150 && y- mouseY >= -150  && y- mouseY <= 150){
       
     targetX = mouseX;
     dx = targetX - x;
@@ -107,7 +108,7 @@ class Bee
     noStroke();
     fill(random(200,255));
     ellipse (x+2, y-2, 10, random(30));
-    fill(255,219,13);
+    fill(yellow);
     ellipse (x, y, 15, 10);
   }
 }
