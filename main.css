@@ -190,16 +190,16 @@ h1{
 #hive{
 	width:75%;	
 	height:75%;
-	margin-left:0;
+	margin-left:25%;
 }
 
 h1{
 	text-align: center;
+	margin-top: -10%;
 }
 
 .head-one{
 	text-align: center;
-
 	padding-left: 0;
 }
 
@@ -208,31 +208,13 @@ h1{
 	text-align: center;
 }
 
-/*
-.horizontal{
-	display: none;
-}
-
-.vertical{
-	display: none;
-}	
-
-.head-two{
-	display: none;
-}
-
-.head-three{
-	display: none;
-}
-
 .weather-info{
-	display: none;
+	margin-top: 5px;
 }
 
 .date-info{
-	display: none;
+	margin-top: 0px;
 }
-*/
 
 }
 
