@@ -12,8 +12,24 @@
 	<link rel="stylesheet" href="normalize.css"/>
 	<link rel="stylesheet" href="main.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400' rel='stylesheet' type='text/css'>
-	<script src="clock.js"></script>
 	<script src="processing.min.js"></script>
+
+	<script type="text/javascript">
+	tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+	tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+	function GetClock(){
+	var d=new Date();
+	var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate();
+
+	document.getElementById('date').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+"";
+}
+
+	window.onload=function(){
+	GetClock();
+	setInterval(GetClock,1000);
+	}
+</script>
 
 </head>
 
