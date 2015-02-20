@@ -49,14 +49,14 @@ canvas{
 
 #hive{
 	position: absolute;
-	z-index: 15;
+	z-index: -2;
 	top: -310px;
 	margin-left: 25%;
 }
 
 #flowers{
 	position: absolute;
-	z-index: 20;
+	z-index: -2;
 	left: -70px;
 	margin-top: -65px;
 }
