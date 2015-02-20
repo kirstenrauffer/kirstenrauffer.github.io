@@ -8,45 +8,51 @@
 	<title>Kirsten Rauffer</title>
 	
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="main.css"/>
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Josefin+Sans|Dosis|Homemade+Apple|Coustard">
 
-	<script src="processing.min.js"></script>
+	<link rel="stylesheet" href="main.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
 
-
-<div class="bar">
-
-    <div class="header"><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></div>
-	<div class="links">
-	    <ul class="text">
-      			<li class="underline"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';">ABOUT</a>
-			<div id="light" class="lightbox"><div id="about">
-			<p>Hey there! My name is Kirsten Rauffer, and I am currently a Junior double majoring in Computer Science and Philosophy at Rutgers University. I love designing and developing experiences for users. Right now I am focused on improving my front-end development skills, but I'm always experimenting and exploring new territories.</p>
-			<p>But hey, I'm more than just a programmer! I have a second degree black belt in Tae Kwon Doe, I have my SCUBA certification, I like to build ukuleles from scratch and I like to ski in my spare time.</p>
-
-			<p>Thanks for stopping by! My "Projects" section is coming soon, so stay tuned.</p>
-			<p>If you have any questions or just want to chat, feel free to contact me!</p>
-			<p>I am currently freelancing in the New York area and remotely.</p>
-			<p>Email: kirsten.rauffer@rutgers.edu
-			<br>#: 732.865.4350</p>
-		</div><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" id="x">X</a></div></li>
-
-	   <li class="underline"><a href="KirstenRaufferResume.pdf">RESUME</a></li></div>
-           </ul>
-    </div>
-</div>
-	<div class="bee-stuff">
- 	<object type="image/svg+xml" data="/svg/beehive.svg" class="beehive"><img src="beehive.png"/></object>
- 	<object type="image/svg+xml" data="/svg/beehive2.svg" class="beehive2"><img src="beehive2.png"/></object>
-	</div>
-
-	<canvas id= "bees" data-processing-sources="bees2_0.pde"></canvas>
-
-	<div id="footer"></div>
 	
+
+	<div class="everything">
+	
+	<img id="hive" src="hive.svg">
+
+	<img id="flowers" src="flowers.svg">
+
+    	<h1 class="text"><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></h1>
+
+	<div class="vertical"></div>
+	<div class="horizontal one"></div>	
+
+	<p class="text head-one"><span class="highlight">technology + creativity</span></p>
+
+	<div class="horizontal two"></div>	
+
+	<p class="text head-two"><span class="highlight">junior</span></p>
+
+	<div class="horizontal three"></div>
+
+	<p class="text head-three"><span class="highlight">rutgers university</span></p>	
+
+	<div class="horizontal four"></div>
+
+	<div class="links text">
+	  	<ul>
+      			<li><a class="highlight" href="#about">about</a></li>
+			<li><a class="highlight" href="#projects">projects</a></li>
+	   		<li><a class="highlight" href="KirstenRaufferResume.pdf">resume</a></li>
+			<li><a class="highlight" href="#contact">contact</a></li>
+    	   	</ul>
+    	</div>
+	
+	<p class="text weather-info">Where you are <span id="your-weather">20°</span><br>Where I am <span id="my-weather">13°</span></p>
+	<p class="text date-info"><span id="time">9:24 pm</span><br><span id="date">February 19</span><br><span id="day">Thursday</span></p>
+	
+	</div>
 </body>
 </html>

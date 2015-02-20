@@ -1,222 +1,171 @@
-html 
-{
+html{
   	font-size: 100%;
  	-webkit-text-size-adjust: 100%;
   	-ms-text-size-adjust: 100%;
 }
 
-body
-{
+body{
 	margin: 0 0;
 	padding: 0;
 	overflow:hidden;
-	background-color: #FAF7E8;
 }
 
-a
-{
+ul{
+    	list-style-type: none;
+}
+
+li{
+    	display: inline;
+    	padding: 5px;
+}
+
+a{
     	text-decoration: none;
     	color:black;
 }
 
-ul 
-{
-    	list-style-type: none;
-    	margin-left:-41px;
+.everything{
+	position: relative;
+	margin: auto;
+	margin-top: 25px;
+	width: 40%;
+	height: 40%;
 }
 
-li 
-{
-    	display: block;
-    	padding: 10px;
-    
-}
-
-canvas{
+#hive{
 	position: absolute;
-	padding-left: 0;
-    	padding-right: 0;
-    	margin-left: auto;
-    	margin-right: auto;
-    	display: block;
-    	width: 100%;
+	z-index: 15;
+	top: -310px;
+	margin-left: 25%;
 }
 
-.text
-{
+#flowers{
+	position: absolute;
+	z-index: 20;
+	left: -70px;
+	margin-top: -65px;
+}
+
+h1{
+	margin-top: 375px;
+	margin-bottom: -5px;
+}
+
+.vertical{
+	position: absolute;
+	left: 30%;
+	width: 1px;
+	height: 165px;
+	background: black;
+}
+
+.horizontal{
+	height: 1px;
+	background: black;
+}
+
+.head-one{
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 28.5%;
+	padding-left: 20px;
+}
+
+.head-two{
+	margin-bottom: 5px;
+	padding-right: 20px;
+	margin-right: 68%; 
+	text-align: right;
+}
+
+.head-three{
+	padding-right: 20px;
+	margin-right: 68%; 
+	text-align: right;
+}
+
+.one{
+	position: absolute;
+	width: 65%;
+}
+
+.two{
+	position: absolute;
+	left: 30%;
+	width: 15%;
+}
+
+.three{
+	position: absolute;
+	width: 17.5%;
+	left: 12.5%;
+}
+
+.four{
+	position: absolute;
+	width: 70%;
+	left: 30%;
+	
+}
+
+.highlight{
+	background-color: #FFFDBF;
+}
+
+
+.text{
+	font-family: 'Vollkorn', serif;
     	color: black;
-	font-size:14px;
-	font-family: "Josefin Sans", sans-serif;
-}
-
-.bar
-{
-	position:fixed;
-	z-index:5;
-    	background: white;
-    	height: 16%;
-    	width:100%;
-}
-
-.header
-{
-	width: 60%;
-	height: 40px;
-	padding-top: 15px;
-    	color: black;
-    	font-size:25px;
-    	font-family: "Homemade Apple", cursive;
-    	text-align:center;
-    	margin: auto;
 }
 
 .links
 {
-   	width: 60%;
-   	margin: auto;
-    	margin-top: -5px;
-    	text-align: center;
+	padding-left: 5px;
+	margin-top: 25px;
+	margin-bottom: 5px;
+	margin-left: 23%;
+	font-size: 17px;
+  
 }
 
-#footer{
-    	position: fixed;
-	z-index:5;
-    	top:97%;
-    	width:100%;
-    	height: 3%;
-    	background-color: #FFE8B6; 
+.weather-info{
+	position: absolute;
+	margin-top: 35px;
+	line-height: 20px;
 }
 
-.beehive {
-  	float:left;
-	margin-left:20%;
-	margin-top:-2%;
-	z-index:0;
+#your-weather{
+	padding-left: 15px;
 }
 
-
-.beehive2 {
-  	float:right;
-  	margin-top:5%;
-	margin-right:20%;
-	z-index:0;
+#my-weather{
+	padding-left: 37px;
 }
 
-#about{
-    	float:left;   
-    	width:720px;
-    	margin-left:30px;
+.date-info{
+	position: absolute;
+	margin-top: 25px;
+	line-height: 18px;
+	text-align: right;
+	right: 0%;
 }
 
-.lightbox {
-    	text-align: left;
-    	font-size:15px;
-    	display: none;
-    	position: fixed;
-    	top: 42%;
-    	left: 27%;
-    	width: 875px;
-    	height: 420px;
-    	padding: 10px;
-    	background-color: white;
-    	margin: -125px 0 0 -125px;
-    	overflow: auto;
-    	opacity: .85;
-    	z-index:10;  
-    	font-family: "Dosis";
-	transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+#time{
+	font-size: 14px;
 }
 
-#x{	
-    	float:right;   
+#date{
+	font-size: 15px;
 }
 
-.underline {
-	display: inline-block;
-	position: relative;
-	padding-bottom: 3px;
-}
-
-.underline:after {
-	content: '';
-	display: block;
-	margin: auto;
-	height: 3px;
-	width: 0px;
-	background: transparent;
-	transition: width .5s ease, background-color .5s ease;
-}
-
-.underline:hover:after {
-	width: 100%;
-	background: #FFE8B6;
+#day{
+	font-size: 20px;
 }
 
 @media all and (min-device-width : 320px) and (max-device-width : 480px) {
-li 
-{
-    	padding: 4px;  
-} 
 
-.links
-{
-    	font-size: 20px;   
-}
-
-.header
-{
-    	font-size: 18px;   
-}
-
-.bar
-{
-    	height: 22%;
-}    
-
-.beehive
-{
-	visibility: hidden;
-	display: none;
-}
-
-.beehive2
-{
-	visibility: hidden;
-	display: none;
-}  
-
-canvas{
-	position: fixed;
-	width: 100%;
-	height:100%;
-	-webkit-transform: scaleX(3) scaleY(3);
-        -moz-transform: scaleX(3) scaleY(3);
-}
-
-.lightbox{
-	font-size:12px;
-	width: 320px;
-	height:480px;
-	left:-3%;
-	top:22%;
-	margin: 0 auto;
-	padding: 0;
-}
-
-#about{
-	width:90%;
-}
-
-#x{
-	width:10%
 }
 
 @media all and (min-device-width : 768px) and (max-device-width : 1024px) {
-
-.beehive2
-{
-	visibility: hidden;
-	display: none;
-}  
 
 }
