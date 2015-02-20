@@ -22,13 +22,17 @@
 	var d=new Date();
 	var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate();
 
-	document.getElementById('date').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+"";
+	document.getElementById('date').innerHTML=""+tmonth[nmonth]+" "+ndate+"";
+}
+
+	document.getElementById('day').innerHTML=""+tday[nday]+"";
 }
 
 	window.onload=function(){
 	GetClock();
 	setInterval(GetClock,1000);
 	}
+
 </script>
 
 </head>
