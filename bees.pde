@@ -8,11 +8,11 @@ boolean mouseDown = false;
  
 void setup()
 {
-  size(displayWidth, displayHeight);
+  size(1300, 800);
   smooth();
   noStroke();
   
-  for(int i=0; i<17;i++){
+  for(int i=0; i<20;i++){
     bc.add(new Bee(7,random(width),random(height)));
   }
 }
