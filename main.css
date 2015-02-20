@@ -25,7 +25,7 @@ a{
 }
 
 canvas{
-	position: fixed;
+	position: absolute; 
 	z-index: -1;
         -webkit-touch-callout: none;
     	-webkit-user-select: none;
