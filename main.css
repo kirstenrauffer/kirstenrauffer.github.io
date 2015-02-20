@@ -172,13 +172,32 @@ h1{
 	font-size: 20px;
 }
 
-@media all and (max-device-width : 480px){
+@media all and (max-device-width : 320px) and (max-device-width : 480px){
 
+.everything{
+	width:100%;
 }
 
+h1{
+	text-align: center;
+}
 
-@media all and (max-device-width : 320px){
+.head-one{
+	text-align: center;
 
+	padding-left: 0;
+}
+
+.links{
+	padding-left: 0;
+	text-align: center;
+}
+
+#hive{
+	margin-left: 25%;
+}
+
+/*
 .horizontal{
 	display: none;
 }
@@ -202,28 +221,7 @@ h1{
 .date-info{
 	display: none;
 }
-
-.everything{
-	width:100%;
-}
-
-h1{
-	text-align: center;
-}
-
-.head-one{
-	margin-left: -20%;
-	padding-left: 0;
-}
-
-.links{
-	padding-left: 0;
-	text-align: center;
-}
-
-#hive{
-	margin-left: 25%;
-}
+*/
 
 }
 
