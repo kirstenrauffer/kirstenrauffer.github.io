@@ -1,5 +1,5 @@
 float acc = .05;
-float vel = 1;
+float vel = .8;
 float z_limit = 6;
 color yellow = #FFF5AB;
 
@@ -12,7 +12,7 @@ void setup()
   smooth();
   noStroke();
   
-  for(int i=0; i<20;i++){
+  for(int i=0; i<30;i++){
     bc.add(new Bee(7,random(width),random(height)));
   }
 }
@@ -53,9 +53,9 @@ class Bee
     
     float targetX;
     float targetY;
-    float easing = 0.015;
+    float easing = 0.02;
     
-    if(x - mouseX >= -200 && x - mouseX <= 200 && y- mouseY >= -200  && y- mouseY <= 200){
+    if(x - mouseX >= -175 && x - mouseX <= 175 && y- mouseY >= -175  && y- mouseY <= 175){
       
     targetX = mouseX;
     dx = targetX - x;
