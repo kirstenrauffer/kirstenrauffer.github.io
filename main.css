@@ -3,7 +3,7 @@ html{
   	-ms-text-size-adjust: 100%;
 	margin: 0 0;
 	padding: 0;
-	overflow:hidden;
+	overflow: hidden;
 }
 
 ul{
@@ -33,6 +33,7 @@ canvas{
     	user-select: none;
     	outline: none;
     	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+	width: 100%;
 }
 
 .everything{
@@ -172,10 +173,34 @@ h1{
 	font-size: 20px;
 }
 
+@media all and (max-device-width : 480px){
 
-@media all and (min-device-width : 320px) and (max-device-width : 480px) {
+}
+
+
+@media all and (max-device-width : 320px){
 
 .horizontal.vertical.head-two.head-three.weather-info.date-info{
+	display: none;
+}
+
+.vertical{
+	display: none;
+}	
+
+.head-two{
+	display: none;
+}
+
+.head-three.weather-info.date-info{
+	display: none;
+}
+
+.weather-info.date-info{
+	display: none;
+}
+
+.date-info{
 	display: none;
 }
 
