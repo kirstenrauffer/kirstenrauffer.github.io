@@ -12,7 +12,7 @@ void setup()
   smooth();
   noStroke();
   
-  for(int i=0; i<50;i++){
+  for(int i=0; i<17;i++){
     bc.add(new Bee(7,random(width),random(height)));
   }
 }
@@ -55,7 +55,7 @@ class Bee
     float targetY;
     float easing = 0.02;
     
-    if(x - mouseX >= -150 && x - mouseX <= 150 && y- mouseY >= -150  && y- mouseY <= 150){
+    if(x - mouseX >= -200 && x - mouseX <= 200 && y- mouseY >= -200  && y- mouseY <= 200){
       
     targetX = mouseX;
     dx = targetX - x;
