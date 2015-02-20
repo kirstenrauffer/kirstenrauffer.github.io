@@ -36,6 +36,7 @@ a{
 	margin-top: 25px;
 	width: 40%;
 	height: 40%;
+	z-index: 2;
 }
 
 h1{
@@ -175,8 +176,6 @@ h1{
 }
 
 .cl-effect-20 a span {
-	position: relative;
-	display: inline-block;
 	padding: 3px 15px 0;
 	background: #587285;
 	box-shadow: inset 0 3px #2f4351;
@@ -195,9 +194,6 @@ h1{
 }
 
 .cl-effect-20 a span::before {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	background: #fff;
