@@ -24,6 +24,11 @@ a{
     	color:black;
 }
 
+canvas{
+	position: fixed;
+	z-index: 21;
+}
+
 .everything{
 	position: relative;
 	margin: auto;
@@ -162,10 +167,11 @@ h1{
 	font-size: 20px;
 }
 
+
 @media all and (min-device-width : 320px) and (max-device-width : 480px) {
 
 .hive{
-	margin-left: -15%;
+	margin-left: -35%;
 	
 }
 
@@ -182,7 +188,7 @@ h1{
 }
 
 .head-one{
-	margin-left: -10%;
+	margin-left: -25%;
 	padding-left: 0;
 }
 
@@ -199,7 +205,7 @@ h1{
 }
 
 .links{
-	margin-left: -5%;
+	margin-left: -20%;
 	padding-left: 0;
 	text-align: center;
 }
