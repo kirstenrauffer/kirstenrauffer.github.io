@@ -178,16 +178,6 @@ h1{
 
 @media all and (max-device-width : 320px) and (max-device-width : 480px){
 
-/*
-#bees-mobile{
-	display: initial;
-	position: absolute;
-	z-index: -1;
-	top: 0px;
-  	left: 0px;
-}
-
-*/
 #bees{
 	display: none;
 }	
@@ -198,8 +188,8 @@ h1{
 }
 
 #hive{
-	width:80%;	
-	height:80%;
+	width:90%;	
+	height:90%;
 }
 
 h1{
