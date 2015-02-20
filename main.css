@@ -179,7 +179,7 @@ h1{
 
 @media all and (max-device-width : 320px){
 
-.horizontal.vertical.head-two.head-three.weather-info.date-info{
+.horizontal{
 	display: none;
 }
 
@@ -191,11 +191,11 @@ h1{
 	display: none;
 }
 
-.head-three.weather-info.date-info{
+.head-three{
 	display: none;
 }
 
-.weather-info.date-info{
+.weather-info{
 	display: none;
 }
 
@@ -219,6 +219,10 @@ h1{
 .links{
 	padding-left: 0;
 	text-align: center;
+}
+
+#hive{
+	margin-left: 25%;
 }
 
 }
