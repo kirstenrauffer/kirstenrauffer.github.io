@@ -1,5 +1,5 @@
 float acc = .05;
-float vel = .4;
+float vel = 1;
 float z_limit = 6;
 color yellow = #FFF5AB;
 
@@ -53,7 +53,7 @@ class Bee
     
     float targetX;
     float targetY;
-    float easing = 0.02;
+    float easing = 0.015;
     
     if(x - mouseX >= -200 && x - mouseX <= 200 && y- mouseY >= -200  && y- mouseY <= 200){
       
@@ -107,9 +107,9 @@ class Bee
   {
     noStroke();
     fill(random(200,255));
-    ellipse (x+2, y-2, 10, random(30));
+    ellipse (x, y-2, 10, random(30));
     fill(yellow);
-    ellipse (x, y, 15, 10);
+    ellipse (x, y, 16, 10);
   }
 }
 
