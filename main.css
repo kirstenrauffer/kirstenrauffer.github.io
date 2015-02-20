@@ -164,6 +164,42 @@ h1{
 
 @media all and (min-device-width : 320px) and (max-device-width : 480px) {
 
+.hive{
+	margin-left: 0;
+	
+}
+
+.horizontal{
+	display: none;
+}
+
+.weather-info{
+	display: none;
+}
+
+.date-info{
+	display: none;
+}
+
+.head-one{
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.head-two{
+	display: none;
+}
+
+.vertical{
+	display: none;
+}
+
+.links{
+	margin-left: 0;
+	padding-left: 0;
+	text-align: center;
+}
+
 }
 
 @media all and (min-device-width : 768px) and (max-device-width : 1024px) {
