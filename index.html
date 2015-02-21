@@ -30,8 +30,8 @@
 		if(nmin<=9) nmin="0"+nmin;
 
 		document.getElementById('time').innerHTML=""+nhour+":"+nmin+ap+"";
-		document.getElementById('date').innerHTML=""+tmonth[nmonth]+" "+ndate+"";
 		document.getElementById('day').innerHTML=""+tday[nday]+"";
+		document.getElementById('date').innerHTML=""+tmonth[nmonth]+" "+ndate+"";
 	}
 
 	window.onload=function(){
@@ -79,7 +79,7 @@
     	</nav>
 	
 	<p class="text weather-info">Where you are <span id="your-weather">20°F</span><br>Where I am <span id="my-weather">13°F</span></p>
-	<p class="text date-info"><span id="time">9:24 pm</span><br><span id="date">Thursday</span><br><span id="day">February 19</span></p>
+	<p class="text date-info"><span id="time"></span><br><span id="date"></span><br><span id="day"></span></p>
 	
 	</div>
 
