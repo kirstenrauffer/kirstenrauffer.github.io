@@ -9,27 +9,14 @@
 	
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="normalize.css"/>
-	<link rel="stylesheet" href="main.css"/>
-	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400' rel='stylesheet' type='text/css'>
-	<script src="processing.min.js"></script>
-
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	
+	<script src="js/processing.min.js"></script>
 	<script type="text/javascript">
 
 	tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
 	tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-
-function GetClock(){
-var d=new Date();
-
-
-
-}
-
-window.onload=function(){
-GetClock();
-setInterval(GetClock,1000);
-}
 
 	function GetClock(){
 		var d=new Date();
@@ -54,17 +41,19 @@ setInterval(GetClock,1000);
 
 	</script>
 
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
 
-	<canvas id="bees" data-processing-sources="bees.pde"></canvas>
+	<canvas id="bees" data-processing-sources="bees/bees.pde"></canvas>
 
 	<div class="everything">
 
-	<img id="hive" src="hive.svg">
+	<img id="hive" src="svg/hive.svg">
 
-	<img id="flowers" src="flowers.svg">
+	<img id="flowers" src="svg/flowers.svg">
 
     	<h1 class="text"><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></h1>
 
@@ -90,7 +79,7 @@ setInterval(GetClock,1000);
     	</nav>
 	
 	<p class="text weather-info">Where you are <span id="your-weather">20°F</span><br>Where I am <span id="my-weather">13°F</span></p>
-	<p class="text date-info"><span id="time">9:24 pm</span><br><span id="date">February 19</span><br><span id="day">Thursday</span></p>
+	<p class="text date-info"><span id="time">9:24 pm</span><br><span id="date">Thursday</span><br><span id="day">February 19</span></p>
 	
 	</div>
 
