@@ -11,37 +11,10 @@
 
 	<link rel="stylesheet" href="css/normalize.css"/>
 	<link rel="stylesheet" href="css/main.css"/>
-	
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Vollkorn:400' type='text/css'/>
+
 	<script src="js/processing.min.js"></script>
-	<script type="text/javascript">
-
-	tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-	tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-
-	function GetClock(){
-		var d=new Date();
-		var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(), nhour=d.getHours(),nmin=d.getMinutes(),ap;
-
-		if(nhour==0){ap=" AM";nhour=12;}
-		else if(nhour<12){ap=" AM";}
-		else if(nhour==12){ap=" PM";}
-		else if(nhour>12){ap=" PM";nhour-=12;}
-
-		if(nmin<=9) nmin="0"+nmin;
-
-		document.getElementById('time').innerHTML=""+nhour+":"+nmin+ap+"";
-		document.getElementById('day').innerHTML=""+tday[nday]+"";
-		document.getElementById('date').innerHTML=""+tmonth[nmonth]+" "+ndate+"";
-	}
-
-	window.onload=function(){
-		GetClock();
-		setInterval(GetClock,1000);
-	}
-
-	</script>
-
-	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400' rel='stylesheet' type='text/css'>
+	<script src="toggle.js" type="text/javascript"></script>
 
 </head>
 
@@ -50,6 +23,8 @@
 	<canvas id="bees" data-processing-sources="bees/bees.pde"></canvas>
 
 	<div class="everything">
+
+	<div id="menu">My name is Kirsten Rauffer and I'm a developer/software engineer currently in my third year at Rutgers University. I mainly focus on front-end development and design for websites, but have dabbled in back-end development as well. This summer I'll be working as an application developer for UnitedHealth, and next autumn I'll be studying abroad for a year in the beautiful city of Munich, Germany at the Technical Universtat of Munich. I'm in the NYC area and currently freelancing in the area or remotely. When I'm not programming or designing, I like building wooden instruments (and robotic ones), SCUBA diving, sky diving, skiing, white water rafting, doing some Tae-Kwon Doe, and looking at old Calvin and Hobbes cartoons. </div>
 
 	<img id="hive" src="svg/hive.svg">
 
@@ -72,15 +47,11 @@
 	<div class="horizontal four"></div>
 
   	<nav class="links text cl-effect-20">
-      			<a class="highlight" href="#about">about</a>
-			<a class="highlight" href="#projects">projects</a>
-	   		<a class="highlight" href="KirstenRaufferResume.pdf">resume</a>
-			<a class="highlight" href="#contact">contact</a>
+      			<a class="highlight" id="toggle">about</a>
+			<a class="highlight" id="toggle-1">projects</a>
+			<a class="highlight" id="toggle-2">contact</a>
+			<a class="highlight" href="KirstenRaufferResume.pdf">resume</a>
     	</nav>
-	
-	<p class="text weather-info">Where you are <span id="your-weather">20°F</span><br>Where I am <span id="my-weather">13°F</span></p>
-	<p class="text date-info"><span id="time"></span><br><span id="date"></span><br><span id="day"></span></p>
-	
 	</div>
 
 </body>

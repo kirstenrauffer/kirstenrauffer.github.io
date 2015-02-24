@@ -138,39 +138,22 @@ h1{
 	font-size: 17px;
 }
 
-.weather-info{
-	position: absolute;
-	margin-top: 35px;
-	line-height: 20px;
+#menu {
+  color: white;
+  border: 1px solid white;
+  width: 150px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  line-height: 100px;
+  text-align: center;
+  margin: auto;
+  display: none;
 }
 
-#your-weather{
-	padding-left: 15px;
-}
 
-#my-weather{
-	padding-left: 37px;
-}
-
-.date-info{
-	position: absolute;
-	margin-top: 25px;
-	line-height: 18px;
-	text-align: right;
-	right: 0%;
-}
-
-#time{
-	font-size: 14px;
-}
-
-#date{
-	font-size: 15px;
-}
-
-#day{
-	font-size: 20px;
-}
+/*start shitstorm*/
 
 @media all and (max-device-width : 320px) and (max-device-width : 480px){
 
@@ -202,14 +185,6 @@ h1{
 .links{
 	padding-left: 0;
 	text-align: center;
-}
-
-.weather-info{
-	margin-top: 5px;
-}
-
-.date-info{
-	margin-top: 0px;
 }
 
 }
