@@ -12,10 +12,6 @@ html, body{
 #about a{
     	text-decoration: none;
 	color: #19191F;
-	-moz-transition: all .5s ease-in;
-    	-o-transition: all .5s ease-in;
-    	-webkit-transition: all .5s ease-in;
-    	transition: all .5s ease-in;
 }
 
 #about a:hover{
@@ -31,20 +27,12 @@ html, body{
   	height: auto;
 }
 
-#about p{
-	-moz-transition: all .5s ease-in;
-    	-o-transition: all .5s ease-in;
-    	-webkit-transition: all .5s ease-in;
-    	transition: all .5s ease-in;
+#about p,a,h1{
+	-moz-transition: all .4s ease-in;
+    	-o-transition: all .4s ease-in;
+    	-webkit-transition: all .4s ease-in;
+    	transition: all .4s ease-in;
 }
-
-#about a{
-	-moz-transition: none;
-    	-o-transition: none;
-    	-webkit-transition: none;
-    	transition: none;
-}
-
 
 #name{	
 	font-size: 34px;
@@ -56,9 +44,9 @@ html, body{
 
 #about{
 	position: absolute;
-	width: 360px;
-	margin-left: 10%;
-	top: 11%;
+	width: 550px;
+	left: 5%;
+	top: 1%;
 }
 
 #sub{
@@ -74,10 +62,10 @@ html, body{
 #credit a{
 	text-decoration: none;
 	color:#FFFFE6;
-	-moz-transition: all .5s ease-in;
-    	-o-transition: all .5s ease-in;
-    	-webkit-transition: all .5s ease-in;
-    	transition: all .5s ease-in;
+	-moz-transition: all .4s ease-in;
+    	-o-transition: all .4s ease-in;
+    	-webkit-transition: all .4s ease-in;
+    	transition: all .4s ease-in;
 }
 
 #credit a:hover{
@@ -92,8 +80,8 @@ html, body{
   #about{
 	margin-left: 0;	
 	top: 0%;
-	left: 10%;
-	width: 80%;
+	left: 5%;
+	width: 90%;
 	font-size: 14px;
   }
 
