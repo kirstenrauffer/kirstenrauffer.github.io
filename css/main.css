@@ -1,194 +1,87 @@
-html{
+html, body{
  	-webkit-text-size-adjust: 100%;
   	-ms-text-size-adjust: 100%;
 	margin: 0 0;
 	padding: 0;
 	overflow: hidden;
+	height: 100%;
+	font-family: 'Ubuntu Mono';
+	font-size: 18px;
 }
 
-a{
+#about a{
     	text-decoration: none;
-    	color:black;
+	color: #19191F;
+	-moz-transition: all .2s ease-in;
+    	-o-transition: all .2s ease-in;
+    	-webkit-transition: all .2s ease-in;
+    	transition: all .2s ease-in;
 }
 
-nav{
-	display: inline-block;
+#about a:hover{
+	color:#E6B85C;
 }
 
-#bees{
-	position: absolute; 
-	z-index: -1;
-	top: 0px;
-  	left: 0px;
-        -webkit-touch-callout: none;
-    	-webkit-user-select: none;
-    	-khtml-user-select: none;
-    	-moz-user-select: none;
-    	-ms-user-select: none;
-    	user-select: none;
-    	outline: none;
-    	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+#content{
+	color: #19191F;
+	background-image: url("DSC_0110.jpg");
+	background-size: cover;
+	background-position: -100px 0px 0px 0px;
+	min-height: 100%;
+  	height: auto;
 }
 
-#bees-mobile{
-	display: none;
-}	
-
-.everything{
-	position: relative;
-	margin: auto;
-	margin-top: 25px;
-	width: 40%;
-	height: 40%;
+#name{	
+	font-size: 34px;
+	-moz-transition: all .2s ease-in;
+    	-o-transition: all .2s ease-in;
+    	-webkit-transition: all .2s ease-in;
+    	transition: all .2s ease-in;
 }
 
-h1{
-	margin-top: 375px;
-	margin-bottom: -5px;
-	padding: 0px;
+#name:hover{
+	color:#E6B85C;
 }
 
-#hive{
+#about{
 	position: absolute;
-	z-index: -2;
-	top: -310px;
-	margin-left: 25%;
+	width: 360px;
+	margin-left: 10%;
+	top: 11%;
 }
 
-#flowers{
+#sub{
+	margin-top: -17.5px;
+}
+
+#credit{
 	position: absolute;
-	z-index: -2;
-	left: -70px;
-	margin-top: -65px;
+	bottom: 0%;
+	right: 1%;
 }
 
-.vertical{
-	position: absolute;
-	left: 30%;
-	width: 1px;
-	height: 165px;
-	background: black;
+#credit a{
+	text-decoration: none;
+	color:#FFFFE6;
+	-moz-transition: all .2s ease-in;
+    	-o-transition: all .2s ease-in;
+    	-webkit-transition: all .2s ease-in;
+    	transition: all .2s ease-in;
 }
 
-.horizontal{
-	height: 1px;
-	background: black;
+#credit a:hover{
+	color:#E6B85C;
 }
-
-.one{
-	position: absolute;
-	width: 65%;
-}
-
-.two{
-	position: absolute;
-	left: 30%;
-	width: 15%;
-}
-
-.three{
-	position: absolute;
-	width: 17.5%;
-	left: 12.5%;
-}
-
-.four{
-	position: absolute;
-	width: 70%;
-	left: 30%;
-	
-}
-
-.head-one{
-	margin-top: 10px;
-	margin-bottom: 5px;
-	margin-left: 28.5%;
-	padding-left: 20px;
-}
-
-.head-two{
-	margin-bottom: 5px;
-	padding-right: 20px;
-	margin-right: 68%; 
-	text-align: right;
-}
-
-.head-three{
-	padding-right: 20px;
-	margin-right: 68%; 
-	text-align: right;
-}
-
-.highlight{
-	background-color: #FFFDBF;
-}
-
-
-.text{
-	font-family: 'Vollkorn', serif;
-    	color: black;
-}
-
-.links{
-	padding-left: 20px;
-	margin-top: 10px;
-	margin-bottom: 5px;
-	margin-left: 28.5%;
-	word-spacing: 20px;
-	font-size: 17px;
-}
-
-#menu {
-  color: white;
-  border: 1px solid white;
-  width: 150px;
-  height: 100px;
-  padding: 10px;
-  border-radius: 3px;
-  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-  line-height: 100px;
-  text-align: center;
-  margin: auto;
-  display: none;
-}
-
-
-/*start shitstorm*/
 
 @media all and (max-device-width : 320px) and (max-device-width : 480px){
 
-#bees{
-	display: none;
-}	
-
-.everything{
-	width:100%;
-	margin-left:0;
-}
-
-#hive{
-	width:75%;	
-	height:75%;
-	margin-left:25%;
-}
-
-h1{
-	text-align: center;
-	margin-top: -10%;
-}
-
-.head-one{
-	text-align: center;
-	padding-left: 0;
-}
-
-.links{
-	padding-left: 0;
-	text-align: center;
-}
 
 }
 
 @media all and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+}
+
+@media all and (min-device-width : 320px) and (max-device-width : 786px) {
 
 }
