@@ -5,7 +5,8 @@ html, body{
 	padding: 0;
 	overflow: hidden;
 	height: 100%;
-	font-family: 'Ubuntu Mono';
+	/*font-family: 'Ubuntu Mono';*/
+	font-family: 'Roboto';
 	font-size: 18px;
 }
 
@@ -35,6 +36,7 @@ html, body{
 }
 
 #name{	
+	font-family: 'Ubuntu Mono';
 	font-size: 34px;
 }
 
