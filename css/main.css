@@ -5,18 +5,18 @@ html, body{
 	padding: 0;
 	overflow: hidden;
 	height: 100%;
-	/*font-family: 'Ubuntu Mono';*/
-	font-family: 'Roboto';
+	font-family: 'Ubuntu Mono';
 	font-size: 18px;
 }
 
 #about a{
     	text-decoration: none;
-	color: #19191F;
+	color:#E6B85C;
+	font-weight: bold;
 }
 
 #about a:hover{
-	color:#E6B85C;
+	color: #19191F;
 }
 
 #content{
@@ -29,14 +29,13 @@ html, body{
 }
 
 #about p,a,h1{
-	-moz-transition: all .4s ease-in;
-    	-o-transition: all .4s ease-in;
-    	-webkit-transition: all .4s ease-in;
-    	transition: all .4s ease-in;
+	-moz-transition: all .3s ease-in;
+    	-o-transition: all .3s ease-in;
+    	-webkit-transition: all .3s ease-in;
+    	transition: all .3s ease-in;
 }
 
 #name{	
-	font-family: 'Ubuntu Mono';
 	font-size: 34px;
 }
 
@@ -47,8 +46,13 @@ html, body{
 #about{
 	position: absolute;
 	width: 550px;
-	left: 5%;
+	left: 3%;
 	top: 1%;
+	line-height: 30px;
+}
+
+#links{
+	line-height: 10px;
 }
 
 #sub{
@@ -64,10 +68,10 @@ html, body{
 #credit a{
 	text-decoration: none;
 	color:#FFFFE6;
-	-moz-transition: all .4s ease-in;
-    	-o-transition: all .4s ease-in;
-    	-webkit-transition: all .4s ease-in;
-    	transition: all .4s ease-in;
+	-moz-transition: all .3s ease-in;
+    	-o-transition: all .3s ease-in;
+    	-webkit-transition: all .3s ease-in;
+    	transition: all .3s ease-in;
 }
 
 #credit a:hover{
