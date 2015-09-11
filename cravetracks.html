@@ -8,6 +8,7 @@
 <script src="//connect.soundcloud.com/sdk.js"></script>
 
 <script>
+/*
 SC.initialize({
     client_id: 'dab5b00f04106a4424dd610f9903dca5'
 });
@@ -15,6 +16,7 @@ SC.initialize({
 SC.get("/tracks/81815566", {}, function(sound){
     $("#music").attr("src", sound.stream_url+"?client_id=dab5b00f04106a4424dd610f9903dca5");
 });
+*/
 </script>
 
 </style>
@@ -28,7 +30,8 @@ SC.get("/tracks/81815566", {}, function(sound){
 	<div class="album-cover-wrapper">
 		<img src="http://www.clashmusic.com/sites/default/files/legacy/files/passion-pit.jpg" width="200px"/>
 	</div>
-	<audio id="music" preload="true">
+	<audio id="music">
+		<source src="sleepyhead.mp3">
 	</audio>
 	<div class="player">
   		<div id="timeline">
