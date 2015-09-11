@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<style>
+
+body{
+	/*background: rgb(252, 252, 252);*/
+}
+
+.posts{
+	margin: 20px;	
+}
+
+.logo{
+	margin: 40px 10px 10px 10px;
+}
+
+.music-block{
+	float: left;
+	margin: 10px;
+	position: relative;
+	background: rgb(230, 46, 120);
+	width: 225px;
+	height: 225px;	
+	-webkit-transition: background-color 1s ease 1.5s;
+	-moz-transition: background-color 1s ease 1.5s;
+	-o-transition: background-color 1s ease 1.5s;
+	transition: background-color 1s ease 1.5s;
+	
+}
+
+.album-cover-wrapper{
+	padding-left: 12px;
+	padding-top: 12px;
+}
+
+.album-cover-wrapper img{
+	overflow: hidden;
+	border-radius: 200px;
+	pointer-events: none;
+}
+
+.music-block:hover{
+	background: rgba(230, 46, 120, .6);
+	-webkit-transition: background-color .5s ease;
+	-moz-transition: background-color .5s ease;
+	-o-transition: background-color .5s ease;
+	transition: background-color .5s ease;
+}
+
+.music-block .player{
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	height: 0px;
+	width:100%;
+	background: rgba(230, 46, 120, .4);
+	-webkit-transition: all 1s ease 1s;
+	-moz-transition: all 1s ease 1s;
+	-o-transition: all 1s ease 1s;
+	transition: all 1s ease 1s;
+}
+
+.music-block .review{
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	height: 0px;
+	width:100%;
+	background: rgba(230, 46, 120, .6);
+	-webkit-transition: all 1s ease .5s;
+	-moz-transition: all 1s ease .5s;
+	-o-transition: all 1s ease .5s;
+	transition: all 1s ease .5s;
+}	
+
+.music-block .song-info{
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;	
+	height: 0px;
+	width:100%;
+	background: rgba(230, 46, 120, 1);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.music-block:hover .player{
+	height: 90px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.music-block:hover .review{
+	height: 65px;
+	-webkit-transition: all 1s ease .5s;
+	-moz-transition: all 1s ease .5s;
+	-o-transition: all 1s ease .5s;
+	transition: all 1s ease .5s;
+}
+
+.music-block:hover .song-info{
+	height: 40px;
+	-webkit-transition: all 1s ease 1s;
+	-moz-transition: all 1s ease 1s;
+	-o-transition: all 1s ease 1s;
+	transition: all 1s ease 1s;
+}
+
+
+<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+<script src="//connect.soundcloud.com/sdk.js"></script>
+<script>
+SC.initialize({
+    client_id: 'dab5b00f04106a4424dd610f9903dca5'
+});
+
+SC.get("/tracks/81815566", {}, function(sound){
+    $("#audio-test").attr("src", sound.stream_url+"?client_id=dab5b00f04106a4424dd610f9903dca5");
+});
+</script>
+
+</style>
+
+</head>
+
+<body>
+
+<audio id="audio-test" controls></audio>
+
+<!--
+<nav>
+	<img class="logo" src="CraveTracksHeader.jpg" width="300px"/>
+</nav>
+
+<div class="posts">
+
+<div class="music-block">
+	<div class="album-cover-wrapper">
+		<img src="http://static.stereogum.com/blogs.dir/2/files/2010/12/Iron-And-Wine-Kiss-Each-Other-Clean-Album-Art.jpg" width="200px"/>
+	</div>
+	<div class="player"></div>
+	<div class="review"></div>
+	<div class="song-info"></div>
+</div>
+
+<div class="music-block">
+	<div class="album-cover-wrapper">
+		<img src="http://www.clashmusic.com/sites/default/files/legacy/files/passion-pit.jpg" width="200px"/>
+	</div>
+	<div class="player"></div>
+	<div class="review"></div>
+	<div class="song-info"></div>
+</div>
+
+<div class="music-block">
+	<div class="album-cover-wrapper">
+		<img src="https://flavorwire.files.wordpress.com/2010/06/black-mountain-wilderness-heart-album-art.jpg" width="200px"/>
+	</div>
+	<div class="player"></div>
+	<div class="review"></div>
+	<div class="song-info"></div>
+</div>
+
+<div class="music-block">
+	<div class="album-cover-wrapper">
+		<img src="https://theindiegirlsguideto.files.wordpress.com/2009/02/foals-antidotes-cover.jpg" width="200px"/>
+	</div>
+	<div class="player"></div>
+	<div class="review"></div>
+	<div class="song-info"></div>
+</div>
+
+<div class="music-block">
+	<div class="album-cover-wrapper">
+		<img src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/626/MI0003626958.jpg?partner=allrovi.com" width="200px"/>
+	</div>
+	<div class="player"></div>
+	<div class="review"></div>
+	<div class="song-info"></div>
+</div>
+
+</div>
+!>
+</body>
+</html>
