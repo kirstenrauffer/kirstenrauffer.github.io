@@ -1,4 +1,4 @@
-<style>
+
 
 body{
 	/*background: rgb(252, 252, 252);*/
@@ -75,7 +75,7 @@ body{
 	overflow: hidden;
 	position: absolute;
 	bottom: 0;	
-	height: 0px;
+	height: 0;
 	width:100%;
 	background: rgba(230, 46, 120, 1);
 	-webkit-transition: all 1s ease;
@@ -106,4 +106,36 @@ body{
 	-moz-transition: all 1s ease 1s;
 	-o-transition: all 1s ease 1s;
 	transition: all 1s ease 1s;
+}
+
+
+#pButton{
+    margin-top:-3px;
+    position: absolute;
+    z-index: 50;
+    height:30px; 
+    width: 30px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline:none;
+}
+
+.play{background: url('http://www.alexkatz.me/codepen/images/play.png') ;}
+.pause{background: url('http://www.alexkatz.me/codepen/images/pause.png') ;}
+
+#timeline{
+	overflow: hidden;
+	position: absolute;
+	top: 0;	
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.1);
+  
+}
+#playhead{
+	width: 0px;
+	height: 25px;
+	background: rgba(0, 0, 0,.6);
 }

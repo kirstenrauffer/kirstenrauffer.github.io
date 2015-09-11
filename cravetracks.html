@@ -2,11 +2,9 @@
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<link rel="stylesheet" href="css/cravetracks.css"/>
+<link rel="stylesheet" href="cravetracks.css"/>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://connect.soundcloud.com/sdk.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//connect.soundcloud.com/sdk.js"></script>
 
 <script>
@@ -15,7 +13,7 @@ SC.initialize({
 });
 
 SC.get("/tracks/81815566", {}, function(sound){
-    $("#audio-test").attr("src", sound.stream_url+"?client_id=dab5b00f04106a4424dd610f9903dca5");
+    $("#music").attr("src", sound.stream_url+"?client_id=dab5b00f04106a4424dd610f9903dca5");
 });
 </script>
 
@@ -25,61 +23,24 @@ SC.get("/tracks/81815566", {}, function(sound){
 
 <body>
 
-<audio id="audio-test" controls></audio>
-
-<!--
-<nav>
-	<img class="logo" src="CraveTracksHeader.jpg" width="300px"/>
-</nav>
-
 <div class="posts">
-
-<div class="music-block">
-	<div class="album-cover-wrapper">
-		<img src="http://static.stereogum.com/blogs.dir/2/files/2010/12/Iron-And-Wine-Kiss-Each-Other-Clean-Album-Art.jpg" width="200px"/>
-	</div>
-	<div class="player"></div>
-	<div class="review"></div>
-	<div class="song-info"></div>
-</div>
-
-<div class="music-block">
+    <div class="music-block">
 	<div class="album-cover-wrapper">
 		<img src="http://www.clashmusic.com/sites/default/files/legacy/files/passion-pit.jpg" width="200px"/>
 	</div>
-	<div class="player"></div>
-	<div class="review"></div>
-	<div class="song-info"></div>
-</div>
-
-<div class="music-block">
-	<div class="album-cover-wrapper">
-		<img src="https://flavorwire.files.wordpress.com/2010/06/black-mountain-wilderness-heart-album-art.jpg" width="200px"/>
+	<audio id="music" preload="true">
+	</audio>
+	<div class="player">
+  		<div id="timeline">
+			<div id="playhead"></div>
+		</div>
 	</div>
-	<div class="player"></div>
-	<div class="review"></div>
+	<div class="review"><button id="pButton" class="play" onclick="play()"></button></div>
 	<div class="song-info"></div>
+    </div>
 </div>
 
-<div class="music-block">
-	<div class="album-cover-wrapper">
-		<img src="https://theindiegirlsguideto.files.wordpress.com/2009/02/foals-antidotes-cover.jpg" width="200px"/>
-	</div>
-	<div class="player"></div>
-	<div class="review"></div>
-	<div class="song-info"></div>
-</div>
+<script src="js.js"></script>
 
-<div class="music-block">
-	<div class="album-cover-wrapper">
-		<img src="http://cps-static.rovicorp.com/3/JPG_400/MI0003/626/MI0003626958.jpg?partner=allrovi.com" width="200px"/>
-	</div>
-	<div class="player"></div>
-	<div class="review"></div>
-	<div class="song-info"></div>
-</div>
-
-</div>
--->
 </body>
 </html>
