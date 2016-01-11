@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link href='https://fonts.googleapis.com/css?family=Hind|Dancing+Script' rel='stylesheet' type='text/css'>
+<link href='style.css' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+<script src="app.js"></script>
+
+</head>
+<body ng-app="rsvp" ng-controller="MainCtrl">
+	</div>
+
+
+	<div class="header">
+		
+		<div class="nav">
+			<ul class="nav-1">
+				<li>DETAILS</li>
+				<li>CREW</li>
+				<li>PHOTOS</li>
+			</ul>
+			<h1>P&J</h1>
+			<ul class="nav-2">
+				<li>POST A MEMORY</li>
+				<li>REQUEST A SONG</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">	
+		<div class="css-invitation">
+			<div class="back"></div>
+			<div class="back-top"></div>
+			<div class="inner-invitation">
+				<div class="crab-left">
+					<div class="body">
+						<div class="smile"></div>
+					</div>
+					<div class="eye">
+					<div class="eye-line-left"></div>
+					<div class="eye-line-right"></div>
+					<div class="eye-left">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>	
+					<div class="eye-right">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+					</div>
+					<div class="arm-left"></div>
+					<div class="arm-right"></div>
+					<div class="claw-left">
+						<div class="claw-top"></div>
+						<div class="claw-bottom"></div>
+					</div>
+					<div class="claw-right">
+						<div class="claw-top clawing"></div>
+						<div class="claw-bottom"></div>
+					</div>
+					<div class="leg-1"></div>
+					<div class="leg-2"></div>
+					<div class="leg-3"></div>
+					<div class="leg-4"></div>
+				</div>
+				<div class="heart-wrapper">
+				<div class="heart">
+					<div class="tl"></div>
+					<div class="tr"></div>
+					<div class="bl"></div>
+					<div class="br"></div>
+				</div>
+				</div>
+				<div class="crab-right">
+					<div class="body">
+						<div class="smile"></div>
+					</div>
+					<div class="eye">
+					<div class="eye-line-left"></div>
+					<div class="eye-line-right"></div>
+					<div class="eye-left">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+					<div class="eye-right">
+						<div class="eye-white blinking">
+							<div class="eye-ball"></div>
+						</div>	
+					</div>
+					</div>
+					<div class="arm-left"></div>
+					<div class="arm-right"></div>
+					<div class="claw-left">
+						<div class="claw-top"></div>
+						<div class="claw-bottom"></div>
+					</div>
+					<div class="claw-right">
+						<div class="claw-top"></div>
+						<div class="claw-bottom"></div>
+					</div>
+					<div class="leg-1"></div>
+					<div class="leg-2"></div>
+					<div class="leg-3"></div>
+					<div class="leg-4"></div>
+				</div>
+			</div>
+			<div class="side-left"></div>
+			<div class="side-right"></div>
+			<div class="front"></div>
+		</div>
+		
+		<div class="rsvp">
+			<h1>RSVP</h1>
+			<p>Kindly respond by the First of March</p>
+			<form class="form" ng-submit="addGuest()" method="post">
+				<fieldset>
+					<label for="name">Name</label>
+           				<input ng-model="name" class="focus" type="text" id="name" name="name" placeholder="full name" required/>
+
+            				<label for="email">Email</label>
+            				<input ng-model="email" class="focus" type="email" id="email" placeholder="email" required/><br>
+
+					<div class="select-style">
+					<p class="left">Number of Guests</p>
+					<select class="left focus" ng-model="accompanyingGuests">
+						<option value="0">None</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+						<option value="4">Four</option>
+						<option value="5">Five</option>
+					</select>
+					</div><br>
+	
+					Joyfully Accepts <input ng-model="attending" type="radio" name="gender" value="true" required> 
+  					Regretfully Declines <input ng-model="attending" type="radio" name="gender" value="false" required><br>
+	
+            				<label class="left notes" for="message">Notes</label>
+            				<textarea ng-model="notes" class="focus" id="message" placeholder="allergies, warm wishes, requests"></textarea><br>
+
+            				<input class="focus send" type="submit" value="Send Response &rarr;" />
+        			</fieldset>
+   			 </form>
+		</div>
+
+
+</body>
+</html>
