@@ -2,7 +2,8 @@
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<link rel="stylesheet" href="css/cravetracks.css"/>
+<link rel="stylesheet" href="normalize.css"/>
+<link rel="stylesheet" href="cravetracks.css"/>
 
 <script src="http://connect.soundcloud.com/sdk.js"></script>
 <script src="//connect.soundcloud.com/sdk.js"></script>
@@ -33,13 +34,12 @@ SC.get("/tracks/81815566", {}, function(sound){
 	<audio id="music">
 		<source src="sleepyhead.mp3">
 	</audio>
+	<div class="review"><button id="pButton" class="play" onclick="play()"></button></div>
 	<div class="player">
-  		<div id="timeline">
+		<div id="timeline">
 			<div id="playhead"></div>
 		</div>
 	</div>
-	<div class="review"><button id="pButton" class="play" onclick="play()"></button></div>
-	<div class="song-info"></div>
     </div>
 </div>
 
@@ -47,3 +47,5 @@ SC.get("/tracks/81815566", {}, function(sound){
 
 </body>
 </html>
+
+
