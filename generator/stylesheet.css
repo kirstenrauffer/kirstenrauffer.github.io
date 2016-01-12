@@ -1,9 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Cutive+Mono|Muli);
 
+/*General Styling*/
 html, body {
   font-family: 'Muli', serif;
 }
 
+/*Main*/
 .main {
   position: absolute;
   text-align: center;
@@ -13,11 +15,15 @@ html, body {
   margin-left: -475px;
 }
 
-.main img {
+.main .charlie {
   float: left;
   width: 400px;
   height: 400px;
   border-radius: 50%;
+}
+
+.charlie {
+  display: none;
 }
 
 .main .for-arian, .main .nickname {
@@ -30,39 +36,16 @@ html, body {
   margin-left: 50px;
 }
 
-@media screen and (max-width: 900px) {
-.main {
-  margin-top: -300px;
-  margin-left: -150px;
+.main .nickname {
+  margin-left: 65px;
 }
 
-.main img {
-  width: 300px;
-  height: 300px;
-}
-
-.main .for-arian {
-  width: 100%;
-  margin-left: -25px;
-  font-size: 32px;
-  margin-top: 50px;
-}
-
-.main .categories {
-  width: 100%;
-  margin-left: -50px;
-}
-
-}
-
-.hidden {
-  display: none;
-}
-
+/*Categories*/
 .categories {
   float: left;
   font-size: 12px;
   margin-top: 30px;
+  max-width: 600px;
 }
 
 .categories ul {
@@ -86,10 +69,7 @@ html, body {
   border-radius: 15px;
 }
 
-.charlie {
-  display: none;
-}
-
+/*For jQuery*/
 .unselected {
   background: rgba(0,0,0,.03);
 }
@@ -97,3 +77,43 @@ html, body {
 .selected {
   background: rgba(0,0,0,.2);
 }
+
+.hidden {
+  display: none;
+}
+
+/*Responsive Styling*/
+@media screen and (max-width: 1000px) {
+.main {
+  margin-top: -300px;
+  margin-left: -150px;
+}
+
+.main .charlie {
+  width: 300px;
+  height: 300px;
+}
+
+.main .for-arian {
+  width: 320px;
+  margin-left: -300px;
+  margin-top: 325px;
+  font-size: 28px;
+}
+
+.main .nickname {
+  width: 320px;
+  margin-left: -300px;
+  margin-top: 225px;
+  font-size: 28px;
+}
+
+.main .categories {
+  margin: 0;
+  width: 320px;
+  margin-left: -30px;
+  clear: both;
+}
+
+}
+
