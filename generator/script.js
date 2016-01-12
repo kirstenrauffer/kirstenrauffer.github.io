@@ -12,6 +12,8 @@ var nouns = ['giggles','gangsta','buttercup','cuddle','munchkin','snuggles','nug
 
 var masterNouns = ['giggles', 'gangsta', 'buttercup', 'cuddle', 'munchkin', 'snuggles', 'nugget', 'sweetie', 'love', 'pants', 'face', 'baby', 'num num', 'dear', 'muppet', 'star', 'angel', 'love', 'taco', 'burrito', 'dumpling', 'peanut', 'noodles', 'fortune cookie', 'nutmeg', 'pork chop', 'cake', 'pie', 'tart', 'cupcake', 'doughnut', 'honey','meringue', 'waffle', 'pancake', 'jelly bean', 'oreo', 'muffin', 'sugar', 'apple', 'apricot', 'banana', 'blueberry', 'cherry', 'cherry', 'coconut', 'fig', 'gooseberry', 'kiwi', 'kumquat', 'mango', 'olive', 'nectarine', 'clementine', 'tangerine', 'peach', 'pear', 'plum', 'pumpkin', 'pineapple', 'tomato', 'lemon', 'artichoke', 'jujube', 'squash','darling','fox','koala','goose','boo'];
 
+var pictures = ['calvin-1.jpg','charlie-1.jpg','calvin-2.png',];
+
 var typeWriter = function(typeClass, text, n) {
   if (n < (text.length)) {
     $(typeClass).html(text.substring(0, n+1));
@@ -23,6 +25,12 @@ var typeWriter = function(typeClass, text, n) {
 }
 
 var main = function() {
+	$('.picture').fadeIn(3000);
+	$('.hidden').delay(2500).fadeIn(2500);
+
+	var text = $('.for-arian').data('text');
+	typeWriter('.for-arian',text, 0);
+
 	var firstActive=false;
 	var firstLastClicked = '';
 	var secondActive=false;
@@ -54,14 +62,6 @@ var main = function() {
 			$(this).addClass('selected');	
 		}
 	});
-
-	$('.charlie').fadeIn(3000);
-	$('.hidden').delay(2500).fadeIn(2500);
-
-	
-
-	var text = $('.for-arian').data('text');
-	typeWriter('.for-arian',text, 0);
 
 	$('button').click(function(){
 		switch(firstLastClicked){
@@ -108,6 +108,7 @@ var main = function() {
 				break;		
    		}
 		typeWriter('.nickname', nicknameText, 0);
+		$('.picture').attr('src',pictures[Math.floor((Math.random() * (pictures.length-1)) + 0)]);
 		nicknameText='';
 	});
 };
