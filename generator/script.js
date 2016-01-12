@@ -108,7 +108,12 @@ var main = function() {
 				break;		
    		}
 		typeWriter('.nickname', nicknameText, 0);
-		$('.picture').attr('src',pictures[Math.floor((Math.random() * (pictures.length-1)) + 0)]);
+		var currentPic = $('.picture').attr('src');
+		var newPic = pictures[Math.floor((Math.random() * (pictures.length-1)) + 0)];
+		while(currentPic === newPic) {
+		  newPic = pictures[Math.floor((Math.random() * (pictures.length-1)) + 0)];
+		} 
+		$('.picture').attr('src', newPic);
 		nicknameText='';
 	});
 };
