@@ -95,10 +95,11 @@ html, body {
 }
 
 .main .for-arian {
-  width: 320px;
-  margin-left: -300px;
-  margin-top: 325px;
+  width: 350px;
+  margin-left: -25px;
+  margin-top: 25px;
   font-size: 28px;
+  clear: both;
 }
 
 .main .nickname {
