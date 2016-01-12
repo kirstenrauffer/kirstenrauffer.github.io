@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <link href='style.css' rel='stylesheet' type='text/css'>
   <link rel="icon" href="http://www.kirstenrauffer.com/favicon.ico" type="image/x-icon">
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> 
+  <script src="http://platform.fatsecret.com/js?key=XXXXX&auto_template=false"></script>
 </head>
 
 <style>
-@import url(http://fonts.googleapis.com/css?family=Cutive+Mono);
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono|Muli);
 
 html, body {
-  font-family: 'Cutive Mono', serif;
+  font-family: 'Muli', serif;
 }
 
 .main {
   position: absolute;
+  text-align: center;
   left: 50%;
   top: 50%;
   margin-top: -200px;
-  margin-left: -450px;
+  margin-left: -475px;
 }
 
 .main img {
@@ -28,10 +28,14 @@ html, body {
   border-radius: 50%;
 }
 
-.main .for-arian {
+.main .for-arian, .main .nickname {
+  width: 500px;
+  font-family:'Cutive Mono', serif;
   float: left;
-  margin-left: 20px;
+  margin: 0 auto;
   font-size: 36px;
+  margin-top: 30px;
+  margin-left: 50px;
 }
 
 @media screen and (max-width: 900px) {
@@ -46,38 +50,190 @@ html, body {
 }
 
 .main .for-arian {
-  width: 400px;
+  width: 100%;
+  margin-left: -25px;
   font-size: 32px;
   margin-top: 50px;
-  margin-left: -50px;
-  text-align: center;
 }
 
+.main .categories {
+  width: 100%;
+  margin-left: -50px;
+}
+
+}
+
+.hidden {
+  display: none;
+}
+
+.categories {
+  float: left;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  
+}
+
+.categories ul li {
+  display: inline-block;
+  padding: 10px;
+  margin: 3px 0px 3px 3px;;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.categories button {
+  padding: 10px;
+  margin: 5px 5px 5px 50px;
+  background: #E5F8FF;
+  border: none;
+  border-radius: 15px;
+}
+
+.charlie {
+  display: none;
+}
+
+.unselected {
+  background: rgba(0,0,0,.03);
+}
+
+.selected {
+  background: rgba(0,0,0,.2);
 }
 
 </style>
 
 <body>
-	<div class="main">
-		<img src="charliebrown.jpg">
-		<div class="for-arian" data-text="f&uuml;r meine Liebe, Arian"></div>
+<div class="main">
+	<img class="charlie" src="charliebrown.jpg">
+	<div class="for-arian" data-text="f&uuml;r meine Liebe, Arian"></div>
+	<div class="categories hidden">
+		<ul class="first">
+			<li class="unselected" id="pronoun">pronoun</li>
+			<li class="unselected" id="adjective">adjective</li>	
+			<li class="unselected" id="noun">any noun</li>
+		</ul>
+		<ul class="second">	
+			<li class="unselected" id="animal">animal</li>
+			<li class="unselected" id="fruit">fruit/veggie</li>
+			<li class="unselected" id="dessert">sweets/dessert</li>
+			<li class="unselected" id="food">miscellaneous food</li>
+			<li class="unselected" id="noun">miscellaneous noun</li>
+		</ul>
+		<button>Generate Nickname</button>
 	</div>
+	<div class="nickname"></div>
+
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-function typeWriter(text, n) {
+function typeWriter(typeClass, text, n) {
   if (n < (text.length)) {
-    $('.for-arian').html(text.substring(0, n+1));
+    $(typeClass).html(text.substring(0, n+1));
     n++;
     setTimeout(function() {
-      typeWriter(text, n)
+      typeWriter(typeClass, text, n)
     }, 100);
   }
 }
 
+var adjectives = ['little','lovely','squishy','smiley','cuddly','snuggly','sweet','perfect','peachy','kissy','dorkey','wonderful','beautiful'];
+
+var animals = ['panda','bear','pup','duckling','lobster','mouse','bird','bug','penguin','bunny', 'fishy','cuddlefish','caterpillar','guppy','squirrel','deer','monkey','dove','giggley'];
+
+var fruits = ['apple','apricot','banana','blueberry','cherry','cherry','coconut','fig','gooseberry','kiwi','kumquat','mango','olive','nectarine','clementine','tangerine','peach','pear','plum','pumpkin','pineapple','tomato','lemon','artichoke','jujube','squash'];
+
+var desserts = ['cake','pie','tart','cupcake','doughnut','honey','meringue','waffle','pancake','jelly bean','oreo','muffin','sugar'];
+
+var foods = ['taco','burrito','dumpling','peanut','noodles','fortune cookie','nutmeg','pork chop'];
+
+var nouns = ['giggles','gangsta','buttercup','cuddle','munchkin','snuggles','nugget','sweetie','love','pants','face','baby','num num','dear','muppet','star','angel','love'];
+
+var masterNouns = ['giggles', 'gangsta', 'buttercup', 'cuddle', 'munchkin', 'snuggles', 'nugget', 'sweetie', 'love', 'pants', 'face', 'baby', 'num num', 'dear', 'muppet', 'star', 'angel', 'love', 'taco', 'burrito', 'dumpling', 'peanut', 'noodles', 'fortune cookie', 'nutmeg', 'pork chop', 'cake', 'pie', 'tart', 'cupcake', 'doughnut', 'honey','meringue', 'waffle', 'pancake', 'jelly bean', 'oreo', 'muffin', 'sugar', 'apple', 'apricot', 'banana', 'blueberry', 'cherry', 'cherry', 'coconut', 'fig', 'gooseberry', 'kiwi', 'kumquat', 'mango', 'olive', 'nectarine', 'clementine', 'tangerine', 'peach', 'pear', 'plum', 'pumpkin', 'pineapple', 'tomato', 'lemon', 'artichoke', 'jujube', 'squash'];
+
 var main = function() {
+	var firstActive=false;
+	var firstLastClicked = '';
+	var secondActive=false;
+	var secondLastClicked = '';
+	var nicknameText = '';
+
+	$('.first li').click(function(){
+		$('.first li').removeClass('selected');
+		if(firstActive==true && firstLastClicked==$(this).attr('id')) {
+			firstActive=false;
+			firstLastClicked='';
+			$(this).removeClass('selected');
+		} else {
+			firstActive=true;
+			firstLastClicked=$(this).attr('id');
+			$(this).addClass('selected');	
+		}
+	});
+
+	$('.second li').click(function(){
+		$('.second li').removeClass('selected');
+		if(secondActive ==true && secondLastClicked==$(this).attr('id')) {
+			secondActive =false;
+			secondLastClicked ='';
+			$(this).removeClass('selected');
+		} else {
+			secondActive =true;
+			secondLastClicked =$(this).attr('id');
+			$(this).addClass('selected');	
+		}
+	});
+
+	$('.charlie').fadeIn(3000);
+	$('.hidden').delay(2500).fadeIn(2500);
+
+	
+
 	var text = $('.for-arian').data('text');
-	typeWriter(text, 0);
+	typeWriter('.for-arian',text, 0);
+
+	$('button').click(function(){
+		switch(firstLastClicked){
+      			case 'pronoun':
+				nicknameText ='my ';
+				break;
+			case 'adjective':
+				nicknameText = adjectives[Math.floor((Math.random() * (adjectives.length-1)) + 0)] + ' ';
+				break;
+			default:
+				nicknameText = masterNouns[Math.floor((Math.random() * (masterNouns.length-1)) + 0)] + ' ';	
+				break;			
+   		}
+
+		switch(secondLastClicked){
+      			case 'animal':
+				nicknameText = nicknameText.concat(animals[Math.floor((Math.random() * (animals.length-1)) + 0)]);
+				break;
+			case 'fruit':
+				nicknameText = nicknameText.concat(fruits[Math.floor((Math.random() * (fruits.length-1)) + 0)]);
+				break;
+			case 'dessert':
+				nicknameText = nicknameText.concat(desserts[Math.floor((Math.random() * (desserts.length-1)) + 0)]);
+				break;
+			case 'food':
+				nicknameText = nicknameText.concat(foods[Math.floor((Math.random() * (foods.length-1)) + 0)]);
+				break;
+			case 'noun':
+				nicknameText = nicknameText.concat(nouns[Math.floor((Math.random() * (nouns.length-1)) + 0)]);
+				break;
+			default:		
+				nicknameText = nicknameText.concat(masterNouns[Math.floor((Math.random() * (masterNouns.length-1)) + 0)]);
+				break;		
+   		}
+		typeWriter('.nickname', nicknameText, 0);
+		nicknameText='';
+	});
 };
 
 $(document).ready(main);
