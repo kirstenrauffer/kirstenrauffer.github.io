@@ -1,6 +1,6 @@
 var adjectives = ['little','lovely','squishy','smiley','cuddly','snuggly','sweet','perfect','peachy','kissy','dorky','wonderful','beautiful','giggly','warm'];
 
-var animals = ['panda','bear','pup','duckling','lobster','mouse','bird','bug','penguin','bunny', 'fishy','cuddlefish','caterpillar','guppy','squirrel','deer','monkey','dove','fox','koala','goose'];
+var animals = ['panda','bear','pup','duckling','lobster','mouse','bird','bug','penguin','bunny', 'fishy','cuddlefish','caterpillar','guppy','squirrel','deer','monkey','dove','fox','koala','goose','lamb'];
 
 var fruits = ['apple','apricot','banana','blueberry','cherry','cherry','coconut','fig','gooseberry','kiwi','kumquat','mango','olive','nectarine','clementine','tangerine','peach','pear','plum','pumpkin','pineapple','tomato','lemon','artichoke','jujube','squash'];
 
@@ -8,11 +8,11 @@ var desserts = ['cake','pie','tart','cupcake','doughnut','honey','meringue','waf
 
 var foods = ['taco','burrito','dumpling','peanut','noodles','fortune cookie','nutmeg','pork chop'];
 
-var nouns = ['giggles','gangsta','buttercup','cuddle','munchkin','snuggles','nugget','sweetie','love','pants','face','baby','num num','dear','muppet','star','angel','love','darling','boo'];
+var nouns = ['giggles','gangsta','buttercup','cuddle','munchkin','snuggles','nugget','sweetie','love','pants','face','baby','num num','dear','muppet','star','angel','umbrella','love','snoopy','darling','boo'];
 
-var masterNouns = ['giggles', 'gangsta', 'buttercup', 'cuddle', 'munchkin', 'snuggles', 'nugget', 'sweetie', 'love', 'pants', 'face', 'baby', 'num num', 'dear', 'muppet', 'star', 'angel', 'love', 'taco', 'burrito', 'dumpling', 'peanut', 'noodles', 'fortune cookie', 'nutmeg', 'pork chop', 'cake', 'pie', 'tart', 'cupcake', 'doughnut', 'honey','meringue', 'waffle', 'pancake', 'jelly bean', 'oreo', 'muffin', 'sugar', 'apple', 'apricot', 'banana', 'blueberry', 'cherry', 'cherry', 'coconut', 'fig', 'gooseberry', 'kiwi', 'kumquat', 'mango', 'olive', 'nectarine', 'clementine', 'tangerine', 'peach', 'pear', 'plum', 'pumpkin', 'pineapple', 'tomato', 'lemon', 'artichoke', 'jujube', 'squash','darling','fox','koala','goose','boo'];
+var masterNouns = ['giggles', 'gangsta', 'buttercup', 'cuddle', 'munchkin', 'snuggles', 'nugget', 'sweetie', 'love', 'pants', 'face', 'baby', 'num num', 'dear', 'muppet', 'star', 'angel', 'love', 'taco', 'burrito', 'dumpling', 'peanut', 'noodles', 'fortune cookie', 'nutmeg', 'pork chop', 'cake', 'pie', 'tart', 'cupcake', 'doughnut', 'honey','meringue', 'waffle', 'pancake', 'jelly bean', 'oreo', 'muffin', 'sugar', 'apple', 'apricot', 'banana', 'blueberry', 'cherry', 'cherry', 'coconut', 'fig', 'gooseberry', 'kiwi', 'kumquat', 'mango', 'olive', 'nectarine', 'clementine', 'tangerine', 'peach', 'pear', 'plum', 'pumpkin', 'pineapple', 'tomato', 'lemon', 'artichoke', 'snoopy','jujube', 'umbrella','squash','darling','fox','koala','goose','boo','lamb'];
 
-var pictures = ['calvin-1.jpg','charlie-1.jpg','calvin-2.png',];
+var pictures = ['calvin-1.jpg','birds.jpg','mountains.jpg','charlie-1.jpg','flowers.jpg','calvin-2.png',];
 
 var typeWriter = function(typeClass, text, n) {
   if (n < (text.length)) {
