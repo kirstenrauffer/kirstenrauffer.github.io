@@ -20,13 +20,13 @@ var typeWriter = function(typeClass, text, n) {
     n++;
     setTimeout(function() {
       typeWriter(typeClass, text, n)
-    }, 100);
+    }, 90);
   }
 }
 
 var main = function() {
-	$('.picture').fadeIn(3000);
-	$('.hidden').delay(2500).fadeIn(2500);
+	$('.picture').fadeIn(1500);
+	$('.hidden').delay(2000).fadeIn(2000);
 
 	var text = $('.for-arian').data('text');
 	typeWriter('.for-arian',text, 0);

@@ -26,11 +26,6 @@ html, body {
 	border-radius: 50%;
 }
 
-.header h1 a {
-	text-decoration: none;
-	color: #fff;
-}
-
 .header .nav {
 	position: fixed;
 	left: 50%;
