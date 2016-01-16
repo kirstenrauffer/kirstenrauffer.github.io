@@ -5,11 +5,8 @@
 <link href='https://fonts.googleapis.com/css?family=Hind|Dancing+Script' rel='stylesheet' type='text/css'>
 <link href='style.css' rel='stylesheet' type='text/css'>
 
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-<script src="app.js"></script>
-
 </head>
-<body ng-app="rsvp" ng-controller="MainCtrl">
+<body>
 	</div>
 
 
@@ -116,17 +113,17 @@
 		<div class="rsvp">
 			<h1>RSVP</h1>
 			<p>Kindly respond by the First of March</p>
-			<form class="form" ng-submit="addGuest()" method="post">
+			<form class="form" action="http://formspree.io/phyllisandjohn.guestlist@gmail.com">
 				<fieldset>
 					<label for="name">Name</label>
-           				<input ng-model="name" class="focus" type="text" id="name" name="name" placeholder="full name" required/>
+           				<input class="focus" type="text" id="name" name="name" placeholder="full name" required/>
 
-            				<label for="email">Email</label>
-            				<input ng-model="email" class="focus" type="email" id="email" placeholder="email" required/><br>
+            				<label for="_replyto">Email</label>
+            				<input name="_replyto" class="focus" type="email" id="email" placeholder="email" required/><br>
 
 					<div class="select-style">
 					<p class="left">Number of Guests</p>
-					<select class="left focus" ng-model="accompanyingGuests">
+					<select class="left focus" name="guests">
 						<option value="0">None</option>
 						<option value="1">One</option>
 						<option value="2">Two</option>
@@ -136,11 +133,11 @@
 					</select>
 					</div><br>
 	
-					Joyfully Accepts <input ng-model="attending" type="radio" name="gender" value="true" required> 
-  					Regretfully Declines <input ng-model="attending" type="radio" name="gender" value="false" required><br>
+					Joyfully Accepts <input name="attending" type="radio" name="gender" value="true" required> 
+  					Regretfully Declines <input name="attending"  type="radio" name="gender" value="false" required><br>
 	
             				<label class="left notes" for="message">Notes</label>
-            				<textarea ng-model="notes" class="focus" id="message" placeholder="allergies, warm wishes, requests"></textarea><br>
+            				<textarea name="message" class="focus" id="message" placeholder="allergies, warm wishes, requests"></textarea><br>
 
             				<input class="focus send" type="submit" value="Send Response &rarr;" />
         			</fieldset>
