@@ -60,7 +60,7 @@ svg {
 <i class="haiku">
 <p>have a cup of tea!</p>
 <p>maybe some cottage cheese. please,</p>
-<p>get better for me &hearts;</p>
+<p>get better for me <span class="heart">&hearts;</span></p>
 </i>
 
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -329,14 +329,18 @@ var main = function(){
 
   if(rand <= 1) {
 	$(".color").css('background-color', color1);
+	$(".heart").css('color', '#AFE2F1');
   } else if(rand <= 2) {
 	$(".color").css('background-color', color2);
+	$(".heart").css('color', '#9BD7F7');
   } else {
 	$(".color").css('background-color', color3);
+	$(".heart").css('color', '#AFC7F4');
   }
 };
 
 $(document).ready(main);
 </script>
-</body>
+
+</body>
 </html>
