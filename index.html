@@ -47,7 +47,7 @@
       <div class="hide">
         <p>neptun app</p>
       </div>
-      <img src='images/neptun.png'/>
+      <img src='images/neptun.png' data-pixelate/>
     </div>
     <div class='section'>
       <div class="hide">
@@ -86,8 +86,6 @@
   <script src="pixelate.js"></script>
   <script>
   var main = function() {
-    $('img').pixelate();
-
     $('.section')
       .mouseenter(function() {
       $(this).find('.hide').delay(100).fadeIn(500);
