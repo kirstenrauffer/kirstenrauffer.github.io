@@ -5,14 +5,6 @@
  * License: MIT
  */
 (function(window, $) {
-       var depixelate = function() {
-		var element = this, 
-                   imgWidth = element.width,
-		    imgHeight = element.height;
-
-		ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
-       };
-
 	var pixelate = function() {
 		var defaults = {
 			value: 0.05,
@@ -57,37 +49,41 @@
 		ctx.drawImage(canv, 0, 0, width, height, 0, 0, canv.width, canv.height);
 		element.style.display = 'none';
 		elementParent.insertBefore(canv, element);
+		if(options.revealonclick !== false && options.revealonclick !== 'false') {
+			/*
+			 * Reveal on click
+			 */
+			canv.addEventListener('click', function(e) {
+				revealed = !revealed;
+				if(revealed) {
+					ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
+				} else {
+					ctx.drawImage(element, 0, 0, width, height);
+					ctx.drawImage(canv, 0, 0, width, height, 0, 0, canv.width, canv.height);
+				}
+			});
+		}
 		if(options.reveal !== false && options.reveal !== 'false') {
 			/*
 			 * Reveal on hover
 			 */
 			canv.addEventListener('mouseenter', function(e) {
 				if(revealed) return;
+				ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
+			});
+			canv.addEventListener('mouseleave', function(e) {
+				if(revealed) return;
 				ctx.drawImage(element, 0, 0, width, height);
 				ctx.drawImage(canv, 0, 0, width, height, 0, 0, canv.width, canv.height);
 			});
-			/*
-			canv.addEventListener('mouseleave', function(e) {
-				if(revealed) return;
-				ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
-			});
-	               */
 		}
 	};
 	window.HTMLImageElement.prototype.pixelate = pixelate;
-	window.HTMLImageElement.prototype.depixelate = depixelate;
 	if(typeof $ === 'function') {
 		$.fn.extend({
 			pixelate: function() {
 				return this.each(function() {
 					pixelate.apply(this, arguments);
-				});
-			}
-		});
-		$.fn.extend({
-			depixelate: function() {
-				return this.each(function() {
-					depixelate.apply(this, arguments);
 				});
 			}
 		});
@@ -97,15 +93,6 @@
 		for(var i = 0; i < img.length; i++) {
 			img[i].addEventListener('load', function() {
 				this.pixelate();
-			});
-		};
-	});
-
-	document.addEventListener('DOMContentLoaded', function(e) {
-		var img = document.querySelectorAll('img[data-pixelate]');
-		for(var i = 0; i < img.length; i++) {
-			img[i].addEventListener('load', function() {
-				this.depixelate();
 			});
 		};
 	});
