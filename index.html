@@ -44,21 +44,39 @@
 
   <div class='content'>
     <div class='section'>
+      <div class="hide">
+        <p>neptun app</p>
+      </div>
       <img src='images/neptun.png'/>
     </div>
     <div class='section'>
+      <div class="hide">
+        <p>wedding site</p>
+      </div>
       <img src='images/wedding.png'/>
     </div>
     <div class='section'>
+      <div class="hide">
+        <p>autonomous driving app</p>
+      </div>
       <img src='images/autonomous.jpg'/>
     </div>
     <div class='section'>
+      <div class="hide">
+        <p>mango search</p>
+      </div>
       <img src='images/mango.png'/>
     </div>
     <div class='section'>
+      <div class="hide">
+        <p>PERSI</p>
+      </div>
       <img src='images/instrument.png'/>
     </div>
     <div class='section'>
+      <div class="hide">
+        <p>crit it</p>
+      </div>
       <img src='images/critit.png'/>
     </div>
   </div>
@@ -69,9 +87,22 @@
   <script>
   var main = function() {
     
+    var element = $('img');
+
     $('img').mouseover(function(){
       $(this).pixelate();
+      element = $(this);
     });
+
+    $('.section')
+      .mouseenter(function() {
+      $(this).find('.hide').delay(100).fadeIn(500);
+    })
+      .mouseleave(function() {
+      $(this).find('.hide').delay(100).fadeOut(500);
+      element.depixelate();
+    });
+
   };
 
   $(document).ready(main);
