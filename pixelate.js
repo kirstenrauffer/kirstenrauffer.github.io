@@ -49,24 +49,22 @@
 		ctx.drawImage(canv, 0, 0, width, height, 0, 0, canv.width, canv.height);
 		element.style.display = 'none';
 		elementParent.insertBefore(canv, element);
-		if(options.revealonclick !== false && options.revealonclick !== 'false') {
-			/*
-			 * Reveal on click
-			 */
-			canv.addEventListener('click', function(e) {
-				revealed = !revealed;
-				if(revealed) {
-					ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
-				} else {
-					ctx.drawImage(element, 0, 0, width, height);
-					ctx.drawImage(canv, 0, 0, width, height, 0, 0, canv.width, canv.height);
-				}
-			});
-		}
+		
 		if(options.reveal !== false && options.reveal !== 'false') {
 			/*
 			 * Reveal on hover
 			 */
+			 
+			elementParent.addEventListener('mouseenter', function(e) {
+				if(revealed) return;
+				ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
+			});
+			elementParent.addEventListener('mouseleave', function(e) {
+				if(revealed) return;
+				ctx.drawImage(element, 0, 0, width, height);
+				ctx.drawImage(canv, 0, 0, width, height, 0, 0, canv.width, canv.height);
+			});
+			
 			canv.addEventListener('mouseenter', function(e) {
 				if(revealed) return;
 				ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
