@@ -86,13 +86,7 @@
   <script src="pixelate.js"></script>
   <script>
   var main = function() {
-    
-    var element = $('img');
-
-    $('img').mouseover(function(){
-      $(this).pixelate();
-      element = $(this);
-    });
+    $('img').pixelate();
 
     $('.section')
       .mouseenter(function() {
@@ -100,7 +94,6 @@
     })
       .mouseleave(function() {
       $(this).find('.hide').delay(100).fadeOut(500);
-      element.depixelate();
     });
 
   };
