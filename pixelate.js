@@ -69,11 +69,14 @@
 				if(revealed) return;
 				ctx.drawImage(element, 0, 0, imgWidth, imgHeight);
 			});
+			
+			/*
 			canv.addEventListener('mouseleave', function(e) {
 				if(revealed) return;
 				ctx.drawImage(element, 0, 0, width, height);
 				ctx.drawImage(canv, 0, 0, width, height, 0, 0, canv.width, canv.height);
 			});
+			*/
 		}
 	};
 	window.HTMLImageElement.prototype.pixelate = pixelate;
