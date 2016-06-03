@@ -266,10 +266,32 @@ html, body {
       <li><a href="projects/">Projects</a></li>
       <li><a href="KirstenRaufferResume.pdf">R&eacute;sum&eacute;</a></li>
       <li><a href="about/">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="contact">Contact</a></li>
   </ul>
 </div>
 
+<div class="contact-form">
+  <form class="form" method="POST" action="http://formspree.io/kirstenrauffer@gmail.com">
+    <fieldset>
+      <label for="name">Name</label>
+      <input class="focus" type="text" id="name" name="name" required/>
+      <label for="_replyto">Email</label>
+      <input name="_replyto" class="focus" type="email" id="email" required/><br>
+      <label style="margin-top: -30px;"  class="notes" for="message">Hello!</label>
+      <textarea name="message" class="focus" id="message"></textarea><br>
+      <input class="focus send" type="submit" value="Message" />
+    </fieldset>
+   </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+var main = function() {
+$( ".contact" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+}
 
+$(document).ready(main);  
+</script>
 </body>
 </html>
