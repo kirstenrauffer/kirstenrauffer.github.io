@@ -7,12 +7,16 @@ boolean mouseDown = false;
   
 void setup()
 {
-  size(800,400,P2D);
+  size(displayWidth,displayHeight,P2D);
   smooth();
   noStroke();
    
-  for(int i=0; i<80;i++){
-    bc.add(new Bee(7,random(width),random(height)));
+  for(int i=0; i<=40;i++){
+    bc.add(new Bee(7,random(width),random(height),false));
+  }
+  
+  for(int i=0; i<=40;i++){
+    bc.add(new Bee(7,random(width),random(height),true));
   }
 }
   
@@ -28,16 +32,17 @@ class Bee
   int diameter;
   float x, y;
   float dx, dy, dz;
-    
+  boolean reverse;
   Bee(){  }
   
-  Bee(int D, float X, float Y)
+  Bee(int D, float X, float Y, boolean R)
   {
     diameter = D;
     x = X;
     y = Y;
     dx = random(-vel,vel);
     dy = random(-vel,vel);
+    reverse = R;
   }
   
   void run()
@@ -105,13 +110,34 @@ class Bee
   void display()
   {
     noStroke();
-    fill(random(200,255));
-    ellipse (x+2, y-2, 10, random(30));
-    fill(255,219,13);
-    ellipse (x, y, 15, 10);
+    
+    if(reverse == false) { 
+     fill(random(200,255));
+     rect (x+1, y-7.5, 10, random(30)); 
+      
+     fill(255,219,13);
+     rect (x+6, y, 6, 8);
+     fill(102, 51, 0);
+     rect (x, y, 2, 8); 
+     fill(255,219,13);
+     rect (x+2, y, 2, 8);
+     fill(102, 51, 0);
+     rect (x+4, y, 2, 8);   
+    } else {
+     fill(random(200,255));
+     rect (x-7, y-7.5, 10, random(30));  
+      
+     fill(255,219,13);
+     rect (x-10, y, 6, 8);
+     fill(102, 51, 0);
+     rect (x, y, 2, 8); 
+     fill(255,219,13);
+     rect (x-2, y, 2, 8);
+     fill(102, 51, 0);
+     rect (x-4, y, 2, 8); 
+    }
   }
-}
- 
+} 
 class Colony
 {
   ArrayList bees = new ArrayList();
