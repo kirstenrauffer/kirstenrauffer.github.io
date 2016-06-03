@@ -92,6 +92,86 @@ canvas:focus {
   opacity: .8;
 }
 
+form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -225px;
+  margin-top: -200px;
+}
+
+fieldset {
+  border: 0;
+  width: 350px;
+  height: 100%;
+  background: #010101;
+  opacity: .9;
+  padding: 50px 75px 50px 25px;
+  display: inline-block;
+}
+
+input[type=text], input[type=email], textarea {
+  font-family: 'Inconsolata', sans-serif;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #ECF0F1;
+  width: 225px;
+  color: #ECF0F1;
+  line-height:15px; 
+  font-size: 14px;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  outline: 0;
+}
+
+form ul li {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+form p {
+  position: absolute;
+  z-index: 999;
+  right: 15px;
+  cursor: pointer;
+}
+
+fieldset label{
+  margin-right: 20px;
+  position: relative;
+}
+
+fieldset label:after{
+  content: ". ";
+  position: absolute;
+  right: -0.2em;
+}
+
+fieldset input, textarea{
+  float: right;
+}
+
+input[type=submit] {
+  border: none;
+  background: #ECF0F1; 
+  padding: 10px;
+  margin-top: 25px;
+  margin-left: 20px;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 16px;
+}
+
+textarea {
+  background: transparent url(http://s24.postimg.org/62v2ipx81/underline.png) repeat;
+  overflow:hidden;
+  line-height:25px; 
+  border: none;
+  margin-top: -10px;
+}
+
+
 </style>
 
 <script src="processing-1.4.8.min.js"></script>
@@ -107,7 +187,7 @@ canvas:focus {
       <li><a href="/projects/">Projects</a></li>
       <li><a href="KirstenRaufferResume.pdf">R&eacute;sum&eacute;</a></li>
       <li><a href="">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a class="contact" style="cursor: pointer;">Contact</a></li>
   </ul>
 </div>
 
@@ -124,5 +204,44 @@ canvas:focus {
       <canvas data-processing-sources="bees/bees.pde"></canvas>
     </div>
   </div>
+
+<div class="contact-form">
+  <form class="form" method="POST" action="http://formspree.io/kirstenrauffer@gmail.com">
+    <p>[close]</p>
+    <fieldset>
+      <ul>
+        <li><label for="name">Name</label>
+            <input class="focus" type="text" id="name" name="name" required/></li>
+        <li><label for="_replyto">Email</label>
+             <input name="_replyto" class="focus" type="email" id="email" required/></li>
+        <li><label style="margin-top: -30px;"  class="notes" for="message">Hello</label>
+            <textarea name="message" rows="5" class="focus" id="message"></textarea></li>
+        <li><input class="focus send" type="submit" value="Send Message" /></li>
+      </ul>
+    </fieldset>
+   </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+var main = function() {
+$( ".contact-form" ).hide();
+
+$( ".contact" ).click(function() {
+  $( ".contact-form" ).fadeIn();
+});
+
+
+$( "form p" ).click(function() {
+  $( ".contact-form" ).fadeOut();
+});
+
+$( ".send" ).click(function() {
+  $( ".contact-form" ).fadeOut();
+});
+}
+
+$(document).ready(main);  
+</script>
+
 </body>
 </html>
