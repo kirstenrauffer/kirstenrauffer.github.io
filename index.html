@@ -92,7 +92,7 @@ html, body {
   animation: bounce 2s infinite;
 }
 
-.star:nth-child(3) {
+.star:nth-child(4) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -106,7 +106,7 @@ html, body {
   transform:         scale(.7) rotate(35deg);
 }
 
-.star:nth-child(4) {
+.star:nth-child(5) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -120,7 +120,7 @@ html, body {
   transform:         scale(.5) rotate(-75deg);
 }
 
-.star:nth-child(5) {
+.star:nth-child(6) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -134,7 +134,7 @@ html, body {
   transform:         scale(.6) rotate(-5deg);
 }
 
-.star:nth-child(6) {
+.star:nth-child(7) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -148,7 +148,7 @@ html, body {
   transform:         scale(.5) rotate(-150deg);
 }
 
-.small-star:nth-child(7) {
+.small-star:nth-child(8) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -162,7 +162,7 @@ html, body {
   transform:         scale(.5);
 }
 
-.small-star:nth-child(8) {
+.small-star:nth-child(9) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -176,7 +176,7 @@ html, body {
   transform:         scale(.5);
 }
 
-.small-star:nth-child(9) {
+.small-star:nth-child(10) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -190,7 +190,7 @@ html, body {
   transform:         scale(.5);
 }
 
-.small-star:nth-child(10) {
+.small-star:nth-child(11) {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -331,16 +331,29 @@ textarea {
   margin-top: -10px;
 }
 
+#cover {
+  background: #000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+}
 </style>
 </head>
 <body>
-
+<div id="cover"></div>
 <div class="moon"></div>
 <div class="kiki bounce"></div>
 
-<div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
 
-<div class="small-star"></div><div class="small-star"></div><div class="small-star"></div><div class="small-star"></div>
+<div class="small-star"></div>
+<div class="small-star"></div>
+<div class="small-star"></div>
+<div class="small-star"></div>
 
 <div class="info">
   <h1><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></h1>
@@ -371,6 +384,12 @@ textarea {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script>
+$(window).load(function(){
+    $('#cover').fadeOut(2000);
+});
+</script>
+<script>
+
 var main = function() {
 $( ".contact-form" ).hide();
 

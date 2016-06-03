@@ -175,13 +175,23 @@ textarea {
   margin-top: -10px;
 }
 
+#cover {
+  background: #000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+  margin:0;
+}
+
 </style>
 
 <script src="processing-1.4.8.min.js"></script>
 
 </head>
 <body>
-  <div class="robot-and-kids"></div>
+<div id="cover"></div>  
+<div class="robot-and-kids"></div>
 
 <div class="info">
   <h1><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></h1>
@@ -225,6 +235,11 @@ textarea {
    </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+$(window).load(function(){
+    $('#cover').fadeOut(2000);
+});
+</script>
 <script>
 var main = function() {
 $( ".contact-form" ).hide();
