@@ -11,11 +11,11 @@ void setup()
   smooth();
   noStroke();
    
-  for(int i=0; i<=40;i++){
+  for(int i=0; i<=20;i++){
     bc.add(new Bee(7,random(width),random(height),false));
   }
   
-  for(int i=0; i<=40;i++){
+  for(int i=0; i<=20;i++){
     bc.add(new Bee(7,random(width),random(height),true));
   }
 }
