@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Kirsten Rauffer</title>
+
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='style.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <div class="speechbubble"></div>
+  <div class="snoopy"></div>
+  <h3>c'mon</h3>
+  <div class="info">
+  <h1><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></h1>
+  <p class="subtitle">Software Engineer at <a href="https://www.microsoft.com/">Microsoft</a> // Consultant at <a href="https://www.codecademy.com/">Codecademy</a></p>
+    <ul>
+      <li><a href="">Projects</a></li>
+      <li><a href="KirstenRaufferResume.pdf">R&eacute;sum&eacute;</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a class="contact" style="cursor: pointer;">Contact</a></li>
+  </ul>
+</div>
+<div class="contact-form">
+  <form class="form" method="POST" action="http://formspree.io/kirstenrauffer@gmail.com">
+    <p>[close]</p>
+    <fieldset>
+      <ul>
+        <li><label for="name">Name</label>
+            <input class="focus" type="text" id="name" name="name" required/></li>
+        <li><label for="_replyto">Email</label>
+             <input name="_replyto" class="focus" type="email" id="email" required/></li>
+        <li><label style="margin-top: -30px;"  class="notes" for="message">Message</label>
+            <textarea name="message" rows="5" class="focus" id="message"></textarea></li>
+        <li><input type="hidden" name="_next" value="http://www.kirstenrauffer.com/projects/"/><input class="focus send" type="submit" value="Send Message" /></li>
+      </ul>
+    </fieldset>
+   </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="scripts/load.js"></script>
+<script src="scripts/form.js"></script>
+</body>
+</html>
