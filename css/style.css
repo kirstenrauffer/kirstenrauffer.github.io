@@ -15,10 +15,17 @@ width:8px; height:8px; box-shadow:40px 16px 0 #ECF0F1,40px 24px 0 #ECF0F1,24px 3
 width:8px; height:8px; box-shadow:40px 16px 0 #ECF0F1,40px 24px 0 #ECF0F1,24px 32px 0 #ECF0F1,32px 32px 0 #ECF0F1,40px 32px 0 #ECF0F1,48px 32px 0 #ECF0F1,40px 40px 0 #ECF0F1; 
 }
 
-html, body {
+html {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background: #1A313F;
+  background-color: #1A313F;
+  background-image:
+    radial-gradient(
+      circle closest-side,
+      rgba(255,255,255,.15),
+      #1A313F
+    );
   font-family: 'Inconsolata', sans-serif;
   color: #ECF0F1;
 }
@@ -201,10 +208,10 @@ html, body {
 
 .info {
   position: absolute;
-  left: 50%;
+  right:0;
   top: 50%;
   margin-top: 175px;
-  margin-left: 150px;
+  margin-right: 150px;
 }
 
 .info h1 {

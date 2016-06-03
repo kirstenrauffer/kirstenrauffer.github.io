@@ -73,10 +73,10 @@ h3 {
 .info {
   position: absolute;
   z-index: 1000;
-  left: 50%;
+  right:0;
   top: 50%;
   margin-top: 175px;
-  margin-left: 150px;
+  margin-right: 150px;
 }
 
 form {
