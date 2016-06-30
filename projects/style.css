@@ -155,7 +155,7 @@ input[type=submit] {
 textarea {
   background: transparent url(http://s24.postimg.org/62v2ipx81/underline.png) repeat;
   overflow:hidden;
-  line-height:25px; 
+  line-height:30px;
   border: none;
   width: 550px;
   height: 200px;
