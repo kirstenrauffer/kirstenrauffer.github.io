@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<style>
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #FDB5B0;
+  font-family: 'Slabo 27px', serif;
+  font-weight: 100;
+}
+
+.clock-wrapper {
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -190px;
+}
+
+h1{
+  color: #fff;
+  font-weight: 100;
+  font-size: 32px;
+  margin: 20px 0px 20px;
+  padding: 10px;
+}
+
+#clockdiv{
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #FF7B72;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #E8515C;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+<div class="clock-wrapper">
+<h1>time until i see the love of my life</h1>
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">seconds</div>
+  </div>
+</div>
+</div>
+<script>
+var deadline = 'Jul 06 2016 13:30:00 GMT+0200';
+function time_remaining(endtime){
+	var t = Date.parse(endtime) - Date.parse(new Date());
+	var seconds = Math.floor( (t/1000) % 60 );
+	var minutes = Math.floor( (t/1000/60) % 60 );
+	var hours = Math.floor( (t/(1000*60*60)) % 24 );
+	var days = Math.floor( t/(1000*60*60*24) );
+	return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+}
+function run_clock(id,endtime){
+	var clock = document.getElementById(id);
+	
+	// get spans where our clock numbers are held
+	var days_span = clock.querySelector('.days');
+	var hours_span = clock.querySelector('.hours');
+	var minutes_span = clock.querySelector('.minutes');
+	var seconds_span = clock.querySelector('.seconds');
+
+	function update_clock(){
+		var t = time_remaining(endtime);
+		
+		// update the numbers in each part of the clock
+		days_span.innerHTML = t.days;
+		hours_span.innerHTML = ('0' + t.hours).slice(-2);
+		minutes_span.innerHTML = ('0' + t.minutes).slice(-2);
+		seconds_span.innerHTML = ('0' + t.seconds).slice(-2);
+		
+		if(t.total<=0){ clearInterval(timeinterval); }
+	}
+	update_clock();
+	var timeinterval = setInterval(update_clock,1000);
+}
+run_clock('clockdiv',deadline);
+
+</script>
+
+</body>
+</html>
