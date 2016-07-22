@@ -158,14 +158,43 @@ body {
   font-size: 20px;
 }
 
+.disclaimer-show {
+  display: none; 
+  font-size: 16px;
+  opacity: 0.3;
+}
+
+a {
+  text-decoration: underline;
+}
+
+form {
+  position: absolute;
+  margin-top: 600px;
+  left: 50%;
+  margin-left: -130px;
+}
+
+input {
+  background: rgb(255, 230, 255);
+  border: 0.5px solid rgba(255,255,255);
+  border-radius: 3px;
+  padding: 10px;
+  color: #595959
+
+}
+
 @media (max-width: 600px) {
    .hey {
      width: 250px;
      left: 50%; 
-margin-left: -125px;
+     margin-left: -125px;
    } 
-}
 
+  form {
+    margin-top: 25px;
+  }
+}
 </style>
 </head>
 <body>
@@ -180,10 +209,34 @@ margin-left: -125px;
 <div class="hey">
 <h1>Hey, listen!</h1>
 
-<p><br>Will you accompany me to the <strong style="color: #ff99ff">Zelda Symphony</strong> on Wednesday, October 19th in Stockholm, Sweden? I heard it was absolutely amazing, and thought maybe you'd like it! 
-<br><br>(Don't worry, everything is paid for, I have the flights figured out so that you can work during the day, and be back early in the morning for work the next day)</p>
-
-<p><br>I love you so much, and I hope you have a wonderful friday <3 <br> Just let me know if you can make it, I'd love if you could join!</p>
+<p><br>Will you accompany me to the <strong style="color: #ff99ff">Zelda Symphony</strong> on Wednesday, October 19th in Stockholm, Sweden? I heard it was absolutely amazing, and thought maybe you'd like it!</p>
+<a class="disclaimer">disclaimer</a>
+<p class="disclaimer-show">Don't worry, everything is paid for and I have the flights figured out so that you can work during the day, and be back early in the morning for work the next day. It'll be an easy going night and I love you, and I really just think it'd be a nice thing to do! Happy Friday!</p>
 </div>
+
+<form method="POST" onsubmit="return validateForm()" action="http://formspree.io/kirstenrauffer@gmail.com">
+  <input type="hidden" name="_next" value="http://kirstenrauffer.com"/>
+  <input type="submit" value="Heck yes! Zelda!" name="yes">
+  <input type="submit" value="Eww no, cooties" name="no">
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  var clicked = false;
+
+  $( ".disclaimer" ).click(function() {
+    if(clicked) {
+      $( ".disclaimer-show" ).hide();
+      $(".disclaimer").text("disclaimer");
+      clicked = false;
+    } else {
+      $( ".disclaimer-show" ).show();
+      $(".disclaimer").text("hide"); 
+      clicked = true;
+    }
+  });
+});
+</script>
 </body>
 </html>
