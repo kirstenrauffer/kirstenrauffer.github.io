@@ -1,55 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Kirsten Rauffer</title>
-  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-  <link href='css/style.css' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<div id="cover"></div>
-<div class="moon"></div>
-<div class="kiki bounce"></div>
+  <head>
+    <title>Howdy</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <canvas></canvas>
+    <div class="canvas-wrapper"></div>
+    <section>
+      <div class="section-wrapper">
+        <h1>Welcome to my little corner of the web.</h1>
+        <p>My name is Kirsten and I live in Copenhagen, Denmark. I used to live in München, Germany, and before that, I lived in good ol' New Jersey aka the "Armpit of the America." But I liked living there.</p>
 
-<div class="star"></div>
-<div class="star"></div>
-<div class="star"></div>
-<div class="star"></div>
+        <p>Currently, I work at Microsoft as a Software Engineer. I like to give Brown Bags, air drum in between code compilation, and deliver some solid business requirements each sprint. Not all heroes wear capes.</p>
 
-<div class="small-star"></div>
-<div class="small-star"></div>
-<div class="small-star"></div>
-<div class="small-star"></div>
+        <p>I don't have too much information for you right now, but maybe check out my <a href="https://www.linkedin.com/in/kirstenrauffer/">linkedin</a> if you want to learn more about me. If you're not feeling that, then just drop me a line via my <a href="mailto:kirstenrauffer@gmail.com?subject=what up Kirsten!">email</a>. We can do a collab and make some cool stuff.</p>
+      </div>
+    </section>
 
-<div class="info">
-  <h1><a href="http://www.kirstenrauffer.com">Kirsten Rauffer</a></h1>
-  <p class="subtitle">Software Engineer at <a href="https://www.microsoft.com/">Microsoft</a> // Consultant at <a href="https://www.codecademy.com/">Codecademy</a></p>
-    <ul>
-      <li><a href="projects/">Projects</a></li>
-      <li><a href="KirstenRaufferResume.pdf">R&eacute;sum&eacute;</a></li>
-      <li><a href="about/">About</a></li>
-      <li><a class="contact" style="cursor: pointer;">Contact</a></li>
-  </ul>
-</div>
-
-<div class="contact-form">
-  <form class="form" method="POST" action="http://formspree.io/kirstenrauffer@gmail.com">
-    <p>[close]</p>
-    <fieldset>
-      <ul>
-        <li><label for="name">Name</label>
-            <input class="focus" type="text" id="name" name="name" required/></li>
-        <li><label for="_replyto">Email</label>
-             <input name="_replyto" class="focus" type="email" id="email" required/></li>
-        <li><label style="margin-top: -30px;"  class="notes" for="message">Message</label>
-            <textarea name="message" rows="5" class="focus" id="message"></textarea></li>
-        <li><input type="hidden" name="_next" value="http://www.kirstenrauffer.com"/><input class="focus send" type="submit" value="Send Message" /></li>
-      </ul>
-    </fieldset>
-   </form>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="scripts/load.js"></script>
-<script src="scripts/form.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
