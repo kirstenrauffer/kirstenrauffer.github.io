@@ -24,7 +24,7 @@ p, span, h1, h2, h3, h4, h5 {
 }
 
 main {
-  height: 100%;
+  height: calc(100% - 50px);
   padding: 5px 20px;
 }
 
@@ -115,6 +115,14 @@ body, .left-panel h1, .left-panel p, .left-panel li {
     visibility: visible;
     opacity: 1;
 }
+
+footer {
+  position: absolute;
+  padding: 10px;
+  right: 0;
+  height: 20px;
+  font-size: 10px;
+}
 </style>
 </head>
 <body>
@@ -125,7 +133,7 @@ body, .left-panel h1, .left-panel p, .left-panel li {
 			<div>
 				<h1>Kirsten Rauffer</h1>
 			</div>
-			<h2 id="slogan"></h2>	
+			<h2>software engineer and self proclaimed cool person</h2>	
 		</div>
 		<nav>
 			<ul>
@@ -158,12 +166,14 @@ body, .left-panel h1, .left-panel p, .left-panel li {
 			</ul>
 		</nav>
 	</div>
-	<main>
-		<p>Workin on the content, hang tight</p>
-	</main>
-	<footer>
-
-	</footer>
+	<div>
+		<main>
+			<p>Workin on the content, hang tight</p>
+		</main>
+		<footer>
+			<p>"<span id="slogan"></span>" &copy; Kirsten Rauffer 2017</p>
+		</footer>
+	</div>
 </div>
 <script>
 var hotRodQuotes = [
