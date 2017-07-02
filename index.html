@@ -1,24 +1,188 @@
-<!DOCTYPE html>
+<DOCTYPE! html>
 <html>
-  <head>
-    <title>Howdy</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="style.css" type="text/css" rel="stylesheet"/>
-  </head>
-  <body>
-    <canvas></canvas>
-    <div class="canvas-wrapper"></div>
-    <section>
-      <div class="section-wrapper">
-        <h1>Welcome to my little corner of the web.</h1>
-        <p>My name is Kirsten and I live in Copenhagen, Denmark. I used to live in München, Germany, and before that, I lived in good ol' New Jersey aka the "Armpit of the America." But I liked living there.</p>
+<head>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-        <p>Currently, I work at Microsoft as a Software Engineer. I like to give Brown Bags, air drum in between code compilation, and deliver some solid business requirements each sprint. Not all heroes wear capes.</p>
+<style>
+p, span, h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+}
 
-        <p>I don't have too much information for you right now, but maybe check out my <a href="https://www.linkedin.com/in/kirstenrauffer/">linkedin</a> if you want to learn more about me. If you're not feeling that, then just drop me a line via my <a href="mailto:kirstenrauffer@gmail.com?subject=what up Kirsten!">email</a>. We can do a collab and make some cool stuff.</p>
-      </div>
-    </section>
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 
-    <script src="script.js"></script>
-  </body>
+.left-panel {
+  width: 355px;
+  height: 100%;
+  border-right: 1px solid #efefef;
+  display: flex;
+}
+
+main {
+  height: 100%;
+  padding: 5px 20px;
+}
+
+body, .left-panel h1, .left-panel p, .left-panel li {
+  margin: 0;
+}
+
+.left-panel h1 {
+  line-height: 90%;
+  font-size: 26px;
+  width: 250px;
+}
+
+.left-panel h2 {
+  line-height: 90%;
+  font-size: 10px;
+  width: 100%;
+}
+
+.left-panel .intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+
+  padding: 20px;
+}
+
+.intro {
+  text-align: left;
+}
+
+.intro div {
+  width: 100%;
+}
+
+.left-panel p {
+  width: 100%;
+  padding: 10px;
+  color: #f4d742;
+}
+
+.left-panel nav ul {
+  padding: 0;
+  position: relative;
+  left: 35px;
+  top: 5px;
+}
+
+.left-panel nav li {
+  list-style-type: none;
+  margin: 20px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.active {
+  color: #f4d742;
+}
+
+.nav {
+  text-align: right;
+}
+
+.nav .nav-helper {
+    visibility: hidden;
+    position: absolute;
+    width: 50px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 2px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+} 
+
+.nav-helper {
+  font-size: 10px;
+}
+
+.left {
+    margin-top: -4px;
+    right: 128%; 
+}
+
+.nav:hover .nav-helper {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="flex">
+	<div class="left-panel">
+		<div class="intro">
+			<p><i class="fa fa-female" aria-hidden="true"></i></p>
+			<div>
+				<h1>Kirsten Rauffer</h1>
+			</div>
+			<h2 id="slogan"></h2>	
+		</div>
+		<nav>
+			<ul>
+				<li>
+					<div class="nav">
+						<i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="nav-helper left">About</span>
+					</div>
+				</li>
+				<li>
+					<div class="nav">
+						<i class="fa fa-file-pdf-o" aria-hidden="true"></i><span class="nav-helper left">Resume</span>
+					</div>
+				</li>
+				<li>
+					<div class="nav">
+						<i class="fa fa-magic" aria-hidden="true"></i><span class="nav-helper left">Projects</span>
+					</div>
+				</li>
+				<li>
+					<div class="nav">
+						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i><span class="nav-helper left">Social</span>
+					</div>
+				</li>
+				<li>
+					<div class="nav">
+						<i class="fa fa-paper-plane-o" aria-hidden="true"></i><span class="nav-helper left">Contact</span>
+					</div>
+				</li>
+</li>		
+			</ul>
+		</nav>
+	</div>
+	<main>
+		<p>Workin on the content, hang tight</p>
+	</main>
+	<footer>
+
+	</footer>
+</div>
+<script>
+var hotRodQuotes = [
+		'pools are perfect for holdin\' water, man',
+		'i\'ve been drinking green tea all goddamn day',
+		'my name is rod and i like to party',
+		'i like to party i\'m rod',
+		'rico, what did i just say to dave?',
+		'i\'m pretty sure i\'ve partied before',
+		'no, kevin, i know for a fact you do not party',
+		'you\'re right, dave is the party guy',
+		'my name is dave and i am the stuntman',
+		]
+
+var rand = Math.floor((Math.random() * hotRodQuotes.length) + 0);
+
+document.getElementById('slogan').innerHTML = hotRodQuotes[rand];
+</script>
+
+
+</body>
 </html>
