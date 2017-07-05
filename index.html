@@ -1,10 +1,11 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 
 <title>Kirsten Rauffer</title>
 
+<link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
@@ -71,7 +72,6 @@ main {
 
 .intro p {
   width: 100%;
-  padding: 10px;
   color: #f4d742;
 }
 
@@ -138,23 +138,25 @@ footer {
   display: none;
 }
 
+html {
+  height: 100%;
+}
+body, .flex, .intro, .content {
+  height: 100%;
+  min-height: 100%;
+}
+
 @media (max-width: 800px) {
   .flex {
     height: calc(100% - 85px);
   }
  
   .intro {
+    height: auto;
+    min-height: auto;
     display: none;
     border-bottom: 1px solid #efefef;
-  } 
-
-  .intro {
     text-align: center;
-  }
-
-  .intro p {
-    padding: 5px;
-    padding-top: 0;
   }
 
   .intro h1 {
@@ -175,7 +177,7 @@ footer {
 
   .left-panel nav ul {
     position: relative;
-    left: 7px;
+    left: 15px;
   }
 
   .nav-helper {
@@ -183,15 +185,18 @@ footer {
   }
 }
 
-* {
-  margin: 2px;
+li div, p {
+  padding: 2px;
 }
 
-*:focus {
-  margin: 0;
+li div:focus {
   padding: 1px;
   border: 1px dotted #333;
   outline: none;
+}
+
+object {
+  width: 100%;
 }
 
 </style>
