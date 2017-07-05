@@ -1,5 +1,6 @@
 <DOCTYPE! html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -8,6 +9,10 @@
 p, span, h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
   color: #333333;
+}
+
+body, h1, p, li {
+  margin: 0;
 }
 
 .flex {
@@ -24,33 +29,28 @@ p, span, h1, h2, h3, h4, h5 {
 }
 
 main {
-  height: calc(100% - 50px);
+  height: calc(100% - 60px);
   padding: 5px 20px;
 }
 
-body, .left-panel h1, .left-panel p, .left-panel li {
-  margin: 0;
-}
-
-.left-panel h1 {
+.intro h1 {
   line-height: 90%;
   font-size: 26px;
   width: 250px;
 }
 
-.left-panel h2 {
+.intro h2 {
   line-height: 90%;
   font-size: 10px;
   width: 100%;
 }
 
-.left-panel .intro {
+.intro {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: left;
-
   padding: 20px;
 }
 
@@ -62,7 +62,7 @@ body, .left-panel h1, .left-panel p, .left-panel li {
   width: 100%;
 }
 
-.left-panel p {
+.intro p {
   width: 100%;
   padding: 10px;
   color: #f4d742;
@@ -71,8 +71,7 @@ body, .left-panel h1, .left-panel p, .left-panel li {
 .left-panel nav ul {
   padding: 0;
   position: relative;
-  left: 35px;
-  top: 5px;
+  left: -15px;
 }
 
 .left-panel nav li {
@@ -91,15 +90,15 @@ body, .left-panel h1, .left-panel p, .left-panel li {
 }
 
 .nav .nav-helper {
-    visibility: hidden;
-    position: absolute;
-    width: 50px;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 2px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 1s;
+  visibility: hidden;
+  position: absolute;
+  width: 50px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 2px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
 } 
 
 .nav-helper {
@@ -107,25 +106,87 @@ body, .left-panel h1, .left-panel p, .left-panel li {
 }
 
 .left {
-    margin-top: -4px;
-    right: 128%; 
+  margin-top: -4px;
+  right: 128%; 
 }
 
 .nav:hover .nav-helper {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 footer {
-  position: absolute;
+  float: right;
   padding: 10px;
-  right: 0;
   height: 20px;
   font-size: 10px;
 }
+
+.content {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .flex {
+    height: calc(100% - 85px);
+  }
+ 
+  .intro {
+    display: none;
+    border-bottom: 1px solid #efefef;
+  } 
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro p {
+    padding: 5px;
+    padding-top: 0;
+  }
+
+  .intro h1 {
+    width: auto;
+  }
+
+  .intro h2 {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  } 
+  
+  .left-panel {
+    width: 60px;
+  }
+
+  .left-panel nav ul {
+    position: relative;
+    left: 20px;
+  }
+
+  .nav-helper {
+    display: none;
+  }
+}
+
+
 </style>
 </head>
 <body>
+<div class="intro mobile">
+	<p><i class="fa fa-female" aria-hidden="true"></i></p>
+	<div>
+		<h1>Kirsten Rauffer</h1>
+	</div>
+	<h2>software engineer and self proclaimed cool person</h2>	
+</div>
 <div class="flex">
 	<div class="left-panel">
 		<div class="intro">
@@ -166,7 +227,7 @@ footer {
 			</ul>
 		</nav>
 	</div>
-	<div>
+	<div class="content">
 		<main>
 			<p>Workin on the content, hang tight</p>
 		</main>
