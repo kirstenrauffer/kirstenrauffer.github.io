@@ -2,6 +2,9 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
+
+<title>Kirsten Rauffer</title>
+
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
@@ -31,6 +34,10 @@ body, h1, p, li {
 main {
   height: calc(100% - 60px);
   padding: 5px 20px;
+}
+
+.intro {
+  flex-wrap: wrap;
 }
 
 .intro h1 {
@@ -85,11 +92,11 @@ main {
   color: #f4d742;
 }
 
-.nav {
+.nav-item {
   text-align: right;
 }
 
-.nav .nav-helper {
+.nav-item .nav-helper {
   visibility: hidden;
   position: absolute;
   width: 50px;
@@ -110,7 +117,7 @@ main {
   right: 128%; 
 }
 
-.nav:hover .nav-helper {
+.nav-item:hover .nav-helper {
   visibility: visible;
   opacity: 1;
 }
@@ -168,7 +175,7 @@ footer {
 
   .left-panel nav ul {
     position: relative;
-    left: 20px;
+    left: 7px;
   }
 
   .nav-helper {
@@ -176,6 +183,16 @@ footer {
   }
 }
 
+* {
+  margin: 2px;
+}
+
+*:focus {
+  margin: 0;
+  padding: 1px;
+  border: 1px dotted #333;
+  outline: none;
+}
 
 </style>
 </head>
@@ -199,27 +216,27 @@ footer {
 		<nav>
 			<ul>
 				<li>
-					<div class="nav">
-						<i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="nav-helper left">About</span>
+					<div class="nav-item" tabindex="1" onclick="loadAbout()" onkeypress="loadAbout(event)">
+						<i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="nav-helper left">About</span></a>
 					</div>
 				</li>
 				<li>
-					<div class="nav">
+					<div class="nav-item" tabindex="1" onclick="loadResume()" onkeypress="loadResume(event)">
 						<i class="fa fa-file-pdf-o" aria-hidden="true"></i><span class="nav-helper left">Resume</span>
 					</div>
 				</li>
 				<li>
-					<div class="nav">
+					<div class="nav-item" tabindex="1" onclick="loadProjects()" onkeypress="loadProjects(event)">
 						<i class="fa fa-magic" aria-hidden="true"></i><span class="nav-helper left">Projects</span>
 					</div>
 				</li>
 				<li>
-					<div class="nav">
+					<div class="nav-item" tabindex="1" onclick="loadSocial()" onkeypress="loadSocial(event)">
 						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i><span class="nav-helper left">Social</span>
 					</div>
 				</li>
 				<li>
-					<div class="nav">
+					<div class="nav-item" tabindex="1" onclick="loadContact()" onkeypress="loadContact(event)">
 						<i class="fa fa-paper-plane-o" aria-hidden="true"></i><span class="nav-helper left">Contact</span>
 					</div>
 				</li>
@@ -228,7 +245,7 @@ footer {
 		</nav>
 	</div>
 	<div class="content">
-		<main>
+		<main id="loader">
 			<p>Workin on the content, hang tight</p>
 		</main>
 		<footer>
@@ -236,6 +253,8 @@ footer {
 		</footer>
 	</div>
 </div>
+
+<!-- footer quote -->
 <script>
 var hotRodQuotes = [
 		'pools are perfect for holdin\' water, man',
@@ -254,6 +273,33 @@ var rand = Math.floor((Math.random() * hotRodQuotes.length) + 0);
 document.getElementById('slogan').innerHTML = hotRodQuotes[rand];
 </script>
 
+<!-- loader -->
+<script>
+function loadAbout() {
+    loadObject('loader/about.html');
+}
+
+function loadResume() {
+    loadObject('loader/resume.html');
+}
+
+function loadProjects() {
+    loadObject('loader/projects.html');
+}
+
+function loadSocial() {
+    loadObject('loader/social.html');
+}
+
+function loadContact() {
+    loadObject('loader/contact.html');
+}
+
+function loadObject(source) {
+    document.getElementById('loader').innerHTML='<object type="text/html" data="' + source + '" ></object>';
+}
+
+</script>
 
 </body>
 </html>

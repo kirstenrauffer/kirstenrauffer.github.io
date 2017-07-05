@@ -1,0 +1,191 @@
+<DOCTYPE! html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+<title>Kirsten Rauffer</title>
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<style>
+p, span, h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+}
+
+body, h1, p, li {
+  margin: 0;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-panel {
+  width: 355px;
+  height: 100%;
+  border-right: 1px solid #efefef;
+  display: flex;
+}
+
+main {
+  height: calc(100% - 60px);
+  padding: 5px 20px;
+}
+
+.intro h1 {
+  line-height: 90%;
+  font-size: 26px;
+  width: 250px;
+}
+
+.intro h2 {
+  line-height: 90%;
+  font-size: 10px;
+  width: 100%;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+
+.intro {
+  text-align: left;
+}
+
+.intro div {
+  width: 100%;
+}
+
+.intro p {
+  width: 100%;
+  padding: 10px;
+  color: #f4d742;
+}
+
+.left-panel nav ul {
+  padding: 0;
+  position: relative;
+  left: -15px;
+}
+
+.left-panel nav li {
+  list-style-type: none;
+  margin: 20px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.active {
+  color: #f4d742;
+}
+
+.nav-item {
+  text-align: right;
+}
+
+.nav-item .nav-helper {
+  visibility: hidden;
+  position: absolute;
+  width: 50px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 2px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+} 
+
+.nav-helper {
+  font-size: 10px;
+}
+
+.left {
+  margin-top: -4px;
+  right: 128%; 
+}
+
+.nav:hover .nav-helper {
+  visibility: visible;
+  opacity: 1;
+}
+
+footer {
+  float: right;
+  padding: 10px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.content {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .flex {
+    height: calc(100% - 85px);
+  }
+ 
+  .intro {
+    display: none;
+    border-bottom: 1px solid #efefef;
+  } 
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro p {
+    padding: 5px;
+    padding-top: 0;
+  }
+
+  .intro h1 {
+    width: auto;
+  }
+
+  .intro h2 {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  } 
+  
+  .left-panel {
+    width: 60px;
+  }
+
+  .left-panel nav ul {
+    position: relative;
+    left: 20px;
+  }
+
+  .nav-helper {
+    display: none;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<div>
+  <h1>About</h1>
+</div>
+
+</body>
+</html>
