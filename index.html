@@ -16,7 +16,7 @@ html {
   height: 100vh;
 }
 
-body {
+body, .flex, .left-panel {
   height: 100%;
 }
 
@@ -32,12 +32,10 @@ body, h1, p, li {
 .flex {
   display: flex;
   flex-direction: row;
-  height: 100%;
 }
 
 .left-panel {
   min-width: 315px;
-  height: 100%;
   border-right: 1px solid #efefef;
   display: flex;
 }
@@ -50,14 +48,12 @@ body, h1, p, li {
 .intro h1 {
   line-height: 90%;
   font-size: 26px;
-  width: 100%;
 }
 
 .intro h2 {
   line-height: 90%;
   font-size: 13px;
   font-weight: 300;
-  width: 100%;
 }
 
 .intro {
@@ -74,7 +70,6 @@ body, h1, p, li {
 
 .intro p {
   line-height: 140%;
-  width: 100%;
   padding: 7px 0;
   color: #ddd;
 }
@@ -148,9 +143,12 @@ li div:focus {
 }
 
 .content {
-  width: 100%;
   padding: 25px 15px;
   padding-bottom: 0;
+}
+
+main, object, .content, .intro p, .intro h1, .intro h2 {
+  width: 100%;
 }
 
 .content {
@@ -224,7 +222,7 @@ li div:focus {
 	<div class="left-panel">
 		<div class="intro">
 			<p>
-				<i class="fa fa-moon-o" aria-hidden="true"></i>
+				<i class="fa fa-moon-o" aria-hidden="true" id=""></i>
 				<i class="fa fa-sun-o active" aria-hidden="true"></i>
 				<i class="fa fa-moon-o" aria-hidden="true"></i>
 				<i class="fa fa-sun-o active" aria-hidden="true"></i>
@@ -236,27 +234,27 @@ li div:focus {
 		</div>
 		<nav>
 			<ul>
-				<li>
+				<li id="about">
 					<div class="nav-item" tabindex="1" onclick="loadAbout()" onkeypress="loadAbout(event)">
 						<i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="nav-helper left">About</span></a>
 					</div>
 				</li>
-				<li>
+				<li id="resume">
 					<div class="nav-item" tabindex="1" onclick="loadResume()" onkeypress="loadResume(event)">
 						<i class="fa fa-file-pdf-o" aria-hidden="true"></i><span class="nav-helper left">Resume</span>
 					</div>
 				</li>
-				<li>
+				<li id="projects">
 					<div class="nav-item" tabindex="1" onclick="loadProjects()" onkeypress="loadProjects(event)">
 						<i class="fa fa-magic" aria-hidden="true"></i><span class="nav-helper left">Projects</span>
 					</div>
 				</li>
-				<li>
+				<li id="social">
 					<div class="nav-item" tabindex="1" onclick="loadSocial()" onkeypress="loadSocial(event)">
 						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i><span class="nav-helper left">Social</span>
 					</div>
 				</li>
-				<li>
+				<li id="contact">
 					<div class="nav-item" tabindex="1" onclick="loadContact()" onkeypress="loadContact(event)">
 						<i class="fa fa-paper-plane-o" aria-hidden="true"></i><span class="nav-helper left">Contact</span>
 					</div>
@@ -296,29 +294,43 @@ document.getElementById('slogan').innerHTML = hotRodQuotes[rand];
 
 <!-- loader -->
 <script>
+var currentClass = '';
+
 function loadAbout() {
-    loadObject('loader/about.html');
+    loadObject('about');
 }
 
 function loadResume() {
-    loadObject('loader/resume.html');
+    loadObject('resume');
 }
 
 function loadProjects() {
-    loadObject('loader/projects.html');
+    loadObject('projects');
 }
 
 function loadSocial() {
-    loadObject('loader/social.html');
+    loadObject('social');
 }
 
 function loadContact() {
-    loadObject('loader/contact.html');
+    loadObject('contact');
+    
 }
 
-function loadObject(source) {
-    document.getElementById('loader').innerHTML='<object type="text/html" data="' + source + '" ></object>';
+function loadObject(section) {
+    if(currentClass != section)
+    {
+       if(currentClass) {
+         document.getElementById(currentClass).className += 'active';
+       }
+       
+       document.getElementById(section).className += 'active';
+       document.getElementById('loader').innerHTML='<object type="text/html" data="loader/' + section + '.html" ></object>';
+
+       currentClass = section;
+    }
 }
+
 
 </script>
 
