@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,163 +7,15 @@
 
 <link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 <style>
-html {
-  height: 100vh;
-}
-
-body {
-  height: 100%;
-}
-
-p, span, h1, h2, h3, h4, h5, li {
+p, span, h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
   color: #333333;
 }
 
-body, h1, p, li {
-  margin: 0;
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-}
-
-.left-panel {
-  min-width: 315px;
-  height: 100%;
-  border-right: 1px solid #efefef;
-  display: flex;
-}
-
-.intro {
-  flex-wrap: wrap;
-  max-width: 290px;
-}
-
-.intro h1 {
-  line-height: 90%;
-  font-size: 26px;
-  width: 100%;
-}
-
-.intro h2 {
-  line-height: 90%;
-  font-size: 13px;
-  font-weight: 300;
-  width: 100%;
-}
-
-.intro {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-  padding: 20px;
-}
-
-.intro {
-  text-align: left;
-}
-
-.intro p {
-  line-height: 140%;
-  width: 100%;
-  padding: 7px 0;
-  color: #ddd;
-}
-
-.left-panel nav ul {
-  padding: 0px 10px;
-  position: relative;
-}
-
-.left-panel nav li {
-  list-style-type: none;
-  padding: 10px 0;
-  font-size: 15px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.active {
-  color: #f4d742;
-}
-
-.nav-item {
-  text-align: right;
-}
-
-.nav-item .nav-helper {
-  position: absolute;
-  width: 50px;
-  text-align: center;
-  padding: 9px 0;
-  border-radius: 2px;
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 1s;
-} 
-
-.nav-helper {
-  font-size: 10px;
-}
-
-.left {
-  margin-top: -4px;
-  right: 120%; 
-}
-
-.nav-item:hover .nav-helper, .nav-item:focus .nav-helper {
-  visibility: visible;
-  opacity: 1;
-}
-
-footer {
-  float: right;
-  padding: 0 10px;
-  height: 20px;
-  font-size: 10px;
-}
-
-.mobile {
-  display: none;
-}
-
-li div, p {
-  padding: 2px;
-}
-
-li div:focus {
-  padding: 1px;
-  border: 1px dotted #333;
-  outline: none;
-  color: #f4d742;
-}
-
-.content {
-  width: 100%;
-  padding: 25px 15px;
-  padding-bottom: 0;
-}
-
-.content {
-  height: calc(100% - 25px);
-}
-
-.content main {
-  height: calc(100% - 35px);
-}
-
 @media (max-width: 800px) {
-  * {
-    transition: 0.5s;
-  }
-
   .flex {
     height: calc(100% - 85px);
   }
@@ -173,7 +23,6 @@ li div:focus {
   .intro {
     height: auto;
     min-height: auto;
-    max-width: none;
     display: none;
     border-bottom: 1px solid #efefef;
     text-align: center;
@@ -181,7 +30,10 @@ li div:focus {
 
   .intro h1 {
     width: auto;
-    font-weight: 300;
+  }
+
+  .intro h2 {
+    display: none;
   }
 
   .mobile {
@@ -189,16 +41,12 @@ li div:focus {
   } 
   
   .left-panel {
-    width: 70px;
-  }
-
-  .left-panel {
-    min-width: 0;
+    width: 60px;
   }
 
   .left-panel nav ul {
     position: relative;
-    left: 10px;
+    left: 15px;
   }
 
   .nav-helper {
@@ -206,35 +54,24 @@ li div:focus {
   }
 }
 
+.left-panel nav {
+  width: 40px;
+}
+
 </style>
 </head>
 <body>
-<div class="intro mobile">
-	<p>
-		<i class="fa fa-moon-o" aria-hidden="true"></i>
-		<i class="fa fa-sun-o active" aria-hidden="true"></i>
-		<i class="fa fa-moon-o" aria-hidden="true"></i>
-		<i class="fa fa-sun-o active" aria-hidden="true"></i>
-	</p>
-	<div>
-		<h1>Kirsten Rauffer</h1>
-	</div>
-</div>
 <div class="flex">
 	<div class="left-panel">
 		<div class="intro">
-			<p>
-				<i class="fa fa-moon-o" aria-hidden="true"></i>
-				<i class="fa fa-sun-o active" aria-hidden="true"></i>
-				<i class="fa fa-moon-o" aria-hidden="true"></i>
-				<i class="fa fa-sun-o active" aria-hidden="true"></i>
-			</p>
+	<!--		<p><i class="fa fa-female" aria-hidden="true"></i></p>
 			<div>
 				<h1>Kirsten Rauffer</h1>
 			</div>
-			<h2>software engineer & lover of adventure</h2>	
+			<h2>software engineer and self proclaimed cool person</h2>	 -->
 		</div>
 		<nav>
+		<!--
 			<ul>
 				<li>
 					<div class="nav-item" tabindex="1" onclick="loadAbout()" onkeypress="loadAbout(event)">
@@ -264,14 +101,17 @@ li div:focus {
 </li>		
 			</ul>
 		</nav>
+		-->
 	</div>
 	<div class="content">
+		<!--
 		<main id="loader">
 			<p>Workin on the content, hang tight</p>
 		</main>
 		<footer>
 			<p>"<span id="slogan"></span>" &copy; Kirsten Rauffer 2017</p>
 		</footer>
+		-->
 	</div>
 </div>
 
