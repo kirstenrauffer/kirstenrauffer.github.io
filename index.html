@@ -207,6 +207,17 @@ object {
   .nav-helper {
     display: none;
   }
+
+  .initial p:nth-child(1), .initial p:nth-child(2) {
+    display: none;
+  }
+}
+
+.initial {
+  font-size: 170px;
+  text-align: center;
+  position: relative;
+  left: -20px;
 }
 
 </style>
@@ -270,7 +281,11 @@ object {
 	</div>
 	<div class="content">
 		<main id="loader">
-			<p>Workin on the content, hang tight</p>
+			<div class="initial">
+				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
+				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>	
+				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
+			</div>
 		</main>
 		<footer>
 			<p>"<span id="slogan"></span>" &copy; Kirsten Rauffer 2017</p>
