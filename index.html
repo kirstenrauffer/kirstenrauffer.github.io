@@ -232,7 +232,15 @@ main, .content, .intro p, .intro section div, .intro h2 {
     min-height: 0;
   }
 
+  iframe {
+    width: calc(100vw - 100px);
+  }
+
 }
+
+  iframe {
+    width: 100%;
+  }
 
 .initial {
   font-size: 170px;
@@ -385,7 +393,7 @@ function loadObject(section) {
        }
        
        document.getElementById(section).className += 'active';
-       document.getElementById('loader').innerHTML='<iframe id="iframe" frameborder="0" src="loader/' + section + '.html" style="min-width:100%;"></object>';
+       document.getElementById('loader').innerHTML='<iframe id="iframe" frameborder="0" src="loader/' + section + '.html"></object>';
 
        currentClass = section;
     }
