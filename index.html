@@ -23,6 +23,14 @@ An HTML page trying its best
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400" rel="stylesheet">
 
+<!--[if IE]>
+<style>
+.left-panel {
+  min-width: 400px;
+}
+</style>
+<![endif]-->
+
 <style>
 html {
   height: 100vh;
@@ -48,8 +56,8 @@ body, h1, p, li {
 }
 
 .left-panel {
-  min-width: 315px;
   display: flex;
+  min-width: 350px;
 }
 
 .intro {
@@ -243,6 +251,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 200px;
 }
 
 .intro footer p {
@@ -275,7 +284,7 @@ main {
 				<div>
 					<h1>Kirsten Rauffer</h1>
 				</div>
-				<h2>software engineer & lover of adventure</h2>
+				<h2>a software engineer who doesn't drink coffee</h2>
 			</section>
 			<footer style="margin-top: auto;">
 				<p>"<span id="slogan"></span>" &copy; Kirsten Rauffer 2017</p>
