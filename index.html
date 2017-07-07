@@ -164,12 +164,8 @@ li div:focus {
   padding-bottom: 0;
 }
 
-main, object, .content, .intro p, .intro section div, .intro h2 {
+main, .content, .intro p, .intro section div, .intro h2 {
   width: 100%;
-}
-
-object {
-  margin: none;
 }
 
 .content {
@@ -361,6 +357,7 @@ var currentClass = '';
 
 function loadAbout() {
     loadObject('about');
+    document.getElementById('iframe').style.height = document.body.scrollHeight + 70 + 'px';
 }
 
 function loadResume() {
@@ -391,7 +388,6 @@ function loadObject(section) {
        document.getElementById('loader').innerHTML='<iframe id="iframe" frameborder="0" src="loader/' + section + '.html" style="min-width:100%;"></object>';
 
        currentClass = section;
-       document.getElementById('iframe').style.height = document.body.scrollHeight + 120 + 'px';
     }
 }
 
