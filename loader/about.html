@@ -107,9 +107,29 @@ I'm an American currently living and working in Copenhagen, Denmark as I search 
       </p>
 
       <p>
-If you'd ever like to work on something with me, please reach out! I always hate those mailto: tags, so here's my not fancy email: kirstenrauffer@gmail.com. Thanks for stopping by, friendo! <i class="fa fa-hand-peace-o" aria-hidden="true"></i>  
+If you'd ever like to work on something with me, please reach out! I always hate those mailto: tags, so here's my not fancy email: kirstenrauffer@gmail.com. Thanks for stopping by, friendo! <i class="fa fa-hand-peace-o" aria-hidden="true"></i> If you'd like to learn a little more about me, check the video Microsoft made of me <span id="video-text>"></span>.
       </p>
+
+       <p id="video-stuff"></p>
+
+      <iframe id="video" width="560" height="315" frameborder="0"></iframe>
+
     </section>
   </div>
+
+<script>
+window.onload = displayVideo;
+
+function displayVideo() {
+  if(window.innerWidth < 400) {
+    document.getElementById('video-text').innerHtml = '<a href="https://www.youtube.com/embed/niXfANiGIFI">here</a>!';
+  } else {
+    document.getElementById('video-stuff').innerHtml = 'below!';
+
+    document.getElementById('video').src = 'https://www.youtube.com/embed/niXfANiGIFI';
+  } 
+}
+
+</script>
 </body>
 </html>
