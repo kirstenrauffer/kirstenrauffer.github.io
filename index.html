@@ -257,6 +257,37 @@ main {
 .intro footer p {
   color: #333;
 }
+
+.loading-icon {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #f4f4f4;
+  font-size: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.loading-icon i { 
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+}
+
+@-webkit-keyframes blinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.loading-icon i {
+  -webkit-animation-name: blinker;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(.75, 0, 1, 1);
+  -webkit-animation-duration: 1.5s; 
+}   
 </style>
 
 <!--[if IE]>
@@ -279,6 +310,10 @@ main {
 		<h1>Kirsten Rauffer</h1>
 	</div>
 </div>
+<div class="loading-icon" id="loading-icon">
+	<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+</div>
+
 <div class="flex">
 	<div class="left-panel">
 		<div class="intro">
@@ -396,6 +431,8 @@ function loadObject(section) {
 }
 
 window.onload = function() {
+  document.getElementById('loading-icon').style.visibility = "hidden"; 
+ 
   document.getElementById('loader').innerHTML='<iframe id="iframe" frameborder="0" src="loader/' + 'about' + '.html"></object>';
   document.getElementById('iframe').style.height = document.body.scrollHeight + 100 + 'px';
 }
