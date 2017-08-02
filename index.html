@@ -298,6 +298,8 @@ main {
 				<p>"<span id="slogan"></span>" &copy; Kirsten Rauffer 2017</p>
 			</footer>	
 		</div>
+
+<!-- Will add back once content is ready 
 		<nav>
 			<ul>
 				<li id="about">
@@ -323,14 +325,17 @@ main {
 </li>		
 			</ul>
 		</nav>
+-->
 	</div>
 	<div class="content">
 		<main id="loader">
+<!--
 			<div class="initial">
 				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
 				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>	
 				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
 			</div>
+-->
 		</main>
 	</div>
 </div>
@@ -388,6 +393,11 @@ function loadObject(section) {
 
        currentClass = section;
     }
+}
+
+window.onload = function() {
+  document.getElementById('loader').innerHTML='<iframe id="iframe" frameborder="0" src="loader/' + 'about' + '.html"></object>';
+  document.getElementById('iframe').style.height = document.body.scrollHeight + 100 + 'px';
 }
 
 </script>
