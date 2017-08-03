@@ -24,12 +24,15 @@ p::-moz-selection, span::-moz-selection, strong::-moz-selection {
 }
 
 p {
+  font-family: 'Open Sans', arial;
   font-size: 14px;
 }
 
 .content {
+  position: absolute;
   padding: 20px;
-  font-family: 'Open Sans', arial;
+  z-index: 1000;
+  width: 100%;
 }
 
 .content .font-scribble {
@@ -118,7 +121,7 @@ canvas {
       </br>
       (where others saw my scribbles, you saw my heart)
     </p>
-
+</div>
     <main>
       <svg>
         <defs>
@@ -132,7 +135,6 @@ canvas {
     </main>
  
     <p class="bottom">te quiero, omar (mi taco bello)</p>
-  </div>
 
   <script>
     (function() {
