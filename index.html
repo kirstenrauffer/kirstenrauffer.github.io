@@ -1,17 +1,3 @@
-
-<!-------------------------------------------------------
-Hi friend,
-
-If you're looking at me, I'm sorry, I'll clean myself up 
-within the next couple weeks. I'm still a work in progress. 
-I promise, I'm loved. There's someone special out there who 
-cares about me (my awesome maker, Kirsten). Hope you got 
-someone out there, too.
-
-Sincerely,
-An HTML page trying its best
-
---------------------------------------------------------->
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> 
@@ -24,420 +10,135 @@ An HTML page trying its best
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400" rel="stylesheet">
 
 <style>
-html {
-  min-height: 100vh;
-  background: #fcfcfc;
-}
-
-body, .flex, .left-panel, object {
-  min-height: 100%;
-}
-
-p, span, h1, h2, h3, h4, h5, li {
-  font-family: 'Open Sans', sans-serif;
-  color: #333333;
-}
-
-body, h1, p, li {
-  margin: 0;
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-}
-
-.left-panel {
-  display: flex;
-  min-width: 350px;
-}
-
-.intro {
-  flex-wrap: wrap;
-  max-width: 290px;
-}
-
-.intro h1 {
-  line-height: 90%;
-  font-size: 26px;
-}
-
-.intro h2 {
-  line-height: 90%;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.intro {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
+body {
   padding: 20px;
 }
 
-.intro {
-  text-align: left;
+h1, h2, h3, h4, h5, p, i {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
 }
 
-.intro p {
-  line-height: 140%;
-  padding: 7px 0;
-  color: #ddd;
+h1, h1 a:visited, h1 a, h2, p {
+  color: #6C6C6C;
 }
 
-.left-panel nav ul {
-  padding: 0px 10px;
-  position: relative;
+h2 {
+  color: #0F0F0F;
 }
 
-.left-panel nav li {
+h3 {
+  color: #A7A7A7;
+}
+
+h4 {
+  color: #BFBFBF;
+}
+
+h5 {
+  color: #DBDBDB;
+}
+
+div {
+  padding: 20px 0;
+}
+
+ul {
   list-style-type: none;
   padding: 10px 0;
-  font-size: 15px;
-  cursor: pointer;
-  font-size: 17px;
 }
 
-.active {
-  color: #f4d742;
+li {
+  display: inline-block;
+  margin-right: 5px;
 }
 
-.nav-item {
-  text-align: right;
+.fa-windows {
+  color: #7cbb00;
+  padding-left: 5px;
 }
 
-.nav-item .nav-helper {
-  position: absolute;
-  width: 50px;
-  text-align: center;
-  padding: 9px 0;
-  border-radius: 2px;
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 1s;
-} 
+.fa-map-pin {
+  color: #DD5143;
+  font-size: 12px;
+}
 
-.nav-helper {
-  font-size: 10px;
+.fa-warning {
+  margin-right: 5px;
+}
+
+.fa-linkedin-square, .fa-instagram, .fa-twitter-square {
+  font-size: 20px;
+}
+
+.fa-linkedin-square {
+  color: #0077B5;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-twitter-square {
+  color: #00aced;
 }
 
 .left {
-  margin-top: -4px;
-  right: 120%; 
+  float: left;
+  text-align: right;
+  margin: 0 20px;
 }
 
-.nav-item:hover .nav-helper, .nav-item:focus .nav-helper {
-  visibility: visible;
-  opacity: 1;
+.intro {
+  padding: 22px 0;
 }
 
-footer {
-  min-height: 20px;
+.disclaimer {
   font-size: 10px;
 }
 
-.mobile {
-  display: none;
-}
-
-li div, p {
-  padding: 2px;
-}
-
-li div:focus {
-  padding: 1px;
-  border: 1px dotted #333;
-  outline: none;
-  color: #f4d742;
-}
-
-.content {
-  padding-bottom: 0;
-}
-
-main, .content, .intro p, .intro section div, .intro h2 {
-  width: 100%;
-}
-
-.content {
-  min-height: calc(100% - 25px);
-}
-
-.content main {
-  min-height: calc(100vh - 20px);
-  padding: 25px 15px;
-  padding-bottom: 0;
-  border-left: 1px solid #efefef;
-}
-
-
-@media (max-width: 800px) {
-  * {
-    transition: 0.5s;
+@media (max-width : 900px) {
+  .left {
+    float: none;
+    text-align: left;
+    margin: 0;
   }
-
-  .flex {
-    min-height: calc(100% - 85px);
-  }
- 
-  .intro {
-    min-height: auto;
-    min-height: auto;
-    max-width: none;
-    display: none;
-    border-bottom: 1px solid #efefef;
-    text-align: center;
-  }
-
-  .intro h1 {
-    width: auto;
-    font-weight: 300;
-  }
-
-  .mobile {
-    display: flex;
-  } 
-  
-  .left-panel {
-    width: 70px;
-  }
-
-  .left-panel {
-    min-width: 60px;
-  }
-
-  .left-panel nav ul {
-    position: relative;
-    left: 10px;
-  }
-
-  .nav-helper {
-    display: none;
-  }
-
-  .initial p:nth-child(1), .initial p:nth-child(2) {
-    display: none;
-  }
-
-  .intro section {
-    min-height: 0;
-  }
-
-  iframe {
-    width: calc(100vw - 100px);
-  }
-
 }
 
-iframe {
-  width: 100%;
-}
-
-.initial {
-  font-size: 170px;
-  text-align: center;
-  position: relative;
-  left: -20px;
-}
-
-main {
-  min-height: 100vh;
-  width: calc(100% - 40px);
-}
-
-.intro section {
-  min-height: calc(100% - 100px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.intro footer p {
-  color: #333;
-}
-
-.loading-icon {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background-color: #f4f4f4;
-  font-size: 100px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.loading-icon i { 
-  position: absolute;
-  top: 50%;
-  margin-top: -50px;
-}
-
-@-webkit-keyframes blinker {  
-  from { opacity: 1.0; }
-  to { opacity: 0.0; }
-}
-
-.loading-icon i {
-  -webkit-animation-name: blinker;  
-  -webkit-animation-iteration-count: infinite;  
-  -webkit-animation-timing-function: cubic-bezier(.75, 0, 1, 1);
-  -webkit-animation-duration: 1.5s; 
-}   
 </style>
-
-<!--[if IE]>
-<style>
-.left-panel {
-  min-width: 400px;
-}
-</style>
-<![endif]-->
 </head>
 <body>
-<div class="intro mobile">
-	<p>
-		<i class="fa fa-moon-o" aria-hidden="true"></i>
-		<i class="fa fa-sun-o active" aria-hidden="true"></i>
-		<i class="fa fa-moon-o" aria-hidden="true"></i>
-		<i class="fa fa-sun-o active" aria-hidden="true"></i>
-	</p>
-	<div>
-		<h1>Kirsten Rauffer</h1>
-	</div>
+<div class="left intro">
+<h1><a href="https://en.wikipedia.org/wiki/KISS_principle">kiss</a>: keep it simple, stupid</h1>
+
+<div>
+  <h2><strong>Kirsten Snow Rauffer</strong></h2>
+  <h3>software engineer at <i class="fa fa-windows" aria-hidden="true"></i>
+microsoft</h3>
+  <h4>american expat living in copenhagen <i class="fa fa-map-pin" aria-hidden="true"></i></h4>
+  <h5>maker of ukuleles, lover of travel, eater of hella sushi</h5>
 </div>
-<div class="loading-icon" id="loading-icon">
-	<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+<p>kirstenrauffer@gmail.com</p>
+
+<ul>
+  <li>
+    <a href="https://www.linkedin.com/in/kirstenrauffer/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/dangnabbitrabbit/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  </li> 
+  <li>
+    <a href="https://twitter.com/kirstenrauff"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+  </li>
+</ul>
 </div>
-
-<div class="flex">
-	<div class="left-panel">
-		<div class="intro">
-			<section>
-				<p>
-					<i class="fa fa-moon-o" aria-hidden="true" id=""></i>
-					<i class="fa fa-sun-o active" aria-hidden="true"></i>
-					<i class="fa fa-moon-o" aria-hidden="true"></i>
-					<i class="fa fa-sun-o active" aria-hidden="true"></i>
-				</p>
-				<div>
-					<h1>Kirsten Rauffer</h1>
-				</div>
-				<h2>a software engineer who doesn't drink coffee</h2>
-			</section>
-			<footer style="margin-top: auto;">
-				<p>"<span id="slogan"></span>" &copy; Kirsten Rauffer 2017</p>
-			</footer>	
-		</div>
-
-<!-- Will add back once content is ready 
-		<nav>
-			<ul>
-				<li id="about">
-					<div class="nav-item" tabindex="1" onclick="loadAbout()" onkeypress="loadAbout(event)">
-						<i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="nav-helper left">About</span></a>
-					</div>
-				</li>
-				<li id="resume">
-					<div class="nav-item" tabindex="1" onclick="loadResume()" onkeypress="loadResume(event)">
-						<i class="fa fa-file-pdf-o" aria-hidden="true"></i><span class="nav-helper left">Resume</span>
-					</div>
-				</li>
-				<li id="projects">
-					<div class="nav-item" tabindex="1" onclick="loadProjects()" onkeypress="loadProjects(event)">
-						<i class="fa fa-magic" aria-hidden="true"></i><span class="nav-helper left">Projects</span>
-					</div>
-				</li>
-				<li id="contact">
-					<div class="nav-item" tabindex="1" onclick="loadContact()" onkeypress="loadContact(event)">
-						<i class="fa fa-paper-plane-o" aria-hidden="true"></i><span class="nav-helper left">Contact</span>
-					</div>
-				</li>
-</li>		
-			</ul>
-		</nav>
--->
-	</div>
-	<div class="content">
-		<main id="loader">
-<!--
-			<div class="initial">
-				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
-				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>	
-				<p><i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
-			</div>
--->
-		</main>
-	</div>
+<div class="left mobile">
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMicrosoftDevelopment%2Fvideos%2F1311972438884969%2F&show_text=0&width=560" width="450" height="245" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+  <p class="disclaimer"><em><i class="fa fa-warning" aria-hidden="true"></i>beware the occasionally incorrect subtitles</em></p>
 </div>
-
-<!-- footer quote -->
-<script>
-var hotRodQuotes = [
-		'pools are perfect for holdin\' water, man',
-		'i\'ve been drinking green tea all goddamn day',
-		'my name is rod and i like to party',
-		'i like to party i\'m rod',
-		'rico, what did i just say to dave?',
-		'i\'m pretty sure i\'ve partied before',
-		'no, kevin, i know for a fact you do not party',
-		'you\'re right, dave is the party guy',
-		'my name is dave and i am the stuntman',
-		]
-
-var rand = Math.floor((Math.random() * hotRodQuotes.length) + 0);
-
-document.getElementById('slogan').innerHTML = hotRodQuotes[rand];
-</script>
-
-<!-- loader -->
-<script>
-var currentClass = '';
-
-function loadAbout() {
-    loadObject('about');
-    document.getElementById('iframe').style.height = document.body.scrollHeight + 100 + 'px';
-}
-
-function loadResume() {
-    loadObject('resume');
-}
-
-function loadProjects() {
-    loadObject('projects');
-}
-
-function loadContact() {
-    loadObject('contact');
-    
-}
-
-function loadObject(section) {
-    if(currentClass != section)
-    {
-       if(currentClass) {
-         document.getElementById(currentClass).className += 'active';
-       }
-       
-       document.getElementById(section).className += 'active';
-       document.getElementById('loader').innerHTML='<iframe id="iframe" frameborder="0" src="loader/' + section + '.html"></object>';
-
-       currentClass = section;
-    }
-}
-
-window.onload = function() {
-  document.getElementById('loading-icon').style.visibility = "hidden"; 
- 
-  document.getElementById('loader').innerHTML='<iframe id="iframe" frameborder="0" src="loader/' + 'about' + '.html"></object>';
-  document.getElementById('iframe').style.height = document.body.scrollHeight + 100 + 'px';
-}
-
-</script>
-
 </body>
 </html>
