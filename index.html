@@ -10,17 +10,21 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400" rel="stylesheet">
 
 <style>
-body {
-  padding: 20px;
-}
-
-h1, h2, h3, h4, h5, p, i {
+h1, h2, h3, h4, h5, i, p {
   font-family: 'Open Sans';
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 300;
   padding: 0;
   margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 14px;
 }
 
 h1, a:visited, a, h2, p {
@@ -44,12 +48,10 @@ h5 {
 }
 
 div {
-  padding: 20px 0;
 }
 
 ul {
   list-style-type: none;
-  padding: 10px 0;
 }
 
 li {
@@ -62,9 +64,9 @@ li {
   padding-left: 5px;
 }
 
-.fa-map-pin {
-  color: #DD5143;
-  font-size: 12px;
+.fa-smile-o {
+  color: #f4e242;
+  font-size: 20px;
 }
 
 .fa-warning {
@@ -72,7 +74,7 @@ li {
 }
 
 .fa-linkedin-square, .fa-instagram, .fa-twitter-square {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .fa-linkedin-square {
@@ -94,15 +96,15 @@ li {
 }
 
 .intro {
-  padding: 22px 0;
+  padding: 5px 0;
 }
 
 .disclaimer {
   font-size: 10px;
 }
 
-.fa-file-o{
-  font-size: 18px;
+.fa-file-pdf-o{
+  font-size:21px;
 }
 
 @media (max-width : 900px) {
@@ -115,7 +117,7 @@ li {
 
 body{
   overflow:hidden;
-  background: #fcfff9;
+  background: #fffefc;
 }
 
 .leaf {
@@ -126,21 +128,30 @@ body{
   background-repeat: no-repeat;
 }
 
+.content {
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  left: 50%;
+  margin-left: -600px;
+}
+
 </style>
 </head>
 <body>
 <div id="container">
+<div class="content">
 <div class="left intro">
 <div>
   <h2><strong>Kirsten Snow Rauffer</strong></h2>
   <h3>software engineer at <i class="fa fa-windows" aria-hidden="true"></i>
 microsoft</h3>
-  <h4>american expat living in copenhagen <i class="fa fa-map-pin" aria-hidden="true"></i></h4>
-  <h5>maker of ukuleles, lover of travel, developer of pretty things</h5>
+  <h4>american living abroad in copenhagen <i class="fa fa-smile-o" aria-hidden="true"></i></h4>
 </div>
-<p>kirstenrauffer@gmail.com</p>
-
 <ul>
+  <li class="resume">
+    <a href="KirstenRaufferResume.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+  </li>
   <li>
     <a href="https://www.linkedin.com/in/kirstenrauffer/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
   </li>
@@ -150,13 +161,12 @@ microsoft</h3>
   <li>
     <a href="https://twitter.com/kirstenrauff"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
   </li>
-  <li class="resume">
-    <a href="KirstenRaufferResume.pdf"><i class="fa fa-file-o" aria-hidden="true"></i></a>
-  </li>
 </ul>
+<p><em>Happy Autumn!</em> <br> Apologies, my site is currently under construction <i class="fa fa-gavel" aria-hidden="true"></i></p>
 </div>
 <div class="left mobile">
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMicrosoftDevelopment%2Fvideos%2F1311972438884969%2F&show_text=0&width=560" width="450" height="245" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMicrosoftDevelopment%2Fvideos%2F1311972438884969%2F&show_text=0&width=560" width="560" height="345" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+</div>
 </div>
 </div>
 
