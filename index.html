@@ -101,6 +101,10 @@ li {
   font-size: 10px;
 }
 
+.fa-file-o{
+  font-size: 18px;
+}
+
 @media (max-width : 900px) {
   .left {
     float: none;
@@ -109,16 +113,30 @@ li {
   }
 }
 
+body{
+  overflow:hidden;
+  background: #fcfff9;
+}
+
+.leaf {
+  width:35px;
+  height:35px;
+  position:absolute;
+  background: url(leaf.png);
+  background-repeat: no-repeat;
+}
+
 </style>
 </head>
 <body>
+<div id="container">
 <div class="left intro">
 <div>
   <h2><strong>Kirsten Snow Rauffer</strong></h2>
   <h3>software engineer at <i class="fa fa-windows" aria-hidden="true"></i>
 microsoft</h3>
   <h4>american expat living in copenhagen <i class="fa fa-map-pin" aria-hidden="true"></i></h4>
-  <h5>maker of ukuleles, lover of travel, eater of hella sushi</h5>
+  <h5>maker of ukuleles, lover of travel, developer of pretty things</h5>
 </div>
 <p>kirstenrauffer@gmail.com</p>
 
@@ -132,12 +150,37 @@ microsoft</h3>
   <li>
     <a href="https://twitter.com/kirstenrauff"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
   </li>
+  <li class="resume">
+    <a href="KirstenRaufferResume.pdf"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+  </li>
 </ul>
 </div>
 <div class="left mobile">
 <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMicrosoftDevelopment%2Fvideos%2F1311972438884969%2F&show_text=0&width=560" width="450" height="245" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-  <p class="disclaimer"><em><i class="fa fa-warning" aria-hidden="true"></i>beware the occasionally incorrect subtitles</em></p>
-  <p class="disclaimer"><a href="http://tv.di.dk/secret/14872042/3f564d718206c1939321af198f510b66">bonus video</a> of highlights when I was a panelist at the Global Talent Summit (my mom likes it, hi mom)</p>
 </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script>
+var total = 40;
+var warp = document.getElementById("container"), w = window.innerWidth, h = window.innerHeight;
+ 
+ for (i=0; i<total; i++){ 
+   var Div = document.createElement('div');
+   TweenLite.set(Div,{attr:{class:'leaf'},x:R(0,w),y:R(-200,-150),z:R(-200,200)});
+   warp.appendChild(Div);
+   animm(Div);
+ }
+ 
+ function animm(elm){   
+   TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-15});
+   TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
+   TweenMax.to(elm,R(2,8),{rotationX:R(0,360),rotationY:R(0,360),repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
+ };
+
+function R(min,max) {return min+Math.random()*(max-min)};
+
+</script>
+
 </body>
 </html>
