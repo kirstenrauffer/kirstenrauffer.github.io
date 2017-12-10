@@ -18,7 +18,7 @@ h1 {
   font-size: 60px;
 }
 
-p {
+p, li {
   font-family: 'Source Sans Pro', sans-serif;
   color: #c98912;
   opacity: 0.9;
@@ -62,19 +62,82 @@ main {
   padding: 0px 40px;
 }
 
-ul, main div {
+main div {
   list-style-type: none;
   display: inline-block;
   vertical-align:top;
 }
 
 main div {
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 
-li p, li h3, li i {
+.tooltip {
+  position: relative;
+  z-index:3;
+}
+
+.arrow-left {
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid #edd6ad; 
+}
+
+#info {
+  position: absolute;
+  left: 10px;
+  background: #edd6ad;
+  border-radius: 5px;
+  padding: 15px;
+  top: -40px;
+}
+
+#info img, #info p {
+  float: left;
+  padding: 10px;
+}
+
+.reminders {
+  font-size: 12px;
+  width: 275px;
+}
+
+.tooltip {
+  display: none;
+}
+
+.time {
+  padding: 0 10px;
+}
+
+.event {
+  padding: 0 10px;
+}
+
+table h3, table p, p {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  margin: 20px 55px;
+  background: #f4d397;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+footer h2, footer li, footer ul {
+  color: #c98912;
+  margin: 0;
+}
+
+footer ul {
+  vertical-align:top;
   display: inline-block;
-  margin: 0px 10px;
+  margin: 10px 0px;
 }
 
 </style>
@@ -86,144 +149,234 @@ li p, li h3, li i {
   </header>
   <main>
     <div>
-    <h2>Jan 09: OGG</h2>
-    <ul>
-      <li>
-        <h3><i class="fa fa-plane" aria-hidden="true"></i> 10:00pm</h3>
-        <p>Arrive at OGG</p>
-      </li>
+      <h2>Jan 09: OGG</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-plane" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>10:00pm</h3></td>
+          <td class="event"><p>Arrive at OGG</p></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h2>Jan 10: Paia</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-coffee" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>8:00am</h3></td>
+          <td class="event"><p>Breakfast</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-sun-o" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>9:30am</h3></td>
+          <td class="event"><p>Beach 1: Snorkeling</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-sun-o" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>12:30pm</h3></td>
+          <td class="event"><p>Beach 2: Sea turtles</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-sun-o" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>3:30pm</h3></td>
+          <td class="event"><p>Beach 3: Chillin</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-cutlery" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>6:00pm</h3></td>
+          <td class="event"><p>Dinner</p></td>
+        </tr>
+      </table>
     </ul>
     </div>
     <div>
-    <h2>Jan 10: Paia</h2>
-    <ul>
-      <li>
-        <h3><i class="fa fa-coffee" aria-hidden="true"></i> 8:00am</h3>
-        <p>Breakfast</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-sun-o" aria-hidden="true"></i>9:30am</h3>
-        <p>Beach 1: Snorkeling</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-sun-o" aria-hidden="true"></i>12:30am</h3>
-        <p>Beach 2: Sea turtles</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-sun-o" aria-hidden="true"></i>3:30pm</h3>
-        <p>Beach 3: Chillin</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-cutlery" aria-hidden="true"></i> 7:00pm</h3>
-        <p>Dinner</p>
-      </li>
-    </ul>
+      <h2>Jan 11: Road to Hana</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-birthday-cake" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>12:00am</h3></td>
+          <td class="event"><p>Birthday boy!</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-car" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>6:00am</h3></td>
+          <td class="event"><p>Start road trip</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-camera-retro" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>6:30am</h3></td>
+          <td class="event"><p>Stop 1</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-camera-retro" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>8:30am</h3></td>
+          <td class="event"><p>Stop 2</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-camera-retro" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>11:30am</h3></td>
+          <td class="event"><p>Stop 3</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-camera-retro" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>3:30pm</h3></td>
+          <td class="event"><p>Stop 4</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-car" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>5:00pm</h3></td>
+          <td class="event"><p>Arrive at Hana</p></td>
+        </tr>
+      </table>
     </div>
     <div>
-    <h2>Jan 11: Road to Hana</h2>
-    <ul>
-      <li>
-        <h3><i class="fa fa-birthday-cake" aria-hidden="true"></i> 12:00am</h3>
-        <p>Birthday boy!</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-car" aria-hidden="true"></i> 6:00am</h3>
-        <p>Start road trip</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> 6:30am</h3>
-        <p>Stop 1</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> 8:30am</h3>
-        <p>Stop 2</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> 11:30am</h3>
-        <p>Stop 3</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> 3:30am</h3>
-        <p>Stop 4</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-car" aria-hidden="true"></i> 5:00pm</h3>
-        <p>Arrive at Hana</p>
-      </li>
-    </ul>
+      <h2>Jan 12: Hana</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-coffee" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>8:00am</h3></td>
+          <td class="event"><p>Breakfast</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-sun-o" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>9:30am</h3></td>
+          <td class="event"><p>Thing 1</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-sun-o" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>12:30pm</h3></td>
+          <td class="event"><p>Thing 2</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-sun-o" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>3:30pm</h3></td>
+          <td class="event"><p>Thing 3</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-cutlery" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>6:00pm</h3></td>
+          <td class="event"><p>Dinner</p></td>
+        </tr>
+      </table>
     </div>
     <div>
-    <h2>Jan 12: Hana</h2>
-    <ul>
-        <li>
-        <h3><i class="fa fa-coffee" aria-hidden="true"></i> 8:00am</h3>
-        <p>Breakfast</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-sun-o" aria-hidden="true"></i>9:30am</h3>
-        <p>Thing 1</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-sun-o" aria-hidden="true"></i>12:30am</h3>
-        <p>Thing 2</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-sun-o" aria-hidden="true"></i>3:30pm</h3>
-        <p>Thing 3</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-cutlery" aria-hidden="true"></i> 7:00pm</h3>
-        <p>Dinner</p>
-      </li>
-    </ul>
+      <h2>Jan 13: Hana to Waliea</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-car" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>8:00am</h3></td>
+          <td class="event"><p>Start road trip</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-camera-retro" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>8:30am</h3></td>
+          <td class="event"><p>Stop 1</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-camera-retro" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>10:30am</h3></td>
+          <td class="event"><p>Stop 2</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-camera-retro" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>12:30am</h3></td>
+          <td class="event"><p>Stop 3</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-car" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>4:00pm</h3></td>
+          <td class="event"><p>Arrive at Waliea </p></td>
+        </tr>
+      </table>
     </div>
     <div>
-    <h2>Jan 13: Hana to Waliea</h2>
-    <ul>
-      <li>
-        <h3><i class="fa fa-car" aria-hidden="true"></i> 8:00am</h3>
-        <p>Start road trip</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> 8:30am</h3>
-        <p>Stop 1</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> 10:30am</h3>
-        <p>Stop 2</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-camera-retro" aria-hidden="true"></i> 11:30am</h3>
-        <p>Stop 3</p>
-      </li>
-      <li>
-        <h3><i class="fa fa-car" aria-hidden="true"></i> 4:00pm</h3>
-        <p>Arrive at Waliea</p>
-      </li>
-    </ul>
-    </div>
-    <div>
-    <h2>Jan 14: Wailea</h2>
-    <ul>
-      <li>
-        <h3><i class="fa fa-ship" aria-hidden="true"></i> 10:00pm</h3>
-        <p>Surf lessons</p>
-      </li>
-     <li>
-        <h3><i class="fa fa-car" aria-hidden="true"></i> 5:00pm</h3>
-        <p>Back to Paia for flight</p>
-      </li>
-     <li>
-        <h3><i class="fa fa-cutlery" aria-hidden="true"></i> 6:00pm</h3>
-        <p>Dinner</p>
-      </li>
-     <li>
-        <h3><i class="fa fa-plane" aria-hidden="true"></i> 9:00pm</h3>
-        <p>Flight to Honolulu</p>
-      </li>
-    </ul>
+      <h2>Jan 14: Wailea</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-coffee" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>8:00am</h3></td>
+          <td class="event"><p>Breakfast</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-ship" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>10:00am</h3></td>
+          <td class="event"><p>Surf lessons</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-car" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>5:00pm</h3></td>
+          <td class="event"><p>Drive to Paia for flight</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-cutlery" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>6:00pm</h3></td>
+          <td class="event"><p>Dinner</p></td>
+        </tr>
+        <tr>
+          <td class="icon"><h3><i class="fa fa-plane" aria-hidden="true"></i></h3></td>
+          <td class="time"><h3>3:30pm</h3></td>
+          <td class="event"><p>Flight to Honolulu</p></td>
+        </tr>
+      </table>
     </div>
   </main>
+  <footer>
+    <h2>Packing reminders</h2>
+    <ul>
+      <li>Swim suits</li>
+      <li>Hawaiin shirts</li>
+      <li>Snorkel mask</li>
+      <li>Snorkel fins</li>
+    </ul>
+    <ul>
+      <li>Beach towel</li>
+      <li>Disposable camera</li>
+      <li>Frisbee</li>
+      <li>Sun lotion</li>
+    </ul>
+    <ul>
+      <li>Bug spray</li>
+    </ul>
+  </footer>
 </div>
+
+<div class="tooltip">
+<div class="arrow-left"></div>
+<div id="info">
+<img src="https://cdn.dribbble.com/users/44323/screenshots/3020891/pipeline.png" width="100"/>
+<p>hello</p>
+</div>
+</div>
+
 </body>
 </html>
