@@ -78,7 +78,7 @@ h1, h3 {
 h3 {
   position: absolute;
   z-index: 5;
-  bottom: 390px;
+  bottom: 400px;
   transform: rotate(-10deg);
 }
 
