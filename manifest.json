@@ -1,0 +1,31 @@
+{
+  "transcriptManifestUrl": "https://s3.amazonaws.com/test-test-test-0531/transcriptmanifest.json",
+  "transcribedDocumentUrl": "http://kirstenrauffer.github.io/test.pdf",
+ "perResolutions": [
+   {
+     "width" : 480,
+     "height" : 200,
+     "imageManifestUrl" : "https://s3.amazonaws.com/test-test-test-0531/imagemanifest480X200.json"
+   },
+   {
+     "width" : 160,
+     "height" : 67,
+     "imageManifestUrl" : "https://s3.amazonaws.com/test-test-test-0531/imagemanifest160X67.json"
+   },
+   {
+     "width" : 800,
+     "height" : 334,
+     "imageManifestUrl" : "https://s3.amazonaws.com/test-test-test-0531/imagemanifest800X334.json"
+   },
+   {
+     "width" : 1280,
+     "height" : 534,
+     "imageManifestUrl" : "https://s3.amazonaws.com/test-test-test-0531/imagemanifest1280X534.json"
+   },
+   {
+     "width" : 1920,
+     "height" : 800,
+     "imageManifestUrl" : "https://s3.amazonaws.com/test-test-test-0531/imagemanifest1920X800.json"
+   }
+ ]
+}
