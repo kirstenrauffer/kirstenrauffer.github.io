@@ -5,22 +5,7 @@
    {
      "width" : 3300,
      "height" : 2550,
-     "imageManifestUrl" : "http://kirstenrauffer.github.io/form1.jpg"
+     "imageManifestUrl" : "http://kirstenrauffer.github.io/formimagemanifest.json"
    },
-   {
-     "width" : 3300,
-     "height" : 2550,
-     "imageManifestUrl" : "http://kirstenrauffer.github.io/form2.jpg"
-   },
-   {
-     "width" : 3300,
-     "height" : 2550,
-     "imageManifestUrl" : "http://kirstenrauffer.github.io/form3.jpg"
-   },
-   {
-     "width" : 3300,
-     "height" : 2550,
-     "imageManifestUrl" : "http://kirstenrauffer.github.io/form4.jpg"
-   }
  ]
 }

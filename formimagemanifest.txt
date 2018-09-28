@@ -1,0 +1,8 @@
+{
+  "pages": [
+    "http://kirstenrauffer.github.io/form1.jpg",
+    "http://kirstenrauffer.github.io/form2.jpg",
+    "http://kirstenrauffer.github.io/form3.jpg",
+    "http://kirstenrauffer.github.io/form4.jpg",
+  ]
+}
