@@ -1,0 +1,26 @@
+{
+  "transcriptManifestUrl": "https://s3.amazonaws.com/test-test-test-0531/transcriptmanifest.json",
+  "transcribedDocumentUrl": "http://kirstenrauffer.github.io/form.pdf",
+ "perResolutions": [
+   {
+     "width" : 3300,
+     "height" : 2550,
+     "imageManifestUrl" : "http://kirstenrauffer.github.io/form1.jpg"
+   },
+   {
+     "width" : 3300,
+     "height" : 2550,
+     "imageManifestUrl" : "http://kirstenrauffer.github.io/form2.jpg"
+   },
+   {
+     "width" : 3300,
+     "height" : 2550,
+     "imageManifestUrl" : "http://kirstenrauffer.github.io/form3.jpg"
+   },
+   {
+     "width" : 3300,
+     "height" : 2550,
+     "imageManifestUrl" : "http://kirstenrauffer.github.io/form4.jpg"
+   }
+ ]
+}
