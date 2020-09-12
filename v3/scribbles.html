@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> 
+<head>
+
+<title>Kirsten Rauffer</title>
+
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Faustina|Homemade+Apple" rel="stylesheet">
+
+<style>
+body {
+  background-color: #f4f4f4;
+}
+
+p::selection, span::selection, strong::selection {
+  background: #ffb7b7; 
+}
+
+p::-moz-selection, span::-moz-selection, strong::-moz-selection {
+  background: #ffb7b7; 
+}
+
+p {
+  font-family: 'Open Sans', arial;
+  font-size: 14px;
+}
+
+.content {
+  position: absolute;
+  padding: 20px;
+  z-index: 1000;
+  width: 100%;
+}
+
+.content .font-scribble {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 16px;
+}
+
+.content .font-art {
+  font-family: 'Faustina', serif;
+  font-size: 16px;
+} 
+
+.word-gap {
+  word-spacing: 5px;
+}
+
+.translation {
+  font-size: 10px;
+  margin: 35px 0;
+}
+
+.quote {
+  line-height: 15px;
+}
+
+.line-break {
+  margin-left: calc(10% + 145px);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px 50px;
+}
+
+canvas {
+  -webkit-clip-path: url(#heart);
+  clip-path: url(#heart);
+  transform: scale(.25);
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -150px;
+}
+</style>
+</head>
+<body>
+  <div class="content">
+    <p class="quote">
+      donde todas 
+      vieron <span class="word-gap">mi 
+        <span class="font-scribble">
+          garabatos
+        </span></span>
+
+      </br>
+
+      <span class="line-break">
+        tú viste mi
+        <span class="font-art">
+          <strong>arte</strong>
+        </span>
+      </span>
+    </p>
+
+    <p class="quote">
+      donde todas 
+      vieron <span class="word-gap">mi 
+        <span class="font-scribble">
+          garabatos
+        </span></span>
+
+      </br>
+
+      <span class="line-break">
+        tú viste mi
+        <span class="font-art">
+          <strong>heart</strong>
+        </span>
+      </span>
+    </p>
+   
+    <p class="translation">
+      (where others saw my scribbles, you saw my art)
+      </br>
+      (where others saw my scribbles, you saw my heart)
+    </p>
+</div>
+    <main>
+      <svg>
+        <defs>
+          <clipPath id="heart" x="0" y="0">
+            <path d="M146 1.8c-27.7-7.7-50.8 11-52.6 32.6C91.7 12.7 68.6-5.9 40.9 1.8 13 9.5-18.8 48.2 13.8 109.3c23.9 44.9 62.9 64.2 79.7 73.7 16.7-9.5 55.7-28.8 79.7-73.7C205.6 48.2 173.8 9.5 146 1.8z"/>
+          </clipPath>
+        </defs>
+      </svg>
+
+      <canvas id="heart-scribble" clip-path="url(#heart)"></canvas>
+    </main>
+ 
+    <p class="bottom">te quiero, omar (mi taco bello)</p>
+
+  <script>
+    (function() {
+  var canvas = document.getElementById('heart-scribble');
+  canvas.width = 200;
+  canvas.height = 200;
+  canvas.style.backgroundColor = 'pink';
+
+  var props = {
+    h: canvas.height,
+    w: canvas.width,
+    directions: [0, 90, 180, 270, 360]
+  }
+
+  var context = canvas.getContext('2d');
+
+  var line = {
+    premoveX: props.w / 2,
+    premoveY: props.h / 2,
+    X: props.w / 2,
+    Y: props.h / 2,
+    angle: 0,
+    distance: Math.floor(Math.random() * (50 - 20) + 20)
+  }
+
+  function update() {
+    line.angle = (Math.random() % Math.PI * 360);   
+        
+    line.Y = line.Y + Math.round(Math.sin(line.angle * Math.PI/180) * line.distance);
+    line.X = line.X + Math.round(Math.cos(line.angle * Math.PI/180) * line.distance);
+    
+    if (line.Y >= props.h){
+      line.Y = props.h;
+    } else if (line.Y <= 0){
+      line.Y = 0;
+    }
+
+    if (line.X >= props.w){
+      line.X = props.w;
+    } else if (line.X <= 0){
+      line.X = 0;
+    }
+
+    context.beginPath();
+    context.moveTo(line.premoveX, line.premoveY);
+    context.lineTo(line.X, line.Y);
+    context.lineCap = 'round';
+    context.strokeStyle = '#b52752';
+    context.fillStyle = '#b52752';
+    context.lineWidth = 25;
+    context.stroke();
+    
+    line.premoveX = line.X;
+    line.premoveY = line.Y;
+  }
+
+  setInterval(update, 25);
+})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "transcriptManifestUrl": "https://s3.amazonaws.com/test-test-test-0531/transcriptmanifest.json",
+  "transcribedDocumentUrl": "http://kirstenrauffer.github.io/test.pdf",
+ "perResolutions": [
+   {
+     "width" : 3300,
+     "height" : 2550,
+     "imageManifestUrl" : "http://kirstenrauffer.github.io/test.jpg"
+   }
+ ]
+}

@@ -1,196 +1,73 @@
-<!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" /> 
-<head>
+  <!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Kirsten Rauffer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body class="index">
+    <main>
+      <h1 class="a11y-text">Kirsten Rauffer's Corder Of The Web</h1>
+      <p id="aria-live" class="a11y-text" aria-live="polite"></p>
+      <div class="index__interactive-container">
+        <div>
+          <h2>happy autumn!!!</h2>
+          <button class="index__bush-button" onclick="onUnleashSurprise()">
+            <img src="bush.png" alt="A bush" width="250"/>
+          </button>
+          <div class="index__blanket-container" id="interactive-container">
+            <img src="blanket.png" alt="A picnic blanket" width="350"/>
+          </div>
+        </div>
+      </div>
+    </main>
 
-<title>Kirsten Rauffer</title>
-
-<link rel="stylesheet" href="normalize.css">
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400" rel="stylesheet">
-
-<style>
-h1, h2, h3, h4, h5, i, p {
-  font-family: 'Open Sans';
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 300;
-  padding: 0;
-  margin: 0;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-p {
-  font-size: 14px;
-}
-
-h1, a:visited, a, h2, p {
-  color: #6C6C6C;
-}
-
-h2 {
-  color: #0F0F0F;
-}
-
-h3 {
-  color: #A7A7A7;
-}
-
-h4 {
-  color: #BFBFBF;
-}
-
-h5 {
-  color: #DBDBDB;
-}
-
-div {
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.fa-windows {
-  color: #7cbb00;
-  padding-left: 5px;
-}
-
-.fa-smile-o {
-  color: #f4e242;
-  font-size: 20px;
-}
-
-.fa-warning {
-  margin-right: 5px;
-}
-
-.fa-linkedin-square, .fa-instagram, .fa-twitter-square {
-  font-size: 23px;
-}
-
-.fa-linkedin-square {
-  color: #0077B5;
-}
-
-.fa-instagram {
-  color: #517fa4;
-}
-
-.fa-twitter-square {
-  color: #00aced;
-}
-
-.left {
-  float: left;
-  text-align: right;
-  margin: 0 20px;
-}
-
-.intro {
-  padding: 5px 0;
-}
-
-.disclaimer {
-  font-size: 10px;
-}
-
-.fa-file-pdf-o{
-  font-size:21px;
-}
-
-@media (max-width : 900px) {
-  .left {
-    float: none;
-    text-align: left;
-    margin: 0;
-  }
-}
-
-body{
-  overflow:hidden;
-  background: #fffefc;
-}
-
-.leaf {
-  width:35px;
-  height:35px;
-  position:absolute;
-  background: url(leaf.png);
-  background-repeat: no-repeat;
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  margin-top: -200px;
-  left: 50%;
-  margin-left: -600px;
-}
-
-</style>
-</head>
-<body>
-<div id="container">
-<div class="content">
-<div class="left intro">
-<div>
-  <h2><strong>Kirsten Snow Rauffer</strong></h2>
-  <h3>software engineer at <i class="fa fa-windows" aria-hidden="true"></i>
-microsoft</h3>
-  <h4>american living abroad in copenhagen <i class="fa fa-smile-o" aria-hidden="true"></i></h4>
-</div>
-<ul>
-  <li class="resume">
-    <a href="KirstenRauffer_Resume.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/in/kirstenrauffer/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-  </li>
-  <li>
-    <a href="https://www.instagram.com/dangnabbitrabbit/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-  </li> 
-  <li>
-    <a href="https://twitter.com/kirstenrauff"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-  </li>
-</ul>
-<p><em>Happy Autumn!</em> <br> Apologies, my site is currently under construction <i class="fa fa-gavel" aria-hidden="true"></i></p>
-</div>
-<div class="left mobile">
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMicrosoftDevelopment%2Fvideos%2F1311972438884969%2F&show_text=0&width=560" width="560" height="345" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-</div>
-</div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script>
-var total = 40;
-var warp = document.getElementById("container"), w = window.innerWidth, h = window.innerHeight;
- 
- for (i=0; i<total; i++){ 
-   var Div = document.createElement('div');
-   TweenLite.set(Div,{attr:{class:'leaf'},x:R(0,w),y:R(-200,-150),z:R(-200,200)});
-   warp.appendChild(Div);
-   animm(Div);
- }
- 
- function animm(elm){   
-   TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-15});
-   TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
-   TweenMax.to(elm,R(2,8),{rotationX:R(0,360),rotationY:R(0,360),repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
- };
-
-function R(min,max) {return min+Math.random()*(max-min)};
-
-</script>
-
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
+    <script src="surprise.js"></script>
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
