@@ -1,87 +1,97 @@
-const WINTER = [
-  {
+const SURPRISES = {
+  COOKIE: {
     src: 'surprises/cookie.png',
     alt: `Grandma's cookies`,
     width: '38',
   },
-  {
+  WINE: {
     src: 'surprises/wine.png',
     alt: `An antique bottle of wine`,
     width: '65',
   },
-  {
+  HOLLY: {
     src: 'surprises/holly.png',
     alt: `A festive holly flower`,
     width: '42',
   },
-  {
+  CHOCOLATE_CAKE: {
     src: 'surprises/chocolate_cake.png',
     alt: `A rich chocolate cake`,
     width: '55',
   },
-  {
+  COFFEE: {
     src: 'surprises/coffee.png',
     alt: `A warm cup of coffee`,
     width: '38',
   },
-  {
+  RHUBARB_PIE: {
     src: 'surprises/rhubarb_pie.png',
     alt: `A tart rhubarb pie`,
     width: '50',
   },
-  {
+  SOUP: {
     src: 'surprises/soup.png',
     alt: `A hot bowl of clam chowder`,
     width: '50',
   },
-  {
+  SNOW: {
     src: 'surprises/snow.png',
     alt: `A clump of snow`,
     width: '50',
-  }
-];
-
-const AUTUMN = [
-  {
+  },
+  BREAKFAST: {
     src: 'surprises/breakfast.png',
     alt: `A hearty breakfast`,
     width: '50',
   },
-  {
-    src: 'surprises/cookie.png',
-    alt: `Grandma's cookies`,
-    width: '38',
-  },
-  {
+  SUNFLOWER: {
     src: 'surprises/sunflower.png',
     alt: `A bright sunflower`,
     width: '48',
   },
-  {
+  PANCAKES: {
     src: 'surprises/pancakes.png',
     alt: `Yummy pancakes with maple syrup drizzled on top`,
     width: '50',
   },
-  {
+  POPPYSEED: {
     src: 'surprises/poppyseed_muffin.png',
     alt: `Some freshly made poppyseed muffins`,
     width: '38',
   },
-  {
+  PUMPKIN_PIE: {
     src: 'surprises/pumpkin_pie.png',
     alt: `A delightful pumpkin pie`,
     width: '50',
   },
-  {
+  PUMPKIN: {
     src: 'surprises/pumpkin.png',
     alt: `A plump pumpkin`,
     width: '60',
   },
-  {
-    src: 'surprises/soup.png',
-    alt: `A fragrant mushroom soup`,
-    width: '45',
-  }
+}
+
+const WINTER = [
+  SURPRISES.COOKIE,
+  SURPRISES.WINE,
+  SURPRISES.HOLLY,
+  SURPRISES.CHOCOLATE_CAKE,
+  SURPRISES.COFFEE,
+  SURPRISES.RHUBARB_PIE,
+  SURPRISES.SOUP,
+  SURPRISES.SNOW
+];
+
+const AUTUMN = [
+  SURPRISES.COOKIE,
+  SURPRISES.COFFEE,
+  SURPRISES.SUNFLOWER,
+  SURPRISES.PANCAKES,
+  SURPRISES.POPPYSEED,
+  SURPRISES.PUMPKIN_PIE,
+  SURPRISES.PUMPKIN,
+  SURPRISES.SOUP,
+  SURPRISES.WINE
 ];
 
 const SPRING = [
@@ -181,7 +191,6 @@ getRandomIntInclusive = (min, max) => {
 }
 
 getSurprise = () => {
-  // return WINTER[getRandomInt(WINTER.length)];
   const today = new Date();
   const month = today.getMonth();
   if (month < 2 || month > 11) {
@@ -221,7 +230,7 @@ animateSurprise = (img) => {
   const end = getRandomInt(13)/100;
   const path = getRandomInt(10) > 5 ? '#path1' : '#path2';
 
-  TweenMax.to(img, .4, { rotation: 720 });
+  TweenMax.to(img, .4, { rotation: getRandomIntInclusive(700, 720) });
   TweenMax.to(img, {
     duration: .4,
     ease: Linear.easeIn,
