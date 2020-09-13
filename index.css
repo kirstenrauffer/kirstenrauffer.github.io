@@ -8,6 +8,13 @@
 
 .index__bush-button {
   padding: 12px;
+  position: relative;
+}
+
+.index__bush-button svg {
+  position: absolute;
+  top: -100px;
+  left: 90px;
 }
 
 .index {
@@ -20,8 +27,6 @@
 
 .index__surprise {
   position: absolute;
-  left: 50%;
-  margin-left: -20px;
 }
 
 .index__bush-button:hover, .index__bush-button:focus {

@@ -208,14 +208,22 @@ onUnleashSurprise = () => {
   img.classList += 'index__surprise';
   Draggable.create(img, {});
   document.getElementById('interactive-container').appendChild(img);
-  TweenMax.to(img, 0.3, {
-    y:-200,
-    ease:Back.easeOut
+
+  const end = getRandomInt(13)/100;
+  const path = getRandomInt(10) > 5 ? '#path1' : '#path2';
+
+  TweenMax.to(img, .4, { rotation: 720 });
+  TweenMax.to(img, {
+    duration: .4,
+    ease: Linear.easeIn,
+    motionPath: {
+      ease: Linear.easeIn,
+      start: 1,
+      end,
+      path,
+      align: path,
+    }
   });
-  TweenMax.to(img, 0.3, {
-    y: getRandomIntInclusive(-15, 60),
-    x: getRandomIntInclusive(-125, 125),
-    ease:Back.easeOut
-  });
+
   document.getElementById('aria-live').innerHTML = `${surprise.alt} just appeared!`;
 }
