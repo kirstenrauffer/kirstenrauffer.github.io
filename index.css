@@ -6,6 +6,11 @@
   opacity: .85;
 }
 
+.index__subheader {
+  padding: 12px;
+  font-size: 14px;
+}
+
 .index__interactive-container {
   display: flex;
   justify-content: center;

@@ -193,15 +193,22 @@ getRandomIntInclusive = (min, max) => {
 getSurprise = () => {
   const today = new Date();
   const month = today.getMonth();
+  const heading = document.getElementById('heading');
+  debugger;
   if (month < 2 || month > 11) {
+    heading.innerHTML = 'welcome, happy winter!!!';
     return WINTER[getRandomInt(WINTER.length)];
   } else if (month < 6) {
+    heading.innerHTML = 'welcome, happy spring!!!';
     return SPRING[getRandomInt(SPRING.length)];
   } else if (month < 8) {
+    heading.innerHTML = 'welcome, happy summer!!!';
     return SUMMER[getRandomInt(SUMMER.length)];
   } else {
+    heading.innerHTML = 'welcome, happy autumn!!!';
     return AUTUMN[getRandomInt(AUTUMN.length)];
   }
+  
 }
 
 onUnleashSurprise = () => {
@@ -244,3 +251,5 @@ animateSurprise = (img) => {
     Draggable.create(img, {});
   });
 }
+
+getSurprise();
