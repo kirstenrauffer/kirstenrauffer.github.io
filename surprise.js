@@ -211,7 +211,6 @@ onUnleashSurprise = () => {
   img.alt = surprise.alt;
   img.width = surprise.width;
   img.classList += 'index__surprise';
-  Draggable.create(img, {});
   document.getElementById('interactive-container').appendChild(img);
 
   animateSurprise(img);
@@ -241,5 +240,7 @@ animateSurprise = (img) => {
       path,
       align: path,
     }
+  }).then(() => {
+    Draggable.create(img, {});
   });
 }
