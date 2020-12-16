@@ -194,8 +194,8 @@ getSurprise = () => {
   const today = new Date();
   const month = today.getMonth();
   const heading = document.getElementById('heading');
-  debugger;
-  if (month < 2 || month > 11) {
+
+  if (month < 2 || month >= 11) {
     heading.innerHTML = 'welcome, happy winter!!!';
     return WINTER[getRandomInt(WINTER.length)];
   } else if (month < 6) {
