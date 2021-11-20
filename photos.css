@@ -1,0 +1,155 @@
+.main__photographs {
+  border-radius: 1px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main__photographs img {
+  max-width: 100%;
+  position: relative;
+}
+
+.photo-1 {
+  height: 200px;
+  width: 800px;
+}
+
+.photo-1__hover {
+  padding: 16px;
+  height: 200px;
+  width: 800px;
+  animation: jello; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+}
+
+.photo-1__hover:hover {
+  background: url(images/1.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.photo-1 img {
+  width: 764px;
+  top: -180px;
+}
+
+.photo-2 {
+  height: 300px;
+  width: 400px;
+}
+
+.photo-2__hover {
+  padding: 16px;
+  height: 300px;
+  width: 400px;
+}
+
+.photo-2__hover:hover {
+  background: url(images/2.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.photo-2 img {
+  top: 0;
+}
+
+.photo-3 {
+  height: 500px;
+  width: 300px;
+}
+
+.photo-3__hover {
+  position: relative;
+  left: -400px;
+  top: -560px;
+  padding: 16px;
+  height: 500px;
+  width: 300px;
+}
+
+.photo-3__hover:hover {
+  background: url(images/3.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.photo-3 img {
+  max-height: 100%;
+  max-width: unset;
+  position: relative;
+  left: -115px;
+}
+
+.photo-4 {
+  height: 400px;
+  width: 400px;
+}
+
+.photo-4__hover {
+  position: relative;
+  left: 450px;
+  top: -1200px;
+  padding: 16px;
+  height: 400px;
+  width: 400px;
+}
+
+.photo-4__hover:hover {
+  background: url(images/4.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.photo-5 {
+  height: 200px;
+  width: 800px;
+  position: relative;
+  z-index: -1;
+  bottom: 1245px;
+}
+
+.photo-5:hover {
+  background: url(images/5.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.photo-5 img {
+  top: -270px;
+}
+
+.photo-1-circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;;
+  position: relative;
+  left: 320px;
+  top: -1150px;
+  z-index: 2;
+}
+
+.photo-1-circle:hover {
+  background: url(images/1-circle.jpg) no-repeat center center fixed;
+}
+
+.photo-1-circle img {
+  max-width: unset;
+  width: 500px;
+  left: -175px;
+  top: -50px;
+}
+
+.photo-2-circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+  left: -225px;
+  top: -1525px;
+  z-index: 2;
+}
+
+.photo-2-circle:hover {
+  background: url(images/2-circle.jpg) no-repeat center center fixed;
+}
+
+
+.photo-2-circle img {
+  border-radius: 50%;
+}
