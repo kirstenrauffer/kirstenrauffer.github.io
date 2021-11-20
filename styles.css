@@ -70,6 +70,21 @@ html {
   border-radius: 1px;
 }
 
+.shakeY:hover {
+  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+}
+
+.heartbeat:hover {
+  animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+}
+
+.jello:hover {
+  animation: jello; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+}
+
 .main__photographs img {
   max-width: 100%;
   position: relative;
