@@ -1,6 +1,6 @@
 const _startGenerateCode = () => {
   const interval1 = setInterval(_generateCode, 25);
-  const interval2 = setInterval(_generateCode, 100);
+  const interval2 = setInterval(_generateCode, 60);
   setTimeout(_cancelGenerateCode, 1000, interval1);
   setTimeout(_cancelGenerateCode, 2000, interval2);
 }
