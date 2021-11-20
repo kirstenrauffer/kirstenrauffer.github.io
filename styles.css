@@ -150,16 +150,9 @@ html {
   width: 150px;
   border-radius: 50%;;
   position: relative;
-  left: -250px;
+  left: -225px;
   top: -1325px;
   z-index: 2;
-}
-
-.photo-2-circle img {
-  max-width: unset;
-  width: 275px;
-  left: -50px;
-  top: -30px;
 }
 
 h1 span {
@@ -176,7 +169,7 @@ h1 span {
 
 .main__heading--accent {
   font-family: 'Reenie Beanie';
-  font-size: 55px;
+  font-size: 54px;
   position: relative;
 }
 
