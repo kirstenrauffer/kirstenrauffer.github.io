@@ -202,7 +202,8 @@ h1 span {
   }
 
   .photo-1-circle {
-    left: 400px;
+    left: 325px;
+    top: -1200px;
   }
 
   .photo-1 img {
