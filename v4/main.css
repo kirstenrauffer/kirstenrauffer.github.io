@@ -1,0 +1,19 @@
+.a11y-text {
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+button {
+  border: 0;
+  background: transparent;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}

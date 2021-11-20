@@ -1,108 +1,125 @@
+<!DOCTYPE html>
 <html>
-  <!DOCTYPE html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Kirsten Rauffer</title>
-    <meta name="description" content="Software engineer, currently at LinkedIn. Co-founder of Dium. Rutgers graduate. What's up!">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body class="index">
-    <main>
-      <h1 class="a11y-text">Kirsten Rauffer's Corder Of The Web</h1>
-      <p class="a11y-text">Welomce! My name is Kirsten and I am a software engineer living in the Bay Area.</p>
-      <ul class="a11y-text">
-        <li><a class="a11y-text" href="https://www.linkedin.com/in/kirstenrauffer/">Add me on LinkedIn</a></li>
-        <li><a class="a11y-text" href="https://www.instagram.com/kirstenxsnow/">Add me on Instagram</a></li>
-        <li><a class="a11y-text" href="https://github.com/kirstenrauffer/">Add me on Github</a></li>
-        <li><a class="a11y-text" href="https://twitter.com/kirstenrauff">Add me on Twitter</a></li>
-      </ul>
-      <p id="aria-live" class="a11y-text" aria-live="polite"></p>
-      <h2 id="heading" class="index__subheader" >welcome, explorer!!</h2>
-      <div class="index__interactive-container">
-        <div>
-          <button class="index__bush-button" onclick="onUnleashSurprise()">
-            <img src="bush.png" alt="A bush" width="250"/>
-            <img id="bee1" class="index__bee" src="bee.png" alt="A bee buzzing around" width="80"/>
-            <img id="bee2" class="index__bee" src="bee.png" alt="Another bee buzzing around. Maybe a friend?" width="80"/>
-            <svg id="path1-svg" aria-hidden="true" width="110px" viewBox="0 0 93 294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g stroke="#3B3B3B" stroke-width="0">
-                      <path id="path1" d="M1.65739937,293 C-4.82670669,112.207055 7.71460993,15.2724052 39.2813492,2.19604976 C70.8480885,-10.8803057 87.7543055,34.4406057 90,138.158784"></path>
-                  </g>
-              </g>
-            </svg>
-            <svg id="path2-svg" aria-hidden="true" width="110px" viewBox="0 0 93 294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g stroke="#3B3B3B" stroke-width="0">
-                      <path id="path2" d="M1.65739937,293 C-4.82670669,112.207055 7.71460993,15.2724052 39.2813492,2.19604976 C70.8480885,-10.8803057 87.7543055,34.4406057 90,138.158784" transform="translate(45.000000, 146.500000) scale(-1, 1) translate(-45.000000, -146.500000) "></path>
-                  </g>
-              </g>
-            </svg>
-          </button>
-          <div class="index__blanket-container" id="interactive-container">
-            <img src="blanket.png" alt="A picnic blanket" width="350"/>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Flow+Circular&family=M+PLUS+1:wght@100;200;300;400;500&family=Reenie+Beanie&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">  <link rel="stylesheet" href="normalize.css">
+
+
+</head>
+<body onload="generateCode()">
+  <div aria-hidden="true" id="matrix-loader" class="matrix-loader">
+    <div class="matrix-loader__divider"></div>
+  </div>
+  
+  <main class="main">
+    <div class="main__content">
+      <div class="main__photographs photo-1">
+        <img src="1.jpg" alt="A fairy-like forest in Norway."/>
       </div>
-    </main>
+      <h1 class="main__heading">
+        <span class="main__heading--supporting left-neg-100">Welcome to the site of</span>
+        <span class="main__heading--accent">Kirsten Rauffer</span>
+        <span class="main__heading--supporting left-100">A creator and a dreamer</span>      
+      </h1>
+      <div class="main__photographs photo-2">
+        <img src="2.jpg" alt="Two sea lions cuddling in the sunlight."/>
+      </div>
+      <div class="main__photographs photo-3">
+        <img src="3.jpg" alt="A view from the end of the Ausungate trek in Peru."/>
+      </div>
+      <div class="main__photographs photo-1-circle">
+        <img src="1-circle.jpg" alt="A cactus weilding sunglasses at a town near Joshua Tree National Park."/>
+      </div>
+      <div class="main__photographs photo-4">
+        <img src="4.jpg" alt="A cute plant spotted at the Conservatory of Flowers in San Fransisco."/>
+      </div>
+      <div class="main__photographs photo-2-circle">
+        <img src="2-circle.jpg" alt="Myself with camera in hand at a baseball stadium in Denver, Colorado. A bright purple sky is behind me."/>
+      </div>
+      <!-- <div class="main__photographs photo-5">
+        <img src="5.jpg" alt="A river bend during autumn in Yosemite National Park."/>
+      </div> -->
+      
+    </div>
+    <p class="main__heading--supporting">Site under construction</p>
+    <div class="matrix-loader__divider"></div>
+  </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EasePack.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EaselPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/PixiPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
-    <script src="surprise.js"></script>
-    <script src="bee.js"></script>
+  <script>
+    const CHARACTERS = ['｢', '｣', '､', '･', 'ｦ', 'ｧ', 'ｨ', 'ｩ', 'ｪ', 'ｫ', 'ｬ', 'ｭ', 'ｮ', 'ｯ', 'ｰ', 'ｱ', 'ｲ', 'ｳ', 'ｴ', 'ｵ', 'ｶ', 'ｷ', 'ｸ', 'ｹ', 'ｺ', 'ｻ', 'ｼ', 'ｽ', 'ｾ', 'ｿ', 'ﾀ', 'ﾁ', 'ﾂ', 'ﾃ', 'ﾄ', 'ﾅ', 'ﾆ', 'ﾇ', 'ﾈ', 'ﾉ', 'ﾊ', 'ﾋ', 'ﾌ', 'ﾍ', 'ﾎ', 'ﾏ', 'ﾐ', 'ﾑ', 'ﾒ', 'ﾓ', 'ﾔ', 'ﾕ', 'ﾖ', 'ﾗ', 'ﾘ', 'ﾙ', 'ﾚ', 'ﾛ', 'ﾜ', 'ﾝ', 'ﾞ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'A', 'B', 'C', 'D', 'E', 'V', 'Z', 'H', 'Θ', 'I', 'K', 'L', 'M', 'N', 'Ξ', 'O', 'P', 'Ś', 'Q', 'R', 'S', 'T', 'Y', 'X', 'Φ', 'Ψ', 'F'];
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61237625-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    /*
+     * Generates the code loader.
+     */
+    const generateCode = () => {
+      const worker = new Worker('animations.js')
+      worker.onmessage = (event) => {
+        if (event.data === 'generate') {
+          _generateCode();
+        } else {
+          _cancelCode();
+        }
+      }
+    }
 
-      gtag('config', 'UA-61237625-1');
-    </script>
-  </body>
+    /*
+     * Starts the code loader.
+     */
+    const _generateCode = () => {
+      const loader = document.getElementById('matrix-loader');
+      loader.appendChild(_generateCodeLine());
+    }
+
+    /*
+     * Closes the code loader.
+     */
+    const _cancelCode = () => {
+      const loader = document.getElementById('matrix-loader');
+      loader.style.height = '5px';
+    }
+
+    /*
+     * Generates a single vertical line of code.
+     */
+    const _generateCodeLine = () => {
+      let codeLine = document.createElement('div');
+
+      codeLine.classList = ['matrix-loader__code-line'];
+
+      for (let i = 0; i < 25; i++) {
+        const codeCharacter = document.createElement('span');
+        codeCharacter.classList = ['matrix-loader__code-character'];
+        _setCodeCharacter(codeCharacter);
+
+        if (i%5) {
+          setInterval(_setCodeCharacter, 300, codeCharacter);
+        }
+        codeLine.appendChild(codeCharacter);
+      }
+
+      codeLine.style.left = `${_getRandomInt(document.body.clientWidth)}px`;
+      codeLine.style.top = `-${_getRandomInt(120, 40)}em`;
+      return codeLine;
+    }
+
+    /*
+     * Generates a character within the line of code.
+     */
+    const _setCodeCharacter = (el) => {
+      el.innerText = CHARACTERS[_getRandomInt(CHARACTERS.length)];
+    }
+
+    /*
+     * Generates a random integer given a maximum value.
+     */
+    const _getRandomInt = (max = 0, min = 0) => {
+      return Math.floor(Math.random() * (max - min) + min);
+    }
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

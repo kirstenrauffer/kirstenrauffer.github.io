@@ -1,0 +1,226 @@
+html {
+  background-color: #f7f7f7;
+}
+
+.matrix-loader {
+  background-color: #1c1c1c;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  transition: height 5s ease-out;
+}
+
+.matrix-loader__divider {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 0 100px 20px #4a4a4a;
+  height: 5px;
+  background-color: #55735f;
+}
+
+.matrix-loader__code-line {
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+  word-wrap: break-word;
+  width: 18px;
+  top: -40em; /* start above so text rolls on screen */
+  position: absolute;
+  animation: marquee 3s linear infinite;
+  background-image: linear-gradient(45deg, #fff, #00FF00); /* below is code for gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255,255,255,.75);
+}
+
+.matrix-loader__code-character {
+  padding: 4px;
+  font-size: 18px;
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+@keyframes marquee {
+  100% {
+    top: 50em;
+    opacity: 0%;
+  }
+  0% {
+    opacity: 100%;
+  }
+}
+
+.main {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main__photographs {
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1px;
+}
+
+.main__photographs img {
+  max-width: 100%;
+  position: relative;
+}
+
+.photo-1 {
+  height: 200px;
+  width: 800px;
+}
+
+.photo-1 img {
+  top: -180px;
+}
+
+.photo-2 {
+  height: 300px;
+  width: 400px;
+}
+
+.photo-2 img {
+  top: 0;
+}
+
+.photo-3 {
+  height: 500px;
+  width: 300px;
+  position: relative;
+  left: -400px;
+  top: -560px;
+}
+
+.photo-3 img {
+  max-height: 100%;
+  max-width: unset;
+  position: relative;
+  left: -115px;
+}
+
+.photo-4 {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  left: 450px;
+  top: -1100px;
+}
+
+.photo-5 {
+  height: 200px;
+  width: 800px;
+  position: relative;
+  z-index: -1;
+  bottom: 1245px;
+}
+
+.photo-5 img {
+  top: -270px;
+}
+
+.photo-1-circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;;
+  position: relative;
+  left: 260px;
+  top: -1050px;
+  z-index: 2;
+}
+
+.photo-1-circle img {
+  max-width: unset;
+  width: 500px;
+  left: -175px;
+  top: -50px;
+}
+
+.photo-2-circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;;
+  position: relative;
+  left: -250px;
+  top: -1325px;
+  z-index: 2;
+}
+
+.photo-2-circle img {
+  max-width: unset;
+  width: 275px;
+  left: -50px;
+  top: -30px;
+}
+
+h1 span {
+  display: block;
+}
+
+.main__heading--supporting {
+  font-family: 'Roboto Mono';
+  text-transform: uppercase;
+  font-size: 18px;
+  position: relative;
+  font-weight: 300;
+}
+
+.main__heading--accent {
+  font-family: 'Reenie Beanie';
+  font-size: 55px;
+  position: relative;
+}
+
+.main__heading {
+  position: relative;
+  padding: 16px;
+}
+
+.left-100 {
+  left: 100px;
+}
+
+.left-neg-100 {
+  left: -100px;
+}
+
+.main__content {
+  margin: 0 auto;
+  position: relative;
+  top: 75px;
+}
+
+@media screen and (max-width: 800px) {
+  .left-100 {
+    left: 0;
+  }
+  
+  .left-neg-100 {
+    left: 0;
+  }
+
+  .photo-1 img {
+    top: -150px;
+    left: -310px;
+  }
+
+  .photo-2-circle {
+    left: 0;
+    top: -1660px;
+    margin: 0 auto;
+  }
+
+  .main__content {
+    top: 0;
+  }
+}
+
