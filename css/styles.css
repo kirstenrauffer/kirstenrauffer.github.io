@@ -41,3 +41,28 @@ h1 span {
   transition: visibility 0s 2s, opacity 2s linear;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.exit-left {
+  margin-left: -800px !important;
+  transition: margin-left 4s;
+}
+
+.exit-right {
+  margin-left: 500px !important;
+  transition: margin-left 4s;
+}
+
+.exit-bottom {
+  margin-top: 600px !important;
+  transition: margin-top 4s;
+}
