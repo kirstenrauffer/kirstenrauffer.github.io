@@ -75,17 +75,17 @@ h1 span {
 
 .exit-left {
   margin-left: -800px !important;
-  transition: margin-left 4s;
+  transition: margin-left 3s;
 }
 
 .exit-right {
   margin-left: 500px !important;
-  transition: margin-left 4s;
+  transition: margin-left 3s;
 }
 
 .exit-bottom {
   margin-top: 650px !important;
-  transition: margin-top 4s;
+  transition: margin-top 3s;
 }
 
 .overflow-hidden {
