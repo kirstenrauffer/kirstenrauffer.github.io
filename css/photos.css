@@ -25,10 +25,10 @@
 
 .main__photographs-anination-box--brown {
   background-color: rgba(199, 128, 62, .2);
-  width: 600px;
-  height: 50px;
-  top: 150px;
-  left: -50px;
+  width: 400px;
+  height: 500px;
+  top: -16px;
+  left: -16px;
 }
 
 .main__photographs-anination-box--gray {
