@@ -36,7 +36,8 @@ h1 span {
   -moz-transition: top 6s, left 6s;
   -o-transition: top 6s, left 6s;
   transition: top 6s, left 6s;
-  animation: shakeY 10s infinite;
+  margin-top: 0;
+  animation: beeHover 2s infinite;
   animation-timing-function: linear;
 }
 

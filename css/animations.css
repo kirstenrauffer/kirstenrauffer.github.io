@@ -32,3 +32,39 @@
     opacity: 100%;
   }
 }
+
+@keyframes beeHover {
+  100% {
+    margin-top: 0px
+  }
+  75% {
+    margin-top: -10px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  25% {
+    margin-top: 10px;
+  }
+  0% {
+    margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes beeHover {
+  100% {
+    margin-top: 0px
+  }
+  75% {
+    margin-top: -10px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  25% {
+    margin-top: 10px;
+  }
+  0% {
+    margin-top: 0px;
+  }
+}
