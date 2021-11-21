@@ -1,6 +1,6 @@
 .main__photographs {
   border-radius: 1px;
-  margin: 0 auto;
+  position: absolute;
   overflow: hidden;
 }
 
@@ -19,10 +19,8 @@
 }
 
 .photo-1__hover {
-  height: 200px;
-  width: 800px;
-  animation: jello; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s;
+  position: relative;
+  top: -16px;
 }
 
 .photo-1__hover:hover {
@@ -40,8 +38,10 @@
 }
 
 .photo-2__hover {
-  height: 300px;
-  width: 400px;
+  top: 50%;
+  margin-top: 380px;
+  left: 50%;
+  margin-left: -200px;
 }
 
 .photo-2__hover:hover {
@@ -59,11 +59,10 @@
 }
 
 .photo-3__hover {
-  position: relative;
-  left: -400px;
-  top: -560px;
-  height: 500px;
-  width: 300px;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -575px;
 }
 
 .photo-3__hover:hover {
@@ -79,16 +78,15 @@
 }
 
 .photo-4 {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 
 .photo-4__hover {
-  position: relative;
-  left: 450px;
-  top: -1200px;
-  height: 400px;
-  width: 400px;
+  top: 50%;
+  margin-top: 176px;
+  left: 50%;
+  margin-left: 275px;
 }
 
 .photo-4__hover:hover {
@@ -99,7 +97,7 @@
 .photo-5 {
   height: 200px;
   width: 800px;
-  position: relative;
+  position: absolute;
   z-index: -1;
   bottom: 1245px;
 }
@@ -113,41 +111,17 @@
   top: -270px;
 }
 
-.photo-1-circle {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;;
-  position: relative;
-  left: 320px;
-  top: -1150px;
-  z-index: 2;
-}
-
-.photo-1-circle:hover {
-  background: url(../images/1-circle.jpg) no-repeat center center fixed;
-}
-
-.photo-1-circle img {
-  max-width: unset;
-  width: 500px;
-  left: -175px;
-  top: -50px;
-}
-
 .photo-2-circle {
+  position: absolute;
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  position: relative;
-  left: -225px;
-  top: -1525px;
+  left: 50%;
+  top: 50%;
+  margin-top: 30px;
   z-index: 2;
+  margin-left: -75px;
 }
-
-.photo-2-circle:hover {
-  background: url(../images/2-circle.jpg) no-repeat center center fixed;
-}
-
 
 .photo-2-circle img {
   border-radius: 50%;

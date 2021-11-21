@@ -41,8 +41,12 @@ h1 span {
 }
 
 .main__heading {
-  position: relative;
+  position: absolute;
   padding: 16px;
+  left: 50%;
+  margin-left: -160px;
+  top: 50%;
+  margin-top: 200px;
 }
 
 .left-100 {
@@ -55,6 +59,7 @@ h1 span {
 
 .main__content {
   margin: 0 auto;
+  max-width: 900px;
   position: relative;
 }
 

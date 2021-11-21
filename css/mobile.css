@@ -8,15 +8,31 @@
     left: 0;
   }
 
+  .main__photographs {
+    padding: 0;
+  }
+
   .photo-1-circle {
     left: 325px;
     top: -1200px;
     border-radius: 0;
   }
 
+  .photo-1 {
+    top: 0;
+  }
+
   .photo-1 img {
     top: -150px;
     left: -310px;
+  }
+
+  .photo-3 {
+    display: none;
+  }
+
+  .photo-4 {
+    display: none;
   }
 
   .photo-2-circle {
@@ -29,7 +45,13 @@
     top: 0;
   }
 
-  .main__photographs {
-    padding: 0;
+  .main__heading {
+    position: absolute;
+    padding: 16px;
+    left: 50%;
+    margin-left: -220px;
+    top: 50%;
+    margin-top: 170px;
+    width: 100%;
   }
 }
