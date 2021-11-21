@@ -38,7 +38,7 @@ h1 span {
 .hidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 2s, opacity 2s linear;
+  transition: visibility 0s 2s, opacity 2s;
 }
 
 .sr-only {
@@ -75,17 +75,17 @@ h1 span {
 
 .exit-left {
   margin-left: -800px !important;
-  transition: margin-left 3s;
+  transition: margin-left 2s;
 }
 
 .exit-right {
   margin-left: 500px !important;
-  transition: margin-left 3s;
+  transition: margin-left 2s;
 }
 
 .exit-bottom {
   margin-top: 650px !important;
-  transition: margin-top 3s;
+  transition: margin-top 2s;
 }
 
 .overflow-hidden {
