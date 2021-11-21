@@ -58,6 +58,27 @@ h1 span {
   left: -150px;
 }
 
+.no-transition {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+
+.bubble {
+  border: 2px solid #2b2b2b;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 26px;
+  display: block;
+  transition: border 100ms ease-in;
+}
+
+.bubble:hover {
+  border: 2px solid #0F9D58;
+}
+
 .main__content {
   margin: 0 auto;
   max-width: 900px;
@@ -65,7 +86,9 @@ h1 span {
 }
 
 .main__navigation ul {
-  list-style: none;;
+  list-style: none;
+  position: relative;
+  left: 10px;
 }
 
 .main__navigation li {
@@ -81,7 +104,7 @@ h1 span {
   color: #2b2b2b;
   text-decoration: none;
   font-size: 18px;
-  transition: color 150ms ease-in;
+  transition: color 100ms ease-in;
 }
 
 .main__navigation a:hover {

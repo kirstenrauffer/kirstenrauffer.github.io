@@ -14,6 +14,16 @@ const _executeCode = () => {
   }
 }
 
+const loader = document.getElementById('matrix-loader');
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams) {
+  const noAnimation = urlParams.get('noAnimation');
+  if (noAnimation) {
+    loader.classList.add('no-transition');
+    loader.style.height = '5px';
+  }
+}
+
 _executeCode();
 
 /*
