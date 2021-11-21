@@ -48,6 +48,16 @@
   position: relative;
 }
 
+.main__content article {
+  padding: 24px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 2px;
+  font-family: 'Roboto Mono';
+  font-size: 14px;
+  font-size: 300;
+}
+
 .main__navigation ul {
   list-style: none;
   position: relative;
@@ -68,6 +78,10 @@
   text-decoration: none;
   font-size: 18px;
   transition: color 100ms ease-in;
+}
+
+.main__sub .photo-2-circle{
+  margin-top: -30px;
 }
 
 .main__navigation a:hover {
