@@ -38,6 +38,10 @@ h1 span {
   transition: top 6s, left 6s;
 }
 
+#bee1 {
+  animation: shakeY 10s infinite;
+}
+
 .main__heading {
   position: relative;
   padding: 16px;

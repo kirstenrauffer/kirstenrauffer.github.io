@@ -52,7 +52,7 @@ const _createBee = (id) => {
 const _createBees = () => {
   for(let i = 0; i < 10; i++) {
     const beeEl = _createBee();
-    setInterval(_animateBee, 3000, beeEl);
+    setInterval(_animateBee, _getRandomInt(3000, 4000), beeEl);
   }
 }
 
@@ -64,7 +64,7 @@ const _animateBee = (beeEl, left = 0, top = 0) =>  {
   
   const newLeft = left || _getRandomInt(window.innerWidth);
   const newTop = top || _getRandomInt(window.innerHeight);
-  // debugger;
+
   beeEl.style.left = `${newLeft}px`;
   beeEl.style.top = `${newTop}px`;
 
