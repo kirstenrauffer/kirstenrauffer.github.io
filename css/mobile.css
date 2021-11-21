@@ -39,7 +39,12 @@
   }
 
   .main__sub .photo-2-circle {
-    margin-top: -100px;
+    margin-top: 25px;
+  }
+
+  .main__sub .photo-2 {
+    display: none;
+    visibility: hidden;
   }
 
   .main__content {
