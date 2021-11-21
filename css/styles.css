@@ -70,3 +70,11 @@ h1 span {
 .overflow-hidden {
   overflow: hidden;
 }
+
+.top {
+  top: 0 !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
