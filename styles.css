@@ -32,15 +32,18 @@ h1 span {
 .main__bee {
   position: absolute;
   z-index: -1;
-  -webkit-transition: top 6s ease-in-out, left 6s ease-in-out;
-  -moz-transition: top 6s ease-in-out, left 6s ease-in-out;
-  -o-transition: top 6s ease-in-out, left 6s ease-in-out;
-  transition: top 6s ease-in-out, left 6s ease-in-out;
+  -webkit-transition: top 6s, left 6s;
+  -moz-transition: top 6s, left 6s;
+  -o-transition: top 6s, left 6s;
+  transition: top 6s, left 6s;
+  animation: shakeY 10s infinite;
+  animation-timing-function: linear;
 }
 
-#bee1 {
+/* #bee1 {
   animation: shakeY 10s infinite;
-}
+  animation-timing-function: linear;
+} */
 
 .main__heading {
   position: relative;
