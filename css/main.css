@@ -1,0 +1,75 @@
+.main {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main__heading--supporting {
+  font-family: 'Roboto Mono';
+  text-transform: uppercase;
+  font-size: 18px;
+  position: relative;
+  font-weight: 300;
+}
+
+.main__heading--accent {
+  font-family: 'Reenie Beanie';
+  font-size: 54px;
+  position: relative;
+}
+
+.main__bee {
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: top 6s, left 6s;
+  -moz-transition: top 6s, left 6s;
+  -o-transition: top 6s, left 6s;
+  transition: top 6s, left 6s;
+  margin-top: 0;
+  animation: beeHover 2s infinite;
+  animation-timing-function: linear;
+}
+
+.main__heading {
+  position: absolute;
+  padding: 16px;
+  left: 50%;
+  margin-left: -160px;
+  top: 50%;
+  margin-top: 200px;
+}
+
+.main__content {
+  margin: 0 auto;
+  max-width: 900px;
+  position: relative;
+}
+
+.main__navigation ul {
+  list-style: none;
+  position: relative;
+  left: 10px;
+}
+
+.main__navigation li {
+  display: inline-block;
+  padding: 16px 36px 0px 16px;
+}
+
+.main__navigation a {
+  font-family: 'Roboto Mono';
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;  
+  color: #2b2b2b;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 100ms ease-in;
+}
+
+.main__navigation a:hover {
+  color: #0F9D58;
+}
