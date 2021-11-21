@@ -12,12 +12,6 @@
     padding: 0;
   }
 
-  .photo-1-circle {
-    left: 325px;
-    top: -1200px;
-    border-radius: 0;
-  }
-
   .photo-1 {
     top: 0;
   }
@@ -36,9 +30,7 @@
   }
 
   .photo-2-circle {
-    left: 0;
-    top: -1660px;
-    margin: 0 auto;
+    margin-top: 0;
   }
 
   .main__content {
