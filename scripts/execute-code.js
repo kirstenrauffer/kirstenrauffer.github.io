@@ -51,7 +51,13 @@ const _generateCodeLine = () => {
     codeLine.appendChild(codeCharacter);
   }
 
-  codeLine.style.left = `${_getRandomInt(document.body.clientWidth)}px`;
+
+  let width = document.body.clientWidth;
+  if (document.body.clientWidth < 700) {
+    width += 1000;
+  }
+
+  codeLine.style.left = `${_getRandomInt(width)}px`;
   codeLine.style.top = `-${_getRandomInt(120, 40)}em`;
   return codeLine;
 }

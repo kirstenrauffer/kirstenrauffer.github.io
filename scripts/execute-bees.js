@@ -36,7 +36,6 @@ const _createBee = (id) => {
   const mainEl = document.getElementById('main');
   mainEl.appendChild(beeEl);
 
-  // _animateBee, _getRandomInt(500, 1500)
   setTimeout(_animateBee, _getRandomInt(1200, 2000), beeEl)
   return beeEl;
 }
