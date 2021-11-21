@@ -59,14 +59,9 @@ const _animateBee = (beeEl, left = 0, top = 0) =>  {
   beeEl.style.left = `${newLeft}px`;
   beeEl.style.top = `${newTop}px`;
 
-  if (beeEl.id) {
-    debugger;
-  }
-
   if (currentLeft && newLeft > currentLeft) {
     beeEl.style.transform = 'scaleX(-1)';
   } else {
-    debugger;
     beeEl.style.transform = 'scaleX(1)';
   }
 }
