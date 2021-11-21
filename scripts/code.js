@@ -1,8 +1,6 @@
 const _startGenerateCode = () => {
-  const interval1 = setInterval(_generateCode, 40);
-  const interval2 = setInterval(_generateCode, 60);
-  setTimeout(_cancelGenerateCode, 1000, interval1);
-  setTimeout(_cancelGenerateCode, 2000, interval2);
+  const interval = setInterval(_generateCode, 30);
+  setTimeout(_cancelGenerateCode, 2000, interval);
 }
 const _cancelGenerateCode = (interval) => {
   clearInterval(interval);
@@ -14,15 +12,7 @@ const _generateCode = () => {
 }
 
 _generateCode();
+setTimeout(_generateCode, 200);
 setTimeout(_generateCode, 300);
-setTimeout(_generateCode, 500);
-setTimeout(_generateCode, 500);
-setTimeout(_generateCode, 700);
-setTimeout(_generateCode, 700);
-setTimeout(_generateCode, 700);
-setTimeout(_generateCode, 1000);
-setTimeout(_generateCode, 1000);
-setTimeout(_generateCode, 1000);
-setTimeout(_generateCode, 1000);
-setTimeout(_generateCode, 1000);
-setTimeout(_startGenerateCode, 900);
+setTimeout(_generateCode, 400);
+setTimeout(_startGenerateCode, 1200);

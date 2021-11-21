@@ -28,7 +28,7 @@ html {
   width: 18px;
   top: -40em; /* start above so text rolls on screen */
   position: absolute;
-  animation: marquee 3s linear infinite;
+  animation: marquee 6.5s linear infinite;
   background-image: linear-gradient(45deg, #fff, #00FF00); /* below is code for gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
@@ -39,7 +39,7 @@ html {
 
 .matrix-loader__code-character {
   padding: 4px;
-  font-size: 18px;
+  font-size: 22px;
   -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
   -o-transform: matrix(-1, 0, 0, 1, 0, 0);
