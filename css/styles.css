@@ -21,6 +21,13 @@ h1 span {
   transition-property: none !important;
 }
 
+.transition {
+  -webkit-transition-property: all 2s !important;
+  -moz-transition-property: all 2s !important;
+  -o-transition-property: all 2s !important;
+  transition: all 2s !important;
+}
+
 .bubble {
   border: 2px solid #2b2b2b;
   border-radius: 50%;
@@ -86,6 +93,18 @@ h1 span {
 .exit-bottom {
   margin-top: 650px !important;
   transition: margin-top 2s;
+}
+
+.exit-left-no-transition {
+  margin-left: -800px !important;
+}
+
+.exit-right-no-transition {
+  margin-left: 500px !important;
+}
+
+.exit-bottom-no-transition {
+  margin-top: 650px !important;
 }
 
 .overflow-hidden {

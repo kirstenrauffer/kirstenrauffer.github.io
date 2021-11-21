@@ -14,6 +14,33 @@ const _executeBees = () => {
   }
 }
 
+const _pushClassList = (el, newClass) => el.classList.add(newClass);
+const _removeClassList = (el, classToRemove) => {
+
+  if (el.classList.contains(classToRemove)) {
+    el.classList.remove(classToRemove);
+  }
+}
+
+if (urlParams) {
+  const noAnimation = urlParams.get('noAnimation');
+  if (noAnimation) {
+    debugger;
+
+    _pushClassList(document.getElementById('photo-2'), 'exit-bottom-no-transition')
+    _pushClassList(document.getElementById('photo-3'), 'exit-left-no-transition')
+    _pushClassList(document.getElementById('photo-4'), 'exit-right-no-transition')
+
+    _pushClassList(document.getElementById('photo-2'), 'transition');
+    _pushClassList(document.getElementById('photo-3'), 'transition');
+    _pushClassList(document.getElementById('photo-4'), 'transition');
+
+    setTimeout(_removeClassList, 500, document.getElementById('photo-2'), 'exit-bottom-no-transition');
+    setTimeout(_removeClassList, 500, document.getElementById('photo-3'), 'exit-left-no-transition');
+    setTimeout(_removeClassList, 500, document.getElementById('photo-4'), 'exit-right-no-transition');
+  }
+}
+
 _executeBees();
 
 const _createBee = (id) => {
