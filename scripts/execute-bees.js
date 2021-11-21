@@ -41,7 +41,7 @@ const _createBee = (id) => {
 }
 
 const _createBees = () => {
-  for(let i = 0; i < 8; i++) {
+  for(let i = 0; i < 6; i++) {
     const beeEl = _createBee();
     setInterval(_animateBee, _getRandomInt(4500, 5500), beeEl);
   }
