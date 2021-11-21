@@ -15,10 +15,10 @@ h1 span {
 }
 
 .no-transition {
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
+  -webkit-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -o-transition-property: none !important;
+  transition-property: none !important;
 }
 
 .bubble {
@@ -65,6 +65,12 @@ h1 span {
 	overflow: visible !important;
 	width: auto !important;
 	white-space: normal !important;
+}
+
+
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .exit-left {

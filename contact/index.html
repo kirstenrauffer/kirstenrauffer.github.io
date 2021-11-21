@@ -24,7 +24,7 @@
       <nav class="main__navigation">
         <ul>
           <li>
-            <a href="../about">About</a>
+            <a href="../about?noAnimation=true">About</a>
           </li>
           <li>
             <a href="../KirstenRaufferResume.pdf">Résumé</a>
@@ -33,10 +33,10 @@
             <a class="bubble" href="../?noAnimation=true">𝒦</a>
           </li>
           <li>
-            <a href="../projects">Projects</a>
+            <a href="../projects?noAnimation=true">Projects</a>
           </li>
           <li>
-            <a href="../contact">Contact</a>
+            <a href="../contact?noAnimation=true">Contact</a>
           </li>
         </ul>
       </nav>
@@ -47,7 +47,7 @@
         </div>
       </div>
       <h1 class="main__heading sr-only">Contact Kirsten Rauffer</h1>
-      <article class="main__form">
+      <article id="article" class="main__form">
         <form class="pure-form pure-form-stacked" action="https://formspree.io/f/xknkdlpl" method="post">
           <fieldset>
               <h2>What's on your mind?</h2>
@@ -86,13 +86,7 @@
     </div>
     <div class="matrix-loader__divider"></div>
   </main>
-  <script>
-    const _pushClassList = (el, newClass) => el.classList.add(newClass);
-
-    setTimeout(_pushClassList, 500, document.getElementById('photo-2'), 'exit-bottom');
-    setTimeout(_pushClassList, 500, document.getElementById('photo-3'), 'exit-left');
-    setTimeout(_pushClassList, 500, document.getElementById('photo-4'), 'exit-right');
-  </script>
+  <script src="scripts/animations.js"></script>
   <script src="scripts/execute.js"></script>
 </body>
 </html>
