@@ -35,19 +35,34 @@
   }
 
   .photo-2-circle {
-    margin-top: -25px;
+    margin-top: 0px;
   }
 
   .main__content {
     top: 0;
   }
 
+  .main__navigation ul {
+    margin: 0;
+    left: -20px;
+  }
+
+  .main__navigation li {
+    display: block;
+    text-align: center;
+    padding: 8px 36px;
+  }
+
+  .main__navigation li a {
+    margin: 0 auto;
+  }
+
   .main__heading {
     position: relative;
     padding: 16px;
     margin-left: 0;
-    top: 100px;
-    margin-top: -60px;
+    top: 50%;
+    margin-top: 25px;
     text-align: center;
     width: 100%;
     left: -16px;
