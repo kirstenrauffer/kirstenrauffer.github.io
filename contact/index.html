@@ -73,6 +73,13 @@
     </div>
     <div class="matrix-loader__divider"></div>
   </main>
+  <script>
+    const _pushClassList = (el, newClass) => el.classList.add(newClass);
+
+    setTimeout(_pushClassList, 500, document.getElementById('photo-2'), 'exit-bottom');
+    setTimeout(_pushClassList, 500, document.getElementById('photo-3'), 'exit-left');
+    setTimeout(_pushClassList, 500, document.getElementById('photo-4'), 'exit-right');
+  </script>
   <script src="scripts/execute.js"></script>
 </body>
 </html>
