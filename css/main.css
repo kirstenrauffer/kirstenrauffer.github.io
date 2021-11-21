@@ -58,6 +58,7 @@
 }
 
 .main__content article {
+  min-width: 840px;
   padding: 24px;
   margin: 20px;
   background-color: #fff;
@@ -103,8 +104,6 @@
 .main__form {
   width: 600px;
   text-align: left;
-  left: 50%;
-  margin-left: -325px !important;
 }
 
 .main__form h2 {
