@@ -58,11 +58,15 @@ h1 span {
 }
 
 .exit-right {
-  margin-left: 500px !important;
+  margin-left: 450px !important;
   transition: margin-left 4s;
 }
 
 .exit-bottom {
   margin-top: 600px !important;
   transition: margin-top 4s;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

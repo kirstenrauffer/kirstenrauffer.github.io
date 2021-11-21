@@ -1,7 +1,51 @@
 .main__photographs {
   border-radius: 1px;
   position: absolute;
-  overflow: hidden;
+}
+
+.main__photographs:hover .main__photographs-anination-box {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.main__photographs-anination-box {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: 150ms ease-in;
+}
+
+.main__photographs-anination-box--blue {
+  background-color: rgba(66, 135, 245, .1);
+  width: 400px;
+  height: 200px;
+  top: 250px;
+  left: -50px;
+}
+
+.main__photographs-anination-box--brown {
+  background-color: rgba(199, 128, 62, .2);
+  width: 600px;
+  height: 50px;
+  top: 150px;
+  left: -50px;
+}
+
+.main__photographs-anination-box--gray {
+  background-color: rgba(153, 145, 138, .2);
+  width: 375px;
+  height: 250px;
+  top: 40px;
+  left: -20px;
+}
+
+.main__photographs-anination-box--green {
+  background-color: rgba(13, 161, 13, .2);
+  height: 200px;
+  width: 800px;
+  top: 50px;
+  left: 50px;
 }
 
 .photo-padding {
