@@ -7,6 +7,15 @@
   overflow: hidden;
 }
 
+.main-sub {
+  text-align: center;
+}
+
+.main-sub .matrix-loader__divider {
+  display: none;
+  visibility: hidden;
+}
+
 .main__heading--supporting {
   font-family: 'Roboto Mono';
   text-transform: uppercase;
