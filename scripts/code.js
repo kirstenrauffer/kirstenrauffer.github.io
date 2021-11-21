@@ -1,5 +1,5 @@
 const _startGenerateCode = () => {
-  const interval = setInterval(_generateCode, 30);
+  const interval = setInterval(_generateCode, 40);
   setTimeout(_cancelGenerateCode, 2000, interval);
 }
 const _cancelGenerateCode = (interval) => {

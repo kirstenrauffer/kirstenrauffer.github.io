@@ -20,7 +20,8 @@
 
 .photo-1__hover {
   position: relative;
-  top: -16px;
+  top: -8px;
+  margin: 0 auto;
 }
 
 .photo-1__hover:hover {
@@ -39,7 +40,7 @@
 
 .photo-2__hover {
   top: 50%;
-  margin-top: 380px;
+  margin-top: 350px;
   left: 50%;
   margin-left: -200px;
 }
@@ -60,7 +61,7 @@
 
 .photo-3__hover {
   top: 50%;
-  margin-top: -50px;
+  margin-top: 25px;
   left: 50%;
   margin-left: -575px;
 }
@@ -84,7 +85,7 @@
 
 .photo-4__hover {
   top: 50%;
-  margin-top: 176px;
+  margin-top: 150px;
   left: 50%;
   margin-left: 275px;
 }
