@@ -1,5 +1,10 @@
+@media screen and (max-width: 1000px) {
+  .photo-1__hover {
+    left: -16px;
+  }
+}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
   .left-100 {
     left: 0;
   }
@@ -30,7 +35,7 @@
   }
 
   .photo-2-circle {
-    margin-top: 0;
+    margin-top: -50px;
   }
 
   .main__content {
@@ -38,12 +43,17 @@
   }
 
   .main__heading {
-    position: absolute;
+    position: relative;
     padding: 16px;
-    left: 50%;
-    margin-left: -220px;
-    top: 50%;
-    margin-top: 170px;
+    margin-left: 0;
+    top: 100px;
+    margin-top: 0;
+    text-align: center;
     width: 100%;
+    left: -16px;
+  }
+
+  .photo-2__hover {
+    margin-top: 300px;
   }
 }
