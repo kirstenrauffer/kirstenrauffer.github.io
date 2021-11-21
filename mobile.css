@@ -28,4 +28,8 @@
   .main__content {
     top: 0;
   }
+
+  .main__photographs {
+    padding: 0;
+  }
 }
