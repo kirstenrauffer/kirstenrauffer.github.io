@@ -55,7 +55,9 @@
   border-radius: 2px;
   font-family: 'Roboto Mono';
   font-size: 14px;
-  font-size: 300;
+  line-height: 20px;
+  font-weight: 300;
+  position: absolute;
 }
 
 .main__navigation ul {
@@ -81,7 +83,7 @@
 }
 
 .main__sub .photo-2-circle{
-  margin-top: -30px;
+  margin-top: 0;
 }
 
 .main__navigation a:hover {

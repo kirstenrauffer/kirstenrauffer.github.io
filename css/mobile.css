@@ -38,6 +38,10 @@
     margin-top: 0px;
   }
 
+  .main__sub .photo-2-circle {
+    margin-top: -100px;
+  }
+
   .main__content {
     top: 0;
   }
