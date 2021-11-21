@@ -16,6 +16,7 @@ const _executeCode = () => {
 
 const loader = document.getElementById('matrix-loader');
 const urlParams = new URLSearchParams(window.location.search);
+debugger;
 if (urlParams) {
   const noAnimation = urlParams.get('noAnimation');
   if (noAnimation) {
