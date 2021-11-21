@@ -1,18 +1,3 @@
-.animate__shakeY:hover {
-  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s;
-}
-
-.animate__heartbeat:hover {
-  animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s;
-}
-
-.animate__jello:hover {
-  animation: jello; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s;
-}
-
 @keyframes marquee {
   100% {
     top: 50em;
