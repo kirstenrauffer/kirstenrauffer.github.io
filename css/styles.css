@@ -93,3 +93,7 @@ h1 span {
 .no-shadow {
   box-shadow: none !important;
 }
+
+.green {
+  color: #0F9D58;
+}
