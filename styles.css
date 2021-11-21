@@ -29,6 +29,15 @@ h1 span {
   position: relative;
 }
 
+.main__bee {
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: top 6s, left 6s;
+  -moz-transition: top 6s, left 6s;
+  -o-transition: top 6s, left 6s;
+  transition: top 6s, left 6s;
+}
+
 .main__heading {
   position: relative;
   padding: 16px;
