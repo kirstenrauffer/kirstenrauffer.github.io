@@ -26,7 +26,7 @@
 }
 
 .photo-1__hover:hover {
-  background: url(images/1.jpg) no-repeat center center fixed;
+  background: url(../images/1.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .photo-2__hover:hover {
-  background: url(images/2.jpg) no-repeat center center fixed;
+  background: url(../images/2.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .photo-3__hover:hover {
-  background: url(images/3.jpg) no-repeat center center fixed;
+  background: url(../images/3.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .photo-4__hover:hover {
-  background: url(images/4.jpg) no-repeat center center fixed;
+  background: url(../images/4.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .photo-5:hover {
-  background: url(images/5.jpg) no-repeat center center fixed;
+  background: url(../images/5.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .photo-1-circle:hover {
-  background: url(images/1-circle.jpg) no-repeat center center fixed;
+  background: url(../images/1-circle.jpg) no-repeat center center fixed;
 }
 
 .photo-1-circle img {
@@ -145,7 +145,7 @@
 }
 
 .photo-2-circle:hover {
-  background: url(images/2-circle.jpg) no-repeat center center fixed;
+  background: url(../images/2-circle.jpg) no-repeat center center fixed;
 }
 
 

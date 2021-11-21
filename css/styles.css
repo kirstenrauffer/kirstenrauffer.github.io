@@ -40,11 +40,6 @@ h1 span {
   animation-timing-function: linear;
 }
 
-/* #bee1 {
-  animation: shakeY 10s infinite;
-  animation-timing-function: linear;
-} */
-
 .main__heading {
   position: relative;
   padding: 16px;
