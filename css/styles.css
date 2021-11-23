@@ -86,7 +86,7 @@ h1 span {
 }
 
 .exit-right {
-  margin-left: 500px !important;
+  margin-left: 465px !important;
   transition: margin-left 2s;
 }
 
@@ -100,7 +100,7 @@ h1 span {
 }
 
 .exit-right-no-transition {
-  margin-left: 500px !important;
+  margin-left: 465px !important;
 }
 
 .exit-bottom-no-transition {
