@@ -46,11 +46,12 @@
   </nav>
 
   <script>
-    function openNavigation() {
-      console.log('hi');
+    function openNavigation(evt) {
       const nav = document.getElementById('main__navigation');
       nav.style.width = '200px';
       nav.style.display = 'block';
+
+      evt?.target?.style?.display = 'none';
     }
 
     function closeNavigation() {
