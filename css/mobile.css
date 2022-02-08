@@ -19,11 +19,17 @@
 
   .photo-1 {
     top: 0;
+    width: auto;
   }
 
   .photo-1 img {
-    top: -250px;
+    top: 0;
     left: 0;
+    width: auto;
+  }
+
+  .main__photographs-anination-box--green {
+    width: auto;
   }
 
   .photo-3 {
