@@ -25,8 +25,6 @@ const _removeClassList = (el, classToRemove) => {
 if (urlParams) {
   const noAnimation = urlParams.get('noAnimation');
   if (noAnimation) {
-    debugger;
-
     _pushClassList(document.getElementById('photo-2'), 'exit-bottom-no-transition')
     _pushClassList(document.getElementById('photo-3'), 'exit-left-no-transition')
     _pushClassList(document.getElementById('photo-4'), 'exit-right-no-transition')

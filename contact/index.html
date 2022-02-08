@@ -16,32 +16,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">  <link rel="stylesheet" href="normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
   <script src="scripts/utils.js"></script>
   <div class="matrix-loader__divider top no-shadow "></div>
 
+  <nav class="main__navigation" id="main__navigation">
+    <ul>
+      <li>
+        <a href="../?noAnimation=true">Home</a>
+      </li>
+      <li>
+        <a href="../about?noAnimation=true">About</a>
+      </li>
+      <li>
+        <a href="../KirstenRaufferResume.pdf">Résumé</a>
+      </li>
+      <li>
+        <a href="../projects?noAnimation=true">Projects</a>
+      </li>
+      <li>
+        <a href="../contact?noAnimation=true">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <script>
+    function openNavigation() {
+      console.log('hi');
+      const nav = document.getElementById('main__navigation');
+      nav.style.width = '200px';
+      nav.style.display = 'block';
+    }
+  </script>
+
   <main class="main-sub " id="main">
     <div class="main__content main__sub">
-      <nav class="main__navigation">
-        <ul>
-          <li>
-            <a href="../about?noAnimation=true">About</a>
-          </li>
-          <li>
-            <a href="../KirstenRaufferResume.pdf">Résumé</a>
-          </li>
-          <li>
-            <a class="bubble" href="../?noAnimation=true">𝒦</a>
-          </li>
-          <li>
-            <a href="../projects?noAnimation=true">Projects</a>
-          </li>
-          <li>
-            <a href="../contact?noAnimation=true">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <button class="main__nav-menu-button" onclick="openNavigation()">
+        <span class="a11y-text">Expand</span>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
       <div class="main__photographs photo-padding photo-1 photo-1__hover">
         <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--green"></div>
         <div class="main__photographs  photo-1 overflow-hidden">

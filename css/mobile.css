@@ -41,7 +41,7 @@
   }
 
   .photo-2-circle {
-    margin-top: 0px;
+    margin-top: -150px;
   }
 
   .main__sub .photo-2-circle {
@@ -64,8 +64,7 @@
 
   .main__navigation li {
     display: block;
-    text-align: center;
-    padding: 8px 36px;
+    padding: 8px 0px;
   }
 
   .main__navigation li a {
@@ -84,6 +83,6 @@
   }
 
   .photo-2__hover {
-    margin-top: 300px;
+    margin-top: 210px;
   }
 }
