@@ -74,6 +74,11 @@
   border: 3px solid green;
 }
 
+.main__nav-menu-button:focus {
+  background: green;
+  opacity: .2;
+}
+
 .main__content article {
   max-width: 840px;
   padding: 24px;
