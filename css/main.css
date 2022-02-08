@@ -127,10 +127,6 @@
   transition: color 100ms ease-in;
 }
 
-.main__sub .photo-2-circle{
-  margin-top: 30px
-}
-
 .main__navigation a:hover {
   color: #0F9D58;
 }
