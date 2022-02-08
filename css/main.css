@@ -63,7 +63,7 @@
   position: fixed;
   z-index: 1;
   background: white;
-  color: green;
+  color: rgba(15,157,88);
   left: 0;
   top: 0;
   padding: 12px;
@@ -71,12 +71,11 @@
   height: 50px;
   border-radius: 50px;
   margin: 16px;
-  border: 3px solid green;
+  border: 3px solid rgba(15,157,88);
 }
 
 .main__nav-menu-button:focus {
-  background: green;
-  opacity: .2;
+  background: black;
 }
 
 .main__content article {
