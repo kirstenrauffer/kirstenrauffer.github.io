@@ -61,7 +61,7 @@
 
 .main__nav-menu-button {
   position: fixed;
-  z-index: 1;
+  z-index: 10000;
   background: white;
   color: rgba(15,157,88);
   left: 0;
