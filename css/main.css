@@ -108,10 +108,11 @@
 .main__navigation ul {
   list-style: none;
   position: relative;
+  left: 30px;
 }
 
 .main__navigation li {
-  display: inline-block;
+  display: block;
   padding: 16px 36px 0px 16px;
 }
 

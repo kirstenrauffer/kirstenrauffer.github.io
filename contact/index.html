@@ -40,6 +40,10 @@
         <a href="../contact?noAnimation=true">Contact</a>
       </li>
     </ul>
+    <button class="main__nav-menu-button" onclick="closeNavigation()">
+      <span class="a11y-text">Hide</span>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
   </nav>
 
   <script>
@@ -48,6 +52,12 @@
       const nav = document.getElementById('main__navigation');
       nav.style.width = '200px';
       nav.style.display = 'block';
+    }
+
+    function closeNavigation() {
+      const nav = document.getElementById('main__navigation');
+      nav.style.width = '0';
+      nav.style.display = 'none';
     }
   </script>
 
