@@ -53,15 +53,6 @@
     top: 0;
   }
 
-  .main__navigation ul {
-    margin: 0;
-  }
-
-  .main__navigation li {
-    display: block;
-    padding: 8px 0px;
-  }
-
   .main__navigation li a {
     margin: 0 auto;
   }

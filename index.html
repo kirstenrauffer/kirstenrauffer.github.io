@@ -88,30 +88,7 @@
       </div>
     </div>
   </main>
-  <script>
-    const openNavigation = function () {
-      const nav = document.getElementById('main__navigation');
-      nav.style.width = '250px';
-      nav.style.display = 'block';
-
-      evt?.target?.style?.display = 'none';
-    }
-
-    const closeNavigation = function() {
-      const nav = document.getElementById('main__navigation');
-      nav.style.width = '0';
-      nav.style.display = 'none';
-
-      const btn = document.getElementById('main__navigation_open');
-      btn?.style?.display = 'block';
-    }
-
-    const btnOpen = document.getElementById('main__navigation_open');
-    btnOpen.addEventListener('click', openNavigation);
-
-    const btnClose = document.getElementById('main__navigation_close');
-    btnClose.addEventListener('click', closeNavigation);
-  </script>
+  <script src="scripts/button.js"></script>
   <script src="scripts/execute-bees.js"></script>
 </body>
 </html>
