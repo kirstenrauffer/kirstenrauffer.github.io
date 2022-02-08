@@ -61,7 +61,7 @@
 
 .main__nav-menu-button {
   position: fixed;
-  z-index: 10000;
+  z-index: 1;
   background: white;
   color: rgba(15,157,88);
   left: 0;
@@ -99,7 +99,7 @@
 .main__navigation {
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   background: white;
   -webkit-transition: width 2s;
   -moz-transition: width 2s;
