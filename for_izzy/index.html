@@ -90,6 +90,7 @@
     el.style.left = `${Math.floor(Math.random() * MAX_WIDTH)}px`;
     el.style.backgroundColor = `${colors[Math.floor(Math.random() * colors.length)]}`;
     el.addEventListener('touchmove', function(e) {
+      e.preventDefault(); 
       // grab the location of touch
       var touchLocation = e.targetTouches[0];
       // assign box new coordinates based on the touch.
@@ -102,6 +103,11 @@
       var x = parseInt(el.style.left);
       var y = parseInt(el.style.top);
     }, wheelOpt)
+    function preventBehavior(e) {
+        e.preventDefault(); 
+    };
+
+    document.addEventListener("touchmove", preventBehavior, wheelOpt);
     dragElement(el)
     loveList.appendChild(el);
 
