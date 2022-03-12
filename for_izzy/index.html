@@ -79,6 +79,12 @@
     el.style.backgroundColor = `${colors[Math.floor(Math.random() * colors.length)]}`;
     dragElement(el)
     loveList.appendChild(el);
+    el.addEventListener("touchmove", function(e) {
+  delta = (e.changedTouches[0].clientX - window.innerWidth / 2) * 0.5;
+  handle.style.left = e.changedTouches[0].clientX + delta + "px";
+  topLayer.style.width = e.changedTouches[0].clientX + skew + delta + "px";
+});
+
 
     function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
