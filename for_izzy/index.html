@@ -69,6 +69,16 @@
   const colors = ["#D0E3CC", "#F7FFDD", "#FCFDAF", "#EFD780", "#DBA159"];
   let currentZIndex = 6970;
 
+  // modern Chrome requires { passive: false } when adding event
+  var supportsPassive = false;
+  try {
+    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+      get: function () { supportsPassive = true; } 
+    }));
+  } catch(e) {}
+
+  var wheelOpt = supportsPassive ? { passive: false } : false;
+
   const loveList = document.getElementById('loveList');
   const MAX_WIDTH = window.innerWidth - 300;
   const MAX_HEIGHT = window.innerHeight - 200;
@@ -87,11 +97,11 @@
       el.style.top = touchLocation.pageY + 'px';
       el.style.zIndex = currentZIndex;
       currentZIndex++;
-    })
+    }, wheelOpt)
     el.addEventListener('touchend', function(e) {
       var x = parseInt(el.style.left);
       var y = parseInt(el.style.top);
-    })
+    }, wheelOpt)
     dragElement(el)
     loveList.appendChild(el);
 
