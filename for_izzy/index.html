@@ -103,11 +103,7 @@
       var x = parseInt(el.style.left);
       var y = parseInt(el.style.top);
     }, wheelOpt)
-    function preventBehavior(e) {
-        e.preventDefault(); 
-    };
 
-    document.addEventListener("touchmove", preventBehavior, wheelOpt);
     dragElement(el)
     loveList.appendChild(el);
 
