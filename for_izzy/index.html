@@ -52,7 +52,7 @@
     "all of the music that you have ever played at any given time",
     "that you listen to jazz",
     "when you speak spanish",
-    "you game library!!",
+    "your game library!!",
     "that you're so open",
     "watching you grind a game",
     "when you kiss me with your whole body",
@@ -115,10 +115,10 @@
       function closeDragElement() {
         document.onmouseup = null;
         document.onmousemove = null;
-        document.touchstart = null;
+        document.touchend = null;
         document.touchmove = null;
-        document.removeEventListener('touchstart');
-        document.removeEventListener('touchmove');
+        document.removeEventListener('touchend', closeDragElement, true);
+        document.removeEventListener('touchmove', elementDrag, true);
       }
     }
   });
