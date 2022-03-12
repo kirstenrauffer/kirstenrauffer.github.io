@@ -67,6 +67,7 @@
     "that you're so trustworthy",
   ]
   const colors = ["#D0E3CC", "#F7FFDD", "#FCFDAF", "#EFD780", "#DBA159"];
+  let currentZIndex = 6970;
 
   const loveList = document.getElementById('loveList');
   const MAX_WIDTH = window.innerWidth - 300;
@@ -79,32 +80,24 @@
     el.style.left = `${Math.floor(Math.random() * MAX_WIDTH)}px`;
     el.style.backgroundColor = `${colors[Math.floor(Math.random() * colors.length)]}`;
     el.addEventListener('touchmove', function(e) {
-    // grab the location of touch
-    var touchLocation = e.targetTouches[0];
-    
-    // assign box new coordinates based on the touch.
-    el.style.left = touchLocation.pageX + 'px';
-    el.style.top = touchLocation.pageY + 'px';
-  })
-  
-  /* record the position of the touch
-  when released using touchend event.
-  This will be the drop position. */
-  
-  el.addEventListener('touchend', function(e) {
-    // current box position.
-    var x = parseInt(el.style.left);
-    var y = parseInt(el.style.top);
-  })
+      // grab the location of touch
+      var touchLocation = e.targetTouches[0];
+      // assign box new coordinates based on the touch.
+      el.style.left = touchLocation.pageX - el.offsetWidth/2 + 'px';
+      el.style.top = touchLocation.pageY + 'px';
+      el.style.zIndex = currentZIndex;
+      currentZIndex++;
+    })
+    el.addEventListener('touchend', function(e) {
+      var x = parseInt(el.style.left);
+      var y = parseInt(el.style.top);
+    })
     dragElement(el)
     loveList.appendChild(el);
-
-    
 
     function dragElement(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
       elmnt.onmousedown = dragMouseDown;
-      // elmnt.addEventListener('touchstart', dragMouseDown);
 
       function dragMouseDown(e) {
         e = e || window.event;
@@ -115,9 +108,10 @@
         pos4 = e.clientY || e.touches[0].pageY;
 
         document.onmouseup = closeDragElement;
-        // document.addEventListener('touchend', closeDragElement);
         document.onmousemove = elementDrag;
-        // document.addEventListener('touchmove', elementDrag);
+
+        el.style.zIndex = currentZIndex;
+        currentZIndex++;
       }
 
       function elementDrag(e) {
@@ -136,10 +130,6 @@
       function closeDragElement() {
         document.onmouseup = null;
         document.onmousemove = null;
-        document.touchend = null;
-        document.touchmove = null;
-        // document.removeEventListener('touchend', closeDragElement, true);
-        // document.removeEventListener('touchmove', elementDrag, true);
       }
     }
   });
