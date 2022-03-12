@@ -1,0 +1,36 @@
+.izzys-face {
+  width: 200px;
+  animation: swing;
+  animation-duration: 1s;
+  position: relative;
+  z-index: 6969;
+}
+
+.main__content {
+  display: flex;
+  justify-content: center;
+}
+
+html {
+  background-color: rgba(180, 204, 205, 0.8)
+}
+
+ul {
+  list-style-type: none;
+}
+
+.absolute {
+  position: absolute;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.bg {
+  background-color: white;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+li {
+  font-family: 'Roboto Mono';
+}
