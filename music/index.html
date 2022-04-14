@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kirsten Rauffer's Portfolio</title>
+  <meta description="Kirsten Rauffer is a web developer, mobile developer, and, occasionally, a designer and creative. She is currently a User Interface Engineer at LinkedIn.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="section">
+    <ul id="loveList"></ul>
+  </section>
+  <main class="main" id="main">
+    <div class="main__content">
+      <div class="heading">
+        <h1>Israel Arzate</h1>
+        <ul>
+          <li><a href="https://soundcloud.com/"><i class="fa-brands fa-soundcloud"></i></a></li>
+          <li><a href="https://www.instagram.com/_izzyroll/"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="https://www.instagram.com/_izzyroll/"><i class="fa-brands fa-instagram-square"></i></a></li>
+        </ul>
+      </div>
+      <div id="main_scroll">
+        <div id="main-background" class="main_background">
+          <img width="800" src="bg.png" alt="Forest camping scene"/>
+          <img class="tree-1" src="tree.png" alt="Tree in the foreground"/>
+          <img class="tree-2" src="tree.png" alt="Tree in the foreground"/>
+          <img id="megaman" class="megaman" src="sprite-run-right-0.png" alt="Megaman sprite"/>
+        </div>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a class="button" href="/music">Music</a></li>
+          <li><a class="button" href="/about">About</a></li>
+          <li><a class="button" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+<script>
+  const STEP_INCREMENT = 20;
+  let spriteStep = 0;
+  let isLeft;
+
+  document.addEventListener('keydown', (evt) => {
+    const { keyCode } = evt;
+    const megaman = document.getElementById('megaman');
+    const left = megaman.style.left;
+    const numLeft = left ? parseInt(left.substring(0, left.length - 2)) : 20;
+    spriteStep = spriteStep <= 1 ? 2 : 1;
+
+    // Left (left arrow or A)
+    if (keyCode === 37 || keyCode === 65) {
+      const leftPost = numLeft < 0 ? 800 : numLeft; 
+      megaman.style.left = `${leftPost - STEP_INCREMENT}px`;
+      megaman.src = `sprite-run-left-${spriteStep}.png`
+      isLeft = true;
+    }
+
+    // Right (right arrow or D)
+    if (keyCode === 39 || keyCode === 68) {
+      const leftPost = numLeft > 800 ? -20 : numLeft; 
+      megaman.style.left = `${leftPost + STEP_INCREMENT}px`;
+      megaman.src = `sprite-run-right-${spriteStep}.png`
+      isLeft = false;
+    }
+
+    // Up (up arrow or W)
+    if (keyCode === 38 || keyCode === 87) {
+      if (isLeft) {
+      megaman.src = `sprite-jump-left.png`
+    } else {
+      megaman.src = `sprite-jump-right.png`
+    }
+    }
+  });
+
+  document.addEventListener('keyup', (evt) => {
+    const megaman = document.getElementById('megaman');
+    if (isLeft) {
+      megaman.src = `sprite-run-left-0.png`
+    } else {
+      megaman.src = `sprite-run-right-0.png`
+    }
+  });
+</script>
+</html>

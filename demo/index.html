@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kirsten Rauffer's Portfolio</title>
+  <meta description="Kirsten Rauffer is a web developer, mobile developer, and, occasionally, a designer and creative. She is currently a User Interface Engineer at LinkedIn.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="/static/scenery/bg-1.png" as="image">
+  <link rel="preload" href="/static/scenery/bg-2.png" as="image">
+  <link rel="preload" href="/static/scenery/fg.png" as="image">
+  <link rel="preload" href="/static/scenery/skyline.png" as="image">
+</head>
+<body>
+  <section class="section">
+    <ul id="loveList"></ul>
+  </section>
+  <main class="main" id="main">
+    <div class="main__content">
+      <div class="heading">
+        <div class="heading__content">
+          <h1>Israel Arzate</h1>
+          <p class="subheading">Chicago-based musician</p>
+        </div>
+        
+        <ul>
+          <li><a href="https://soundcloud.com/"><i class="fa-brands fa-soundcloud"></i></a></li>
+          <li><a href="https://www.instagram.com/_izzyroll/"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="https://www.instagram.com/_izzyroll/"><i class="fa-brands fa-instagram-square"></i></a></li>
+        </ul>
+      </div>
+      <div id="main_scroll">
+        <div id="main-background" class="main_background">
+          <div id="bg" class="bg"></div>
+          <div id="skyline" class="skyline"></div>
+          <div id="fg" class="fg"></div>
+          <div id="guitar" class="guitar"></div>
+          <img id="megaman" class="megaman" src="static/sprites/sprite-1.png" alt="Megaman sprite"/>
+        </div>
+      </div>
+      <!-- <div class="links">
+        <ul>
+          <li><a class="button" href="/music">Music</a></li>
+          <li><a class="button" href="/about">About</a></li>
+          <li><a class="button" href="/contact">Contact</a></li>
+        </ul>
+      </div> -->
+    </div>
+  </main>
+</body>
+<script>
+  const SPRITE_PATH = 'static/sprites';
+  const SCENERY_PATH = 'static/scenery';
+  const STEP_INCREMENT = {
+    default: 5,
+    fg: 6,
+    skyline: 4,
+  }
+  let spriteStep = 0;
+  let isStepOne = false;
+  let isBgStepOne = false;
+  let isWithGuitar = false
+
+  const updateImagePosition = (el, pos) => {
+    el.style.backgroundPosition = `${pos}px 0px`;
+  }
+
+  const updatePosition = () => {
+    const bg = document.getElementById('bg');
+    const fg = document.getElementById('fg');
+    const skyline = document.getElementById('skyline');
+    const guitar = document.getElementById('guitar');
+
+    const leftBg = bg.style.backgroundPosition;
+    const leftFg = fg.style.backgroundPosition;
+    const leftSkyline = skyline.style.backgroundPosition;
+    const numLeft = leftBg ? parseInt(leftBg.substring(0, leftBg.length - 6)) : 20;
+    const numLeftfg = leftFg ? parseInt(leftFg.substring(0, leftFg.length - 6)) : 20;
+    const numLeftSkyline = leftSkyline ? parseInt(leftSkyline.substring(0, leftSkyline.length - 6)) : 20;
+
+    if (numLeft < -100) {
+      isWithGuitar = true;
+      guitar.style.width = '0px';
+    }
+    
+    updateImagePosition(bg, numLeft - STEP_INCREMENT.default);
+    updateImagePosition(fg, numLeftfg - STEP_INCREMENT.fg);
+    updateImagePosition(skyline, numLeftSkyline - STEP_INCREMENT.skyline);
+    if (guitar) {
+      updateImagePosition(guitar, numLeft - STEP_INCREMENT.default);
+    }
+  }
+
+  const updateMegaman = () => {
+    const megaman = document.getElementById('megaman');
+    isStepOne = !isStepOne;
+    if (isWithGuitar) {
+      megaman.style.width = '65px';
+      if (isStepOne) {
+        megaman.src = `${SPRITE_PATH}/sprite-guitar-1.png`
+      } else {
+        megaman.src = `${SPRITE_PATH}/sprite-guitar-2.png`
+      }
+    } else {
+      megaman.style.width = '50px';
+      if (isStepOne) {
+        megaman.src = `${SPRITE_PATH}/sprite-run-right-1.png`
+      } else {
+        megaman.src = `${SPRITE_PATH}/sprite-run-right-2.png`
+      }
+    }
+  }
+
+  setInterval(updatePosition, 100);
+  setInterval(updateMegaman, 150);
+</script>
+</html>
