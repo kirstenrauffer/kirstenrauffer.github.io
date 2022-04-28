@@ -90,7 +90,7 @@
       clearInterval(runInterval);
       clearInterval(initialRunPositionInterval)
       setInterval(updateMegamanGuitar, 265);
-      updateMegamanGuitar();
+      updateMegamanJump();
       setInterval(updatePosition, 70);
     }
     
@@ -100,6 +100,11 @@
     if (guitar) {
       updateImagePosition(guitar, numLeft - STEP_INCREMENT.default);
     }
+  }
+
+  const updateMegamanJump = () => {
+    const megaman = document.getElementById('megaman');
+    megaman.src = `${SPRITE_PATH}/jump-1.png`
   }
 
   const updateMegamanGuitar = () => {
