@@ -39,7 +39,7 @@
           <div id="skyline" class="skyline"></div>
           <div id="fg" class="fg"></div>
           <div id="guitar" class="guitar"></div>
-          <img id="megaman" class="megaman" src="static/sprites/sprite-1.png" alt="Megaman sprite"/>
+          <img id="megaman" class="megaman" src="static/sprites/run-1.png" alt="Megaman sprite"/>
         </div>
       </div>
       <!-- <div class="links">
@@ -63,7 +63,9 @@
   let spriteStep = 0;
   let isStepOne = false;
   let isBgStepOne = false;
-  let isWithGuitar = false
+  let isWithGuitar = false;
+
+  let runInterval;
 
   const updateImagePosition = (el, pos) => {
     el.style.backgroundPosition = `${pos}px 0px`;
@@ -82,9 +84,14 @@
     const numLeftfg = leftFg ? parseInt(leftFg.substring(0, leftFg.length - 6)) : 20;
     const numLeftSkyline = leftSkyline ? parseInt(leftSkyline.substring(0, leftSkyline.length - 6)) : 20;
 
-    if (numLeft < -110) {
+    if (numLeft < -103 && !isWithGuitar) {
       isWithGuitar = true;
       guitar.style.width = '0px';
+      clearInterval(runInterval);
+      clearInterval(initialRunPositionInterval)
+      setInterval(updateMegamanGuitar, 265);
+      updateMegamanGuitar();
+      setInterval(updatePosition, 70);
     }
     
     updateImagePosition(bg, numLeft - STEP_INCREMENT.default);
@@ -95,27 +102,41 @@
     }
   }
 
-  const updateMegaman = () => {
+  const updateMegamanGuitar = () => {
     const megaman = document.getElementById('megaman');
-    isStepOne = !isStepOne;
-    if (isWithGuitar) {
-      megaman.style.width = '65px';
-      if (isStepOne) {
-        megaman.src = `${SPRITE_PATH}/sprite-guitar-1.png`
-      } else {
-        megaman.src = `${SPRITE_PATH}/sprite-guitar-2.png`
-      }
-    } else {
-      megaman.style.width = '50px';
-      if (isStepOne) {
-        megaman.src = `${SPRITE_PATH}/sprite-run-right-1.png`
-      } else {
-        megaman.src = `${SPRITE_PATH}/sprite-run-right-2.png`
-      }
+
+    switch (spriteStep) {
+      case 0:
+        megaman.src = `${SPRITE_PATH}/run-guitar-1.png`
+        spriteStep += 1;
+        break;
+      case 1:
+        megaman.src = `${SPRITE_PATH}/run-guitar-2.png`
+        spriteStep += 1;
+        break;
+      case 2:
+        megaman.src = `${SPRITE_PATH}/run-guitar-3.png`
+        spriteStep += 1;
+        break;
+      default:
+        megaman.src = `${SPRITE_PATH}/run-guitar-4.png`
+        spriteStep = 0;
+        break;
     }
   }
 
-  setInterval(updatePosition, 100);
-  setInterval(updateMegaman, 150);
+  const updateMegamanRun = () => {
+    const megaman = document.getElementById('megaman');
+    isStepOne = !isStepOne;
+
+    if (isStepOne) {
+      megaman.src = `${SPRITE_PATH}/run-1.png`
+    } else {
+      megaman.src = `${SPRITE_PATH}/run-2.png`
+    }
+  }
+
+  initialRunPositionInterval = setInterval(updatePosition, 40);
+  runInterval = setInterval(updateMegamanRun, 125);
 </script>
 </html>
