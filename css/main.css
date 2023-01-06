@@ -101,7 +101,7 @@ p, ul, li {
 
 .main-section p, .main-section li {
   line-height: 22px;
-  margin: 0 40px;
+  margin: 0 20px;
 }
 
 .main__title span {
@@ -121,4 +121,17 @@ p, ul, li {
 
 .link-list-item {
   padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  display: inline-block;
+  height: 100px;
+  padding: 10px;
+}
+
+.wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
