@@ -23,7 +23,10 @@ p, ul, li {
 }
 
 .gradient {
-  background: linear-gradient(180deg, #A9CEEF 0%, #F0CDC2 100%);
+  background: linear-gradient(-45deg, #A9CEEF, #F0CDC2);
+  -webkit-animation: gradientBG 10s ease infinite;
+  animation: gradientBG 10s ease infinite;
+  background-size: 400% 400%;
 }
 
 .word-break {
@@ -39,7 +42,6 @@ p, ul, li {
 }
 
 .gradient-text {
-  background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent; 
