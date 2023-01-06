@@ -6,110 +6,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/matrix.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/photos.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-  <div aria-hidden="true" id="matrix-loader" class="matrix-loader">
-    <div class="matrix-loader__divider"></div>
-  </div>
-  <script src="scripts/utils.js"></script>
-  <script src="scripts/execute-code.js"></script>
-  
-  <nav class="main__navigation" id="main__navigation">
-    <ul>
-      <li>
-        <a href="?noAnimation=true">Home</a>
-      </li>
-      <li>
-        <a href="about">About</a>
-      </li>
-      <li>
-        <a href="KirstenRaufferResume.pdf">Résumé</a>
-      </li>
-      <li>
-        <a href="projects">Projects</a>
-      </li>
-      <li>
-        <a href="contact">Contact</a>
-      </li>
-    </ul>
-    <button class="main__nav-menu-button" id="main__navigation_close">
-      <span class="a11y-text">Hide</span>
-      <i class="fa fa-times" aria-hidden="true"></i>
-    </button>
-  </nav>
-
   <main class="main" id="main">
-    <div class="main__content">
-      <button class="main__nav-menu-button" id="main__navigation_open">
-        <span class="a11y-text">Expand</span>
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </button>
-      <div class="main__photographs photo-padding photo-1 photo-1__hover transition">
-        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--green"></div>
-        <div class="main__photographs  photo-1 overflow-hidden">
-          <img src="images/1.jpg" alt="A fairy-like forest in Norway."/>
-        </div>
-      </div>
-      <h1 class="main__heading">
-        <span class="main__heading--supporting left-neg-100">Welcome to</span>
-        <span class="main__heading--accent">Kirsten Rauffer's </span>
-        <span class="main__heading--supporting left-100">corner of the web</span>      
-      </h1>
-      <div id="photo-2" class="main__photographs photo-padding photo-2 photo-2__hover transition">
-        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--brown"></div>
-        <div class="main__photographs photo-2 overflow-hidden">
-          <img src="images/2.jpg"animate__heartbeat alt="Two sea lions cuddling and basking in the sunlight at the wharf."/>
-        </div>
-      </div>
-      <div id="photo-3" class="main__photographs photo-padding photo-3 photo-3__hover transition">
-        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--blue"></div>
-        <div class="main__photographs photo-3 overflow-hidden">
-          <img src="images/3.jpg" alt="A view from the end of the Ausungate trek in Peru."/>
-        </div>
-      </div>
-      <div id="photo-4" class="main__photographs photo-padding photo-4 photo-4__hover transition">
-        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--gray"></div>
-        <div class="main__photographs photo-4 overflow-hidden">
-          <img src="images/4.jpg" alt="A cute, small plant spotted at the Conservatory of Flowers in San Fransisco."/>
-        </div>
-      </div>
-      <div class="main__photographs photo-2-circle photo-2-circle-home overflow-hidden">
-        <img src="images/2-circle.jpg" alt="Myself at Assateague National Park at sunset. A pink sky is behind me."/>
+    <div class="main__content-container gradient">
+      <div class="main__content">
+        <img src="./assets/bun-blush.png" alt="pixel art of cute, blushing cinnamon bun" width="110"/>
+        <h1 class="main__title text-align-center">
+          <span class="roboto uppercase gradient gradient-text word-break"><span class="em-larger">Kirsten</span> Rauffer's</span>
+          <span class="reenie-beanie"><i>corner of the web</i></span>
+        </h1>
+        <section class="main-section">
+          <h2 class="visually-hidden">About</h2>
+          <p class="roboto">I'm currently a product engineer crafting delightful experiences at <a href="https://www.washingtonpost.com/video-games/2022/11/30/what-is-discord-app-explainer-twitter/" class="discord-purple">Discord</a>. I've worked at LinkedIn, Microsoft, and more.</p>
+          <p class="roboto">In my spare time, I:
+            <ul>
+              <li>photograph/make pixel art/embroider</li>
+              <li>attempt historic house restorations</li>
+              <li>game</li>
+              <li>scuba dive/travel</li>
+              <li>endulge in shows/cinema</li>
+            </ul>
+          </p>
+          <p class="roboto">I'm always happy to help make your website or app accessible. <a href="https://alphagov.github.io/accessibility-personas/" class="discord-purple">Learn more about the importance of accessibility</a></p>
+        </section>
+        <section class="main-section-links">
+          <h2 class="visually-hidden">Other online presences</h2>
+          <ul class="link-list">
+            <li class="wobble link-list-item">
+              <b>kirsten.rauffer@gmail.com</b>
+            </li>
+            <li class="wobble link-list-item">
+              <a href="https://www.linkedin.com/in/kirstenrauffer">
+                <img src="./assets/linkedin-logo.png" alt="visit Kirsten's LinkedIn profile" width="75"/>
+              </a>
+            </li>
+            <li class="wobble link-list-item">
+              <a href="https://www.instagram.com/kirstenxsnow/">
+                <img src="./assets/instagram-logo.png" alt="visit Kirsten's Instagram profile" width="35"/>
+              </a>
+            </li>
+            <li class="wobble link-list-item">
+              <a href="https://app.spoak.com/u/kirstenrauffer/profile">
+                <img src="./assets/spoak-logo.png" alt="visit Kirsten's Spoak profile" width="50"/>
+              </a>
+            </li>
+            <li class="wobble link-list-item">
+              <a href="https://codepen.io/kkdawg">
+                <img src="./assets/codepen-logo.png" alt="visit Kirsten's Codepen profile" width="120"/>
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   </main>
-  <script src="scripts/button.js"></script>
-  <script src="scripts/execute-bees.js"></script>
   <script>
-function minimumAbsoluteDifference(arr) {
-    if (arr.length < 1) {
-        return arr;
-    } else if (arr.length === 1) {
-        return arr[0];
-    }
-    // Write your code here
-    let currentMinimum = Number.MAX_SAFE_INTEGER;
-    debugger;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if (i !== j) {
-                const absValue = Math.abs(arr[i] - arr[j]);
-                currentMinimum = absValue < currentMinimum ? absValue : currentMinimum;
-            }
-        }
-    }
-    return currentMinimum;
-}
-minimumAbsoluteDifference([1, -3, 71, 68, 17]);
+
   </script>
 </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kirsten Rauffer's Portfolio</title>
+  <meta description="Kirsten Rauffer is a web developer, mobile developer, and, occasionally, a designer and creative. She is currently a User Interface Engineer at LinkedIn.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/matrix.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/photos.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+  <div aria-hidden="true" id="matrix-loader" class="matrix-loader">
+    <div class="matrix-loader__divider"></div>
+  </div>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/execute-code.js"></script>
+  
+  <nav class="main__navigation" id="main__navigation">
+    <ul>
+      <li>
+        <a href="?noAnimation=true">Home</a>
+      </li>
+      <li>
+        <a href="about">About</a>
+      </li>
+      <li>
+        <a href="KirstenRaufferResume.pdf">Résumé</a>
+      </li>
+      <li>
+        <a href="projects">Projects</a>
+      </li>
+      <li>
+        <a href="contact">Contact</a>
+      </li>
+    </ul>
+    <button class="main__nav-menu-button" id="main__navigation_close">
+      <span class="a11y-text">Hide</span>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </nav>
+
+  <main class="main" id="main">
+    <div class="main__content">
+      <button class="main__nav-menu-button" id="main__navigation_open">
+        <span class="a11y-text">Expand</span>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="main__photographs photo-padding photo-1 photo-1__hover transition">
+        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--green"></div>
+        <div class="main__photographs  photo-1 overflow-hidden">
+          <img src="images/1.jpg" alt="A fairy-like forest in Norway."/>
+        </div>
+      </div>
+      <h1 class="main__heading">
+        <span class="main__heading--supporting left-neg-100">Welcome to</span>
+        <span class="main__heading--accent">Kirsten Rauffer's </span>
+        <span class="main__heading--supporting left-100">corner of the web</span>      
+      </h1>
+      <div id="photo-2" class="main__photographs photo-padding photo-2 photo-2__hover transition">
+        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--brown"></div>
+        <div class="main__photographs photo-2 overflow-hidden">
+          <img src="images/2.jpg"animate__heartbeat alt="Two sea lions cuddling and basking in the sunlight at the wharf."/>
+        </div>
+      </div>
+      <div id="photo-3" class="main__photographs photo-padding photo-3 photo-3__hover transition">
+        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--blue"></div>
+        <div class="main__photographs photo-3 overflow-hidden">
+          <img src="images/3.jpg" alt="A view from the end of the Ausungate trek in Peru."/>
+        </div>
+      </div>
+      <div id="photo-4" class="main__photographs photo-padding photo-4 photo-4__hover transition">
+        <div aria-hidden="true" class="main__photographs-anination-box main__photographs-anination-box--gray"></div>
+        <div class="main__photographs photo-4 overflow-hidden">
+          <img src="images/4.jpg" alt="A cute, small plant spotted at the Conservatory of Flowers in San Fransisco."/>
+        </div>
+      </div>
+      <div class="main__photographs photo-2-circle photo-2-circle-home overflow-hidden">
+        <img src="images/2-circle.jpg" alt="Myself at Assateague National Park at sunset. A pink sky is behind me."/>
+      </div>
+    </div>
+  </main>
+  <script src="scripts/button.js"></script>
+  <script src="scripts/execute-bees.js"></script>
+  <script>
+function minimumAbsoluteDifference(arr) {
+    if (arr.length < 1) {
+        return arr;
+    } else if (arr.length === 1) {
+        return arr[0];
+    }
+    // Write your code here
+    let currentMinimum = Number.MAX_SAFE_INTEGER;
+    debugger;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (i !== j) {
+                const absValue = Math.abs(arr[i] - arr[j]);
+                currentMinimum = absValue < currentMinimum ? absValue : currentMinimum;
+            }
+        }
+    }
+    return currentMinimum;
+}
+minimumAbsoluteDifference([1, -3, 71, 68, 17]);
+  </script>
+</body>
+</html>

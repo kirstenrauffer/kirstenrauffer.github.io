@@ -1,55 +1,37 @@
-@keyframes marquee {
-  100% {
-    top: 50em;
-    opacity: 0%;
-  }
-  0% {
-    opacity: 100%;
-  }
+/* Wobble Horizontal */
+@keyframes wobble {
+	16.65% {
+		transform: translateX(8px);
+	}
+
+	33.3% {
+		transform: translateX(-6px);
+	}
+
+	49.95% {
+		transform: translateX(4px);
+	}
+
+	66.6% {
+		transform: translateX(-2px);
+	}
+
+	83.25% {
+		transform: translateX(1px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
 }
 
-@-webkit-keyframes marquee {
-  100% {
-    top: 50em;
-    opacity: 0%;
-  }
-  0% {
-    opacity: 100%;
-  }
+.wobble {
+	display: inline-block;
 }
 
-@keyframes beeHover {
-  100% {
-    margin-top: 0px
-  }
-  75% {
-    margin-top: -10px;
-  }
-  50% {
-    margin-top: 0px;
-  }
-  25% {
-    margin-top: 10px;
-  }
-  0% {
-    margin-top: 0px;
-  }
-}
-
-@-webkit-keyframes beeHover {
-  100% {
-    margin-top: 0px
-  }
-  75% {
-    margin-top: -10px;
-  }
-  50% {
-    margin-top: 0px;
-  }
-  25% {
-    margin-top: 10px;
-  }
-  0% {
-    margin-top: 0px;
-  }
+.wobble:hover {
+    animation-name: wobble;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
 }

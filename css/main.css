@@ -1,160 +1,124 @@
-.main {
-  position: absolute;
-  z-index: 0;
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
+/*
+  Global styles
+*/
+
+.main, body, html {
+  height: 100%;
+  width: 100%;
 }
 
-.main-sub {
-  text-align: center;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-.main-sub .matrix-loader__divider {
-  display: none;
-  visibility: hidden;
-}
-
-.main__heading--supporting {
+p, ul, li {
+  font-size: 12px;
   font-family: 'Roboto Mono';
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+.gradient {
+  background: linear-gradient(180deg, #A9CEEF 0%, #F0CDC2 100%);
+}
+
+.word-break {
+  word-spacing: 100vw;
+}
+
+.em-larger {
+  font-size: 1.25em;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.gradient-text {
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.roboto {
+  font-family: 'Roboto Mono';
+}
+
+.uppercase {
   text-transform: uppercase;
-  font-size: 18px;
-  position: relative;
-  font-weight: 300;
 }
 
-.main__heading--accent {
+.reenie-beanie {
   font-family: 'Reenie Beanie';
-  font-size: 54px;
-  position: relative;
 }
 
-.main__bee {
-  position: absolute;
-  z-index: -1;
-  -webkit-transition: top 6s, left 6s;
-  -moz-transition: top 6s, left 6s;
-  -o-transition: top 6s, left 6s;
-  transition: top 6s, left 6s;
-  margin-top: 0;
-  animation: beeHover 2s infinite;
-  animation-timing-function: linear;
+.discord-purple {
+  color: #5865F2;
 }
 
-.main__heading {
-  position: absolute;
-  padding: 16px;
-  left: 50%;
-  margin-left: -160px;
-  top: 50%;
-  margin-top: 200px;
+/*
+  Specific styles
+*/
+.main {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border: 10px solid white;
+}
+
+.main__content-container {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border: 10px solid black;
 }
 
 .main__content {
-  margin: 0 auto;
-  max-width: 900px;
-  position: relative;
-}
-
-.main__nav-menu-button {
-  position: fixed;
-  z-index: 1;
-  background: white;
-  color: rgba(15,157,88);
-  left: 0;
-  top: 0;
-  padding: 12px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin: 16px;
-  border: 3px solid rgba(15,157,88);
-}
-
-.main__nav-menu-button:focus {
-  background: black;
-}
-
-.main__content article {
-  max-width: 840px;
-  padding: 24px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   margin: 20px;
-  background-color: #fff;
-  border-radius: 2px;
-  font-family: 'Roboto Mono';
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 300;
-  position: absolute;
-  z-index: 100;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 2s;
-  text-align: left;
-}
-
-.main__navigation {
-  width: 0;
-  position: fixed;
-  z-index: 1000;
   background: white;
-  -webkit-transition: width 2s;
-  -moz-transition: width 2s;
-  -o-transition: width 2s;
-  transition: width 2s;
-  text-align: left;
-  display: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
 }
 
-.main__navigation ul {
-  list-style: none;
-  position: relative;
-  left: 30px;
+.main-section {
+  max-width: 650px;
 }
 
-.main__navigation li {
+.main-section-links {
+  display: flex;
+  justify-content: center;
+}
+
+.main-section p, .main-section li {
+  line-height: 22px;
+  margin: 0 40px;
+}
+
+.main__title span {
   display: block;
-  padding: 16px 36px 0px 16px;
 }
 
-.main__navigation a {
-  font-family: 'Roboto Mono';
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;  
-  color: #2b2b2b;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 100ms ease-in;
-}
-
-.main__navigation a:hover {
-  color: #0F9D58;
-}
-
-.main__form {
-  width: 600px;
-  text-align: left;
-}
-
-.main__form h2 {
-  font-size: 45px;
+.link-list {
   position: relative;
-  top: -15px;
-  margin: 36px 0 16px 0;
+  top: 20px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
-  font-family: 'Reenie Beanie';
+  justify-content: center;
 }
 
-
-.main__form .pure-form label {
-  padding-top: 12px;
-}
-
-.main__form .pure-form textarea {
-  width: 100%;
-  height: 100px;
+.link-list-item {
+  padding-right: 40px;
 }
