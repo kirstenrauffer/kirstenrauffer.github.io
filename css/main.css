@@ -134,10 +134,8 @@ p, ul, li {
 
 .cinny-bun-wrapper {  
   padding-top: 20px;
-  display: block;
   height: 100px;
   position: relative;
-  top: 20px;
 }
 
 .cinny-bun-wrapper-img {
