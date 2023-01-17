@@ -8,7 +8,8 @@
 }
 
 p, ul, li {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 26px;
   font-family: 'Roboto Mono';
 }
 
@@ -24,8 +25,8 @@ p, ul, li {
 
 .gradient {
   background: linear-gradient(-45deg, #A9CEEF, #F0CDC2);
-  -webkit-animation: gradientBG 10s ease infinite;
-  animation: gradientBG 1.5s ease infinite;
+  -webkit-animation: gradientBG 1.75s ease infinite;
+  animation: gradientBG 1.75s ease infinite;
   background-size: 400% 400%;
 }
 
@@ -114,7 +115,6 @@ p, ul, li {
 }
 
 .main-section p, .main-section li {
-  line-height: 22px;
   margin: 0 20px;
 }
 
