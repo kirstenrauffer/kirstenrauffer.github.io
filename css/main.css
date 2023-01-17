@@ -89,6 +89,12 @@ p, ul, li {
   overflow: scroll;
 }
 
+@media (min-width:1025px) {
+  .main__main-section {
+    justify-content: center;
+  }
+}
+
 .main__content {
   width: calc(100% - 20px);
   height: calc(100% - 20px);
