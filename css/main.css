@@ -25,7 +25,7 @@ p, ul, li {
 .gradient {
   background: linear-gradient(-45deg, #A9CEEF, #F0CDC2);
   -webkit-animation: gradientBG 10s ease infinite;
-  animation: gradientBG 10s ease infinite;
+  animation: gradientBG 1.5s ease infinite;
   background-size: 400% 400%;
 }
 
