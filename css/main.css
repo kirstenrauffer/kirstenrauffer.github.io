@@ -132,15 +132,15 @@ p, ul, li {
   padding-bottom: 20px;
 }
 
-.cinny-bun-wrapper {
+.cinny-bun-wrapper {  
+  padding: 20px;
   display: block;
   height: 100px;
   position: relative;
   top: 20px;
-  padding: 20px;
 }
 
-.cinny-bun-wrapper img {
+.cinny-bun-wrapper-img {
   height: 100%;
   width: 100%;
   object-fit: contain;
