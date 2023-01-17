@@ -85,8 +85,8 @@ p, ul, li {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .main__content {
