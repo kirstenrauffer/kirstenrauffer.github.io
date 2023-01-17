@@ -81,7 +81,12 @@ p, ul, li {
 }
 
 .main__main-section {
-  padding: 20px 0;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main__content {
@@ -91,12 +96,7 @@ p, ul, li {
   left: -10px;
   top: -10px;
   margin: 20px;
-  background: white;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;}
+}
 
 .main-section {
   max-width: 650px;
@@ -133,7 +133,7 @@ p, ul, li {
 }
 
 .cinny-bun-wrapper {  
-  padding: 20px;
+  padding-top: 20px;
   display: block;
   height: 100px;
   position: relative;
